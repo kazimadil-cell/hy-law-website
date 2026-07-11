@@ -18,7 +18,7 @@ const MOST_WATCHED = [
     id: "7550780222598057238",
     thumb: "tt-thumb-1-v3.jpg",
     tag: "Spouse Visa",
-    views: "101.2K",
+    views: null,
     caption: "Exempt From the £29,000 Income Rule?",
     alt: "Exempt from the £29,000 spouse visa income requirement",
     duration: 31
@@ -36,7 +36,7 @@ const MOST_WATCHED = [
     id: "7649543937383877910",
     thumb: "tt-thumb-10.jpg",
     tag: "Citizenship",
-    views: "11.3K",
+    views: null,
     caption: "Will the 'Good Character' Rule Affect You?",
     alt: "Does the good character requirement affect your citizenship application?",
     duration: 72
