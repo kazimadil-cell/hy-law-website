@@ -27,7 +27,7 @@ const MOST_WATCHED = [
     id: "7557105637037985046",
     thumb: "tt-thumb-9.jpg",
     tag: "ILR",
-    views: "3,440",
+    views: null,
     caption: "ILR for a Child: 5 Years, Not 10",
     alt: "ILR for a child after 5 years, not 10",
     duration: 48
@@ -45,7 +45,7 @@ const MOST_WATCHED = [
     id: "7573831193578212630",
     thumb: "tt-thumb-11.jpg",
     tag: "Asylum",
-    views: "710",
+    views: null,
     caption: "Major Changes to the Asylum System",
     alt: "Shabana Mahmood announces major changes to the asylum system",
     duration: 56
