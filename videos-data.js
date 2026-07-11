@@ -36,7 +36,7 @@ const MOST_WATCHED = [
     id: "7649543937383877910",
     thumb: "tt-thumb-10.jpg",
     tag: "Citizenship",
-    views: null,
+    views: "11.3K",
     caption: "Will the 'Good Character' Rule Affect You?",
     alt: "Does the good character requirement affect your citizenship application?",
     duration: 72
@@ -45,7 +45,7 @@ const MOST_WATCHED = [
     id: "7573831193578212630",
     thumb: "tt-thumb-11.jpg",
     tag: "Asylum",
-    views: null,
+    views: "710",
     caption: "Major Changes to the Asylum System",
     alt: "Shabana Mahmood announces major changes to the asylum system",
     duration: 56
