@@ -25,7 +25,7 @@ const MOST_WATCHED = [
   },
   {
     id: "7557105637037985046",
-    thumb: "tt-thumb-2.jpg",
+    thumb: "tt-thumb-9.jpg",
     tag: "ILR",
     views: "3,440",
     caption: "ILR for a Child: 5 Years, Not 10",
@@ -34,7 +34,7 @@ const MOST_WATCHED = [
   },
   {
     id: "7649543937383877910",
-    thumb: "tt-thumb-3.jpg",
+    thumb: "tt-thumb-10.jpg",
     tag: "Citizenship",
     views: null,
     caption: "Will the 'Good Character' Rule Affect You?",
@@ -43,7 +43,7 @@ const MOST_WATCHED = [
   },
   {
     id: "7573831193578212630",
-    thumb: "tt-thumb-7.jpg",
+    thumb: "tt-thumb-11.jpg",
     tag: "Asylum",
     views: null,
     caption: "Major Changes to the Asylum System",
@@ -55,7 +55,7 @@ const MOST_WATCHED = [
 const RECENT_UPLOADS = [
   {
     id: "7575354631535037718",
-    thumb: "tt-thumb-4.jpg",
+    thumb: "tt-thumb-12.jpg",
     tag: "Citizenship",
     caption: "Illegal Entry &amp; British Citizenship",
     alt: "Illegal entry and British citizenship applications",
@@ -64,7 +64,7 @@ const RECENT_UPLOADS = [
   },
   {
     id: "7566388524090592514",
-    thumb: "tt-thumb-5.jpg",
+    thumb: "tt-thumb-13.jpg",
     tag: "Spouse Visa",
     caption: "Spouse Visa: Get Tailored Advice",
     alt: "Get tailored spouse visa legal advice",
@@ -73,7 +73,7 @@ const RECENT_UPLOADS = [
   },
   {
     id: "7564520083695996182",
-    thumb: "tt-thumb-8.jpg",
+    thumb: "tt-thumb-14.jpg",
     tag: "Immigration Rules",
     caption: "Immigration Rules Update: HC133",
     alt: "Latest update to the immigration rules, Statement of Changes HC133",
@@ -82,7 +82,7 @@ const RECENT_UPLOADS = [
   },
   {
     id: "7555955296477269270",
-    thumb: "tt-thumb-6.jpg",
+    thumb: "tt-thumb-15.jpg",
     tag: "Spouse Visa",
     caption: "Answering Your Spouse Visa Question",
     alt: "Answering a follower's spouse visa question",
