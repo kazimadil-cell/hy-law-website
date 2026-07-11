@@ -55,15 +55,15 @@
   .page-hero {
     background: url('joshua-videos-cover.jpg');
     background-size: cover; background-position: center 30%;
-    min-height: 62vh; display: flex; align-items: center; justify-content: center;
+    min-height: 62vh; display: flex; align-items: flex-end; justify-content: center;
     text-align: center; position: relative; overflow: hidden;
   }
   .page-hero::after {
     content: ''; position: absolute; inset: 0;
-    background: linear-gradient(0deg, rgba(11,16,32,0.55) 0%, rgba(11,16,32,0.4) 50%, rgba(11,16,32,0.55) 100%);
+    background: linear-gradient(0deg, rgba(11,16,32,0.7) 0%, rgba(11,16,32,0.3) 55%, rgba(11,16,32,0.35) 100%);
     pointer-events: none;
   }
-  .page-hero-inner { position: relative; z-index: 2; padding: 40px 0; width: 100%; }
+  .page-hero-inner { position: relative; z-index: 2; padding: 40px 0 64px; width: 100%; }
   .page-hero h1 { color: #fff; font-size: clamp(30px, 5vw, 56px); position: relative; text-shadow: 0 4px 24px rgba(0,0,0,0.45); }
   .page-hero h1 em { color: var(--brass-light); font-style: normal; }
   .section-eyebrow { display: flex; align-items: center; justify-content: center; gap: 14px; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass-light); margin-bottom: 18px; }
