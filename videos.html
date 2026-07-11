@@ -52,7 +52,13 @@
   @media (prefers-reduced-motion: reduce) { .nav-btn { animation: none; } }
   @media (max-width: 900px) { .nav-links, .nav-phone { display: none; } }
 
-  .page-hero { background: linear-gradient(120deg, var(--navy), #0e1730); padding: 90px 0 76px; text-align: center; position: relative; overflow: hidden; }
+  .page-hero {
+    background:
+      linear-gradient(180deg, rgba(11,16,32,0.6) 0%, rgba(11,16,32,0.48) 55%, rgba(11,16,32,0.7) 100%),
+      url('joshua-videos-cover.jpg');
+    background-size: cover; background-position: center 30%;
+    padding: 110px 0 96px; text-align: center; position: relative; overflow: hidden;
+  }
   .page-hero::before {
     content: ''; position: absolute; top: -40%; right: -10%; width: 480px; height: 480px; border-radius: 50%;
     background: radial-gradient(circle, rgba(224,168,46,0.16), transparent 70%); pointer-events: none;
