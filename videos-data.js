@@ -16,7 +16,7 @@
 const MOST_WATCHED = [
   {
     id: "7550780222598057238",
-    thumb: "tt-thumb-1-v2.jpg",
+    thumb: "tt-thumb-1-v3.jpg",
     tag: "Spouse Visa",
     views: "101.2K",
     caption: "Exempt From the £29,000 Income Rule?",
