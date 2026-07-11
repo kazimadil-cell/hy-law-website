@@ -288,7 +288,7 @@
       <a href="index.html" class="active">Home</a>
       <a href="services.html">Services</a>
       <a href="about.html">About</a>
-      <a href="index.html#latest-news">News</a>
+      <a href="news.html">News</a>
       <a href="videos.html">Videos</a>
       <a href="contact.html">Contact</a>
     </div>
@@ -445,33 +445,11 @@
     <div class="section-head" style="margin-bottom:50px;">
       <div class="section-eyebrow">Stay Informed</div>
       <h2 style="color:#fff;">Latest UK Immigration News</h2>
-      <p style="color:rgba(255,255,255,0.6);">Real, verified updates from GOV.UK and the Electronic Immigration Network.</p>
+      <p style="color:rgba(255,255,255,0.6);">Real, verified updates from GOV.UK, ONS and the Electronic Immigration Network — refreshed regularly.</p>
     </div>
-    <div class="news-track">
-      <a class="news-card" href="https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-259-9-july-2026" target="_blank" rel="noopener">
-        <div class="news-media"><svg viewBox="0 0 24 24" fill="none" stroke="#F2854A" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 4v16"/></svg></div>
-        <div class="news-body">
-          <div class="news-top"><span class="news-date">9 July 2026</span><span class="news-cat">GOV.UK</span></div>
-          <h3 class="news-title">Statement of Changes to the Immigration Rules: HC 259</h3>
-          <p class="news-teaser">Updates affecting the graduate route, Appendix FM family provisions, the EU Settlement Scheme and the move to eVisas, taking effect from late July 2026.</p>
-        </div>
-      </a>
-      <a class="news-card" href="https://www.gov.uk/government/news/asylum-seekers-will-pay-towards-costs-of-accommodation" target="_blank" rel="noopener">
-        <div class="news-media"><svg viewBox="0 0 24 24" fill="none" stroke="#F2854A" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-        <div class="news-body">
-          <div class="news-top"><span class="news-date">2026</span><span class="news-cat">GOV.UK</span></div>
-          <h3 class="news-title">Asylum Seekers to Repay Accommodation Costs</h3>
-          <p class="news-teaser">New Home Office powers under the Immigration and Asylum Bill require asylum seekers who can afford it to contribute to support and accommodation costs.</p>
-        </div>
-      </a>
-      <a class="news-card" href="https://www.ein.org.uk/news/new-statement-changes-immigration-rules-amends-graduate-route-appendix-fm-and-part-8-family" target="_blank" rel="noopener">
-        <div class="news-media"><svg viewBox="0 0 24 24" fill="none" stroke="#F2854A" stroke-width="1.5"><path d="M12 2 3 7v6c0 5 4 9 9 9s9-4 9-9V7z"/></svg></div>
-        <div class="news-body">
-          <div class="news-top"><span class="news-date">July 2026</span><span class="news-cat">EIN News</span></div>
-          <h3 class="news-title">Immigration Rules Amend Graduate Route &amp; Family Provisions</h3>
-          <p class="news-teaser">A new Statement of Changes updates the graduate route, Appendix FM and Part 8 family provisions, aligning rules for children joining relatives in the UK.</p>
-        </div>
-      </a>
+    <div class="news-track" id="homeNewsGrid"></div>
+    <div style="text-align:center; margin-top:46px;">
+      <a class="btn-primary" href="news.html">See All News →</a>
     </div>
   </div>
 </section>
@@ -550,7 +528,30 @@
   </div>
 </footer>
 
+<script src="news-data.js"></script>
 <script>
+  (function () {
+    const ICONS = {
+      doc: '<path d="M4 4h16v16H4z"/><path d="M4 9h16M9 4v16"/>',
+      clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/>',
+      shield: '<path d="M12 2 3 7v6c0 5 4 9 9 9s9-4 9-9V7z"/>'
+    };
+    function renderHomeNewsCard(n) {
+      return '<a class="news-card" href="news.html#' + n.id + '">' +
+        '<div class="news-media"><svg viewBox="0 0 24 24" fill="none" stroke="#F2854A" stroke-width="1.5">' + ICONS[n.icon] + '</svg></div>' +
+        '<div class="news-body">' +
+          '<div class="news-top"><span class="news-date">' + n.dateDisplay + '</span><span class="news-cat">' + n.source + '</span></div>' +
+          '<h3 class="news-title">' + n.title + '</h3>' +
+          '<p class="news-teaser">' + n.summary + '</p>' +
+        '</div>' +
+      '</a>';
+    }
+    const grid = document.getElementById('homeNewsGrid');
+    if (grid && typeof NEWS_ITEMS !== 'undefined') {
+      grid.innerHTML = NEWS_ITEMS.slice(0, 3).map(renderHomeNewsCard).join('');
+    }
+  })();
+
   window.addEventListener('scroll', () => {
     const max = document.documentElement.scrollHeight - window.innerHeight;
     document.getElementById('scrollBar').style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
