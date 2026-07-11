@@ -106,6 +106,13 @@
   .video-card-embed blockquote.tiktok-embed { margin: 0 !important; }
   .video-loading { position: absolute; inset: 0; z-index: 5; background: var(--navy); display: flex; align-items: center; justify-content: center; transition: opacity 0.4s ease; }
   .video-loading.fade-out { opacity: 0; pointer-events: none; }
+  .video-card-exit {
+    position: absolute; top: 10px; right: 10px; z-index: 10;
+    width: 30px; height: 30px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.4);
+    background: rgba(11,16,32,0.65); backdrop-filter: blur(4px); color: #fff; font-size: 18px; line-height: 1;
+    display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s, border-color 0.2s;
+  }
+  .video-card-exit:hover { background: var(--brass); border-color: var(--brass); }
   .video-loading-spinner { width: 38px; height: 38px; border-radius: 50%; border: 3px solid rgba(255,255,255,0.15); border-top-color: var(--brass-light); animation: videoSpin 0.8s linear infinite; }
   @keyframes videoSpin { to { transform: rotate(360deg); } }
   @media (max-width: 860px) { .video-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -292,7 +299,7 @@
     const viewsHtml = v.views
       ? '<span class="video-card-views"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>' + v.views + '</span>'
       : '';
-    return '<div class="video-card" data-video-id="' + v.id + '" onclick="playTikTok(this)">' +
+    return '<div class="video-card" data-video-id="' + v.id + '" data-duration="' + (v.duration || 25) + '" onclick="playTikTok(this)">' +
       '<img src="' + v.thumb + '" alt="' + v.alt + '" loading="lazy" />' +
       '<div class="video-card-scrim"></div>' +
       '<span class="video-card-tag">' + v.tag + '</span>' +
@@ -307,12 +314,27 @@
   function playTikTok(card) {
     const videoId = card.dataset.videoId;
     if (!videoId) return;
+    const originalHtml = card.innerHTML;
+    // Real video duration + a small buffer for embed load/buffering time, so the
+    // player never reverts before the video has actually finished playing.
+    const revertMs = ((parseInt(card.dataset.duration, 10) || 40) + 3) * 1000;
+
+    function revert() {
+      clearTimeout(card.__revertTimer);
+      card.innerHTML = originalHtml;
+      card.onclick = function () { playTikTok(card); };
+      card.style.cursor = 'pointer';
+    }
+
     card.innerHTML = '<div class="video-card-embed">' +
       '<div class="video-loading"><div class="video-loading-spinner"></div></div>' +
+      '<button class="video-card-exit" aria-label="Close video" onclick="event.stopPropagation(); this.closest(\'.video-card\').__revert();">&times;</button>' +
       '<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@hylawuk/video/' + videoId + '" data-video-id="' + videoId + '" style="max-width:325px;min-width:280px;"><section></section></blockquote>' +
       '</div>';
     card.onclick = null;
     card.style.cursor = 'default';
+    card.__revert = revert;
+    card.__revertTimer = setTimeout(revert, revertMs);
 
     const embedWrap = card.querySelector('.video-card-embed');
     const loader = embedWrap.querySelector('.video-loading');
