@@ -328,6 +328,20 @@
       setTimeout(() => loader.remove(), 400);
     }, 1800);
 
+    // TikTok's own player has a "maximize" icon that, by default, navigates the
+    // whole page away to tiktok.com instead of just enlarging in place. Sandbox
+    // the iframe TikTok injects (no allow-top-navigation/allow-popups) so that
+    // click is inert and visitors stay on our site.
+    const embedObserver = new MutationObserver(() => {
+      const iframe = modalBody.querySelector('iframe');
+      if (iframe && !iframe.hasAttribute('sandbox')) {
+        iframe.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-presentation allow-forms');
+        embedObserver.disconnect();
+      }
+    });
+    embedObserver.observe(modalBody, { childList: true, subtree: true });
+    setTimeout(() => embedObserver.disconnect(), revertMs);
+
     const s = document.createElement('script');
     s.src = 'https://www.tiktok.com/embed.js';
     s.async = true;
