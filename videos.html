@@ -53,21 +53,21 @@
   @media (max-width: 900px) { .nav-links, .nav-phone { display: none; } }
 
   .page-hero {
-    background:
-      linear-gradient(180deg, rgba(11,16,32,0.6) 0%, rgba(11,16,32,0.48) 55%, rgba(11,16,32,0.7) 100%),
-      url('joshua-videos-cover.jpg');
+    background: url('joshua-videos-cover.jpg');
     background-size: cover; background-position: center 30%;
-    padding: 110px 0 96px; text-align: center; position: relative; overflow: hidden;
+    min-height: 62vh; display: flex; align-items: flex-end;
+    text-align: left; position: relative; overflow: hidden;
   }
-  .page-hero::before {
-    content: ''; position: absolute; top: -40%; right: -10%; width: 480px; height: 480px; border-radius: 50%;
-    background: radial-gradient(circle, rgba(224,168,46,0.16), transparent 70%); pointer-events: none;
+  .page-hero::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(0deg, rgba(11,16,32,0.75) 0%, rgba(11,16,32,0.25) 45%, rgba(11,16,32,0) 70%);
+    pointer-events: none;
   }
+  .page-hero-inner { position: relative; z-index: 2; padding: 40px 0 56px; width: 100%; }
+  .page-hero h1 { color: #fff; font-size: clamp(30px, 5vw, 56px); position: relative; }
+  .page-hero h1 em { color: var(--brass-light); font-style: normal; }
   .section-eyebrow { display: flex; align-items: center; justify-content: center; gap: 14px; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass-light); margin-bottom: 18px; }
   .section-eyebrow::before, .section-eyebrow::after { content: ''; width: 32px; height: 1px; background: rgba(212,175,82,0.5); }
-  .page-hero h1 { color: #fff; font-size: clamp(32px, 4.6vw, 52px); margin-bottom: 18px; position: relative; }
-  .page-hero p { color: rgba(255,255,255,0.7); font-size: 16px; max-width: 620px; margin: 0 auto; line-height: 1.7; position: relative; }
-  .page-hero-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 32px; position: relative; }
 
   .btn-primary { background: var(--brass); color: #fff; padding: 16px 32px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; text-decoration: none; display: inline-block; transition: background 0.2s; }
   .btn-primary:hover { background: var(--brass-light); }
@@ -178,15 +178,8 @@
 </nav>
 
 <header class="page-hero reveal">
-  <div class="wrap">
-    <div class="live-badge"><span class="live-dot"></span>Real videos, straight from TikTok</div>
-    <div class="section-eyebrow">On TikTok</div>
-    <h1>Watch H&amp;Y Law on TikTok</h1>
-    <p>Case wins, quick immigration explainers and client stories from @hylawuk — real videos, playable right here on the page. Our most useful explainers stay featured, with new uploads added regularly.</p>
-    <div class="page-hero-actions">
-      <a class="btn-primary" href="https://www.tiktok.com/@hylawuk" target="_blank" rel="noopener">Follow @hylawuk →</a>
-      <a class="btn-ghost" href="contact.html">Book Free Consultation</a>
-    </div>
+  <div class="wrap page-hero-inner">
+    <h1>The Face <em>Behind</em> H&amp;Y Law.</h1>
   </div>
 </header>
 
