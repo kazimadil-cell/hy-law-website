@@ -12,6 +12,11 @@
 // If you add a new video, fetch its real duration with:
 //   curl -sL -A "Mozilla/5.0" "https://www.tiktok.com/@USER/video/<id>" | grep -o '"duration":[0-9]*' | head -1
 // There's also a manual close (X) button on every playing video regardless.
+//
+// "uploadDate" (YYYY-MM-DD): the REAL TikTok upload date, used for VideoObject
+// structured data (SEO). Fetch it the same way as duration:
+//   curl -sL -A "Mozilla/5.0" "https://www.tiktok.com/@USER/video/<id>" | grep -o '"createTime":"[0-9]*"' | head -1
+// then convert the unix timestamp to a date.
 
 const MOST_WATCHED = [
   {
@@ -21,7 +26,8 @@ const MOST_WATCHED = [
     views: null,
     caption: "Exempt From the £29,000 Income Rule?",
     alt: "Exempt from the £29,000 spouse visa income requirement",
-    duration: 31
+    duration: 31,
+    uploadDate: "2025-09-16"
   },
   {
     id: "7557105637037985046",
@@ -30,7 +36,8 @@ const MOST_WATCHED = [
     views: null,
     caption: "ILR for a Child: 5 Years, Not 10",
     alt: "ILR for a child after 5 years, not 10",
-    duration: 48
+    duration: 48,
+    uploadDate: "2025-10-03"
   },
   {
     id: "7649543937383877910",
@@ -39,7 +46,8 @@ const MOST_WATCHED = [
     views: null,
     caption: "Will the 'Good Character' Rule Affect You?",
     alt: "Does the good character requirement affect your citizenship application?",
-    duration: 72
+    duration: 72,
+    uploadDate: "2026-06-09"
   },
   {
     id: "7573831193578212630",
@@ -48,7 +56,8 @@ const MOST_WATCHED = [
     views: null,
     caption: "Major Changes to the Asylum System",
     alt: "Shabana Mahmood announces major changes to the asylum system",
-    duration: 56
+    duration: 56,
+    uploadDate: "2025-11-17"
   }
 ];
 
@@ -60,7 +69,8 @@ const RECENT_UPLOADS = [
     caption: "Illegal Entry &amp; British Citizenship",
     alt: "Illegal entry and British citizenship applications",
     addedAt: "2026-07-11",
-    duration: 92
+    duration: 92,
+    uploadDate: "2025-11-22"
   },
   {
     id: "7566388524090592514",
@@ -69,7 +79,8 @@ const RECENT_UPLOADS = [
     caption: "Spouse Visa: Get Tailored Advice",
     alt: "Get tailored spouse visa legal advice",
     addedAt: "2026-07-11",
-    duration: 53
+    duration: 53,
+    uploadDate: "2025-10-28"
   },
   {
     id: "7564520083695996182",
@@ -78,7 +89,8 @@ const RECENT_UPLOADS = [
     caption: "Immigration Rules Update: HC133",
     alt: "Latest update to the immigration rules, Statement of Changes HC133",
     addedAt: "2026-07-11",
-    duration: 51
+    duration: 51,
+    uploadDate: "2025-10-23"
   },
   {
     id: "7555955296477269270",
@@ -87,6 +99,7 @@ const RECENT_UPLOADS = [
     caption: "Answering Your Spouse Visa Question",
     alt: "Answering a follower's spouse visa question",
     addedAt: "2026-07-11",
-    duration: 73
+    duration: 73,
+    uploadDate: "2025-09-30"
   }
 ];
