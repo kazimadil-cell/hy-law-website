@@ -83,7 +83,7 @@
   }
   .news-card.card-hidden { display: none; }
   .news-card:hover { transform: translateY(-6px); box-shadow: 0 26px 50px rgba(11,16,32,0.45); border-color: transparent; background: var(--news-hover-blue); }
-  .news-body { padding: 30px 30px 24px; display: flex; flex-direction: column; }
+  .news-body { padding: 30px 30px 24px; display: flex; flex-direction: column; flex: 1; }
   .news-top { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
   .news-date { font-size: 11px; letter-spacing: 0.08em; color: rgba(255,255,255,0.55); font-weight: 600; white-space: nowrap; }
   .news-cat { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 800; color: var(--brass-light); border: 1px solid rgba(236,106,43,0.35); padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
@@ -93,11 +93,11 @@
   .news-topic-icon { width: 30px; height: 30px; border-radius: 50%; border: 1px solid rgba(236,106,43,0.5); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
   .news-topic-icon svg { width: 14px; height: 14px; }
   .news-topic-label { font-size: 11px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.85); }
-  .news-resource { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; background: var(--brass); color: #fff; padding: 10px 18px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 12px; letter-spacing: 0.03em; text-transform: uppercase; transition: background 0.2s; margin-bottom: 6px; }
+  .news-resource { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; background: var(--brass); color: #fff; padding: 10px 18px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 12px; letter-spacing: 0.03em; text-transform: uppercase; transition: background 0.2s; margin-top: auto; }
   .news-resource:hover { background: var(--brass-light); }
   .news-resource svg { width: 12px; height: 12px; }
   .news-media { position: relative; width: 100%; aspect-ratio: 4/3; background: #0b1020; }
-  .news-media img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; }
+  .news-media img { width: 100%; height: 100%; object-fit: cover; object-position: center; display: block; }
   .news-media-logo { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: #fff; box-sizing: border-box; padding: 26px; }
   .news-media-logo img { max-width: 68%; max-height: 68%; width: auto; height: auto; object-fit: contain; }
   .news-source-pill { position: absolute; left: 12px; bottom: 12px; background: rgba(11,16,32,0.75); backdrop-filter: blur(4px); color: #fff; font-size: 10.5px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 11px; border-radius: 999px; }
