@@ -18,6 +18,7 @@
     --brass: #EC6A2B; --brass-light: #F2854A; --white: #ffffff; --dark: #0b1020;
     --navy: #16213E; --navy-2: #202f57; --ink: #16213E; --ink-soft: #4b5876; --muted: #6b7484;
     --cream: #f5f6f9; --cream-2: #eef0f5; --card: #ffffff; --line: #e2e5ee; --line-gold: rgba(236,106,43,0.35); --slate: #2c3856;
+    --periwinkle: #6C7CA8; --periwinkle-light: #7C8CB6;
   }
   * { box-sizing: border-box; }
   html { scroll-behavior: smooth; }
@@ -52,50 +53,76 @@
   @media (prefers-reduced-motion: reduce) { .nav-btn { animation: none; } }
   @media (max-width: 900px) { .nav-links, .nav-phone { display: none; } }
 
-  .page-hero { background: linear-gradient(120deg, var(--navy), #0e1730); padding: 90px 0 76px; text-align: center; }
-  .section-eyebrow { display: flex; align-items: center; justify-content: center; gap: 14px; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass-light); margin-bottom: 18px; }
-  .section-eyebrow::before, .section-eyebrow::after { content: ''; width: 32px; height: 1px; background: rgba(242,133,74,0.5); }
-  .page-hero h1 { color: #fff; font-size: clamp(32px, 4.6vw, 52px); margin-bottom: 18px; }
-  .page-hero p { color: rgba(255,255,255,0.7); font-size: 16px; max-width: 620px; margin: 0 auto; line-height: 1.7; }
+  .page-hero { background: var(--cream); padding: 90px 0 40px; text-align: center; }
+  .section-eyebrow { display: flex; align-items: center; justify-content: center; gap: 14px; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass); margin-bottom: 18px; }
+  .section-eyebrow::before, .section-eyebrow::after { content: ''; width: 32px; height: 1px; background: rgba(236,106,43,0.5); }
+  .page-hero h1 { color: var(--navy); font-size: clamp(32px, 4.6vw, 52px); margin-bottom: 18px; }
+  .page-hero p { color: var(--ink-soft); font-size: 16px; max-width: 640px; margin: 0 auto 28px; line-height: 1.7; }
+  .verified-badge { display: inline-flex; align-items: center; gap: 10px; background: #fff; border: 1px solid var(--line); padding: 12px 20px; border-radius: 8px; font-size: 13px; color: var(--ink-soft); margin-bottom: 36px; }
+  .verified-dot { width: 8px; height: 8px; border-radius: 50%; background: #33c17a; flex-shrink: 0; }
 
-  .news-section { padding: 90px 0 40px; background: var(--cream); }
-  .news-track { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 1000px; margin: 0 auto; }
+  .filter-bar { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 900px; margin: 0 auto; }
+  .filter-pill { background: #fff; border: 1px solid var(--line); color: var(--ink-soft); font-family: inherit; font-size: 12.5px; font-weight: 700; letter-spacing: 0.02em; padding: 10px 20px; border-radius: 999px; cursor: pointer; transition: background 0.2s, border-color 0.2s, color 0.2s; }
+  .filter-pill:hover { border-color: var(--navy); }
+  .filter-pill.active { background: var(--navy); border-color: var(--navy); color: #fff; }
+
+  .news-section { padding: 60px 0 90px; background: var(--periwinkle); }
+  .news-head-row { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; margin-bottom: 36px; }
+  .news-head-row h2 { color: #fff; font-size: clamp(26px, 3.2vw, 36px); }
+  .news-arrows { display: flex; gap: 10px; flex-shrink: 0; }
+  .news-arrow { width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.35); background: transparent; color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s, border-color 0.2s; }
+  .news-arrow:hover { background: var(--brass); border-color: var(--brass); }
+  .news-arrow svg { width: 16px; height: 16px; }
+  .news-track { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-bottom: 4px; }
+  .news-track::-webkit-scrollbar { display: none; }
   .news-card {
+    flex: 0 0 clamp(240px, 23vw, 280px); scroll-snap-align: start; scroll-margin-top: 100px;
     background: var(--navy); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; overflow: hidden;
-    display: flex; flex-direction: column; scroll-margin-top: 100px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    display: flex; flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, background 0.3s ease;
   }
-  .news-card:hover { transform: translateY(-6px); box-shadow: 0 26px 50px rgba(22,33,62,0.28); border-color: transparent; }
-  .news-body { padding: 30px 30px 34px; display: flex; flex-direction: column; flex: 1; }
+  .news-card.card-hidden { display: none; }
+  .news-card:hover { transform: translateY(-6px); box-shadow: 0 26px 50px rgba(22,33,62,0.4); border-color: transparent; background: var(--periwinkle-light); }
+  .news-body { padding: 30px 30px 24px; display: flex; flex-direction: column; }
   .news-top { display: flex; align-items: center; gap: 10px; margin-bottom: 16px; }
   .news-date { font-size: 11px; letter-spacing: 0.08em; color: rgba(255,255,255,0.55); font-weight: 600; white-space: nowrap; }
   .news-cat { font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 800; color: var(--brass-light); border: 1px solid rgba(236,106,43,0.35); padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
-  .news-title { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 21px; line-height: 1.32; color: #fff; margin-bottom: 14px; }
-  .news-teaser { font-size: 14px; line-height: 1.75; color: rgba(255,255,255,0.65); flex: 1; margin-bottom: 22px; }
-  .news-resource { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; background: var(--brass); color: #fff; padding: 11px 20px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 12.5px; letter-spacing: 0.03em; text-transform: uppercase; transition: background 0.2s; }
+  .news-title { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 19px; line-height: 1.32; color: #fff; margin-bottom: 14px; }
+  .news-teaser { font-size: 13.5px; line-height: 1.7; color: rgba(255,255,255,0.7); margin-bottom: 20px; }
+  .news-topic { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+  .news-topic-icon { width: 30px; height: 30px; border-radius: 50%; border: 1px solid rgba(236,106,43,0.5); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .news-topic-icon svg { width: 14px; height: 14px; }
+  .news-topic-label { font-size: 11px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: rgba(255,255,255,0.85); }
+  .news-resource { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; background: var(--brass); color: #fff; padding: 10px 18px; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 12px; letter-spacing: 0.03em; text-transform: uppercase; transition: background 0.2s; margin-bottom: 6px; }
   .news-resource:hover { background: var(--brass-light); }
-  .news-resource svg { width: 13px; height: 13px; }
-  @media (max-width: 760px) { .news-track { grid-template-columns: 1fr; } }
+  .news-resource svg { width: 12px; height: 12px; }
+  .news-media { position: relative; width: 100%; aspect-ratio: 16/9; background: linear-gradient(135deg, var(--navy-2), #0e1730); }
+  .news-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .news-media-fallback { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 16px; letter-spacing: 0.04em; color: rgba(255,255,255,0.85); }
+  .news-source-pill { position: absolute; left: 12px; bottom: 12px; background: rgba(11,16,32,0.75); backdrop-filter: blur(4px); color: #fff; font-size: 10.5px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; padding: 5px 11px; border-radius: 999px; }
+  @media (max-width: 900px) { .news-card { flex-basis: 78vw; } }
 
-  .final-cta { background: linear-gradient(120deg, var(--navy), #0e1730); padding: 90px 0; text-align: center; }
-  .final-cta h2 { color: #fff; font-size: clamp(28px,3.6vw,40px); margin-bottom: 20px; }
-  .final-cta p { color: rgba(255,255,255,0.68); font-size: 16px; margin-bottom: 34px; }
-  .final-cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-  .btn-primary { background: var(--brass); color: #fff; padding: 16px 32px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; text-decoration: none; display: inline-block; transition: background 0.2s; }
+  .final-cta { background: var(--cream); padding: 20px 0 90px; }
+  .final-cta-banner { max-width: 1000px; margin: 0 auto; background: linear-gradient(120deg, var(--navy), #0e1730); border-radius: 14px; padding: 40px 48px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+  .final-cta-banner h2 { color: #fff; font-size: clamp(22px,2.6vw,28px); margin-bottom: 8px; }
+  .final-cta-banner p { color: rgba(255,255,255,0.68); font-size: 14.5px; margin: 0; }
+  .btn-primary { background: var(--brass); color: #fff; padding: 16px 32px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; text-decoration: none; display: inline-block; transition: background 0.2s; white-space: nowrap; }
   .btn-primary:hover { background: var(--brass-light); }
   .btn-ghost { border: 1px solid rgba(255,255,255,0.35); color: #fff; padding: 16px 32px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; text-decoration: none; display: inline-block; transition: background 0.2s, border-color 0.2s; }
   .btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.6); }
 
-  .dw-footer { background: var(--slate); color: #fff; padding: 70px 0 30px; }
+  .dw-footer { background: var(--periwinkle); color: #fff; padding: 70px 0 30px; }
+  .dw-footer h2 { color: #fff; font-size: clamp(24px,3vw,34px); margin-bottom: 50px; }
+  .dw-footer h2 em { font-style: normal; border-bottom: 3px solid var(--brass); }
   .dw-cols { display: grid; grid-template-columns: 1fr 1fr 1fr 1.3fr; gap: 40px; }
-  .dw-col h4 { font-size: 14px; color: #cfd6e6; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px; }
+  .dw-col h4 { font-size: 14px; color: rgba(255,255,255,0.85); font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px; }
   .dw-col a, .dw-col p { display: block; width: fit-content; color: #fff; text-decoration: none; font-size: 13.5px; font-weight: 500; margin-bottom: 13px; position: relative; }
   .dw-col a::after { content: ''; position: absolute; left: 0; right: 0; bottom: -3px; height: 2px; background: var(--brass-light); transform: scaleX(0); transform-origin: left; transition: transform 0.25s ease; }
   .dw-col a:hover::after { transform: scaleX(1); }
   .dw-logo { display: flex; align-items: center; gap: 12px; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 20px; margin-bottom: 18px; }
   .dw-logo svg { width: 30px; height: 30px; }
-  .dw-col p.muted { color: rgba(255,255,255,0.6); font-size: 13px; line-height: 1.7; }
-  .dw-bottom { max-width: 1160px; margin: 60px auto 0; padding: 24px 24px 0; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12px; color: rgba(255,255,255,0.5); }
+  .dw-col p.muted { color: rgba(255,255,255,0.7); font-size: 13px; line-height: 1.7; }
+  .dw-bottom { max-width: 1160px; margin: 60px auto 0; padding: 24px 24px 0; border-top: 1px solid rgba(255,255,255,0.15); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12px; color: rgba(255,255,255,0.6); }
   @media (max-width: 860px) { .dw-cols { grid-template-columns: 1fr 1fr; } }
 </style>
 </head>
@@ -126,30 +153,43 @@
 
 <header class="page-hero reveal">
   <div class="wrap">
-    <div class="section-eyebrow">Stay Informed</div>
-    <h1>Latest UK Immigration News</h1>
-    <p>Real, verified updates from GOV.UK, the Office for National Statistics and the Electronic Immigration Network — refreshed regularly as new Immigration Rules, fees and statistics are published.</p>
+    <div class="section-eyebrow">UK Immigration Updates</div>
+    <h1>Rule Changes That Actually Matter</h1>
+    <p>Plain-English summaries of real UK immigration and visa announcements, sourced directly from GOV.UK, ONS and the Electronic Immigration Network.</p>
+    <div class="verified-badge"><span class="verified-dot"></span>Sourced from GOV.UK, ONS &amp; EIN News — verified before publishing, no fabricated content.</div>
+    <div class="filter-bar" id="filterBar"></div>
   </div>
 </header>
 
 <section class="news-section reveal">
   <div class="wrap">
+    <div class="news-head-row">
+      <h2>Latest News</h2>
+      <div class="news-arrows">
+        <button class="news-arrow" id="newsPrev" aria-label="Scroll left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+        <button class="news-arrow" id="newsNext" aria-label="Scroll right"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+      </div>
+    </div>
     <div class="news-track" id="newsGrid"></div>
   </div>
 </section>
 
 <section class="final-cta reveal">
   <div class="wrap">
-    <h2>Have a question about how these changes affect you?</h2>
-    <p>Free initial consultation — call, WhatsApp or visit us in Barking.</p>
-    <div class="final-cta-actions">
-      <a class="btn-primary" href="tel:02080502206">Call 020 8050 2206</a>
-      <a class="btn-ghost" href="https://wa.me/447387829975" target="_blank" rel="noopener">WhatsApp: +44 7387 829975</a>
+    <div class="final-cta-banner">
+      <div>
+        <h2>Affected by a rule change?</h2>
+        <p>Book a free initial consultation to find out what it means for your case.</p>
+      </div>
+      <a class="btn-primary" href="contact.html">Book a Consultation →</a>
     </div>
   </div>
 </section>
 
 <footer class="dw-footer reveal">
+  <div class="wrap">
+    <h2>Have a question or want to <em>connect</em>?</h2>
+  </div>
   <div class="wrap dw-cols">
     <div class="dw-col">
       <h4>Practice Areas</h4>
@@ -201,16 +241,47 @@
     shield: '<path d="M12 2 3 7v6c0 5 4 9 9 9s9-4 9-9V7z"/>'
   };
   function renderNewsCard(n) {
-    return '<article class="news-card" id="' + n.id + '">' +
+    const mediaInner = n.image
+      ? '<img src="' + n.image + '" alt="" loading="lazy" />'
+      : '<div class="news-media-fallback">' + n.source + '</div>';
+    return '<article class="news-card" id="' + n.id + '" data-category="' + n.category + '">' +
       '<div class="news-body">' +
         '<div class="news-top"><span class="news-date">' + n.dateDisplay + '</span><span class="news-cat">' + n.source + '</span></div>' +
         '<h3 class="news-title">' + n.title + '</h3>' +
         '<p class="news-teaser">' + n.teaser + '</p>' +
+        '<div class="news-topic"><span class="news-topic-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#F2854A" stroke-width="2">' + ICONS[n.icon] + '</svg></span><span class="news-topic-label">' + n.category + '</span></div>' +
         '<a class="news-resource" href="' + n.url + '" target="_blank" rel="noopener">Read Full Article <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M7 17 17 7M7 7h10v10"/></svg></a>' +
       '</div>' +
+      '<div class="news-media">' + mediaInner + '<span class="news-source-pill">' + n.source + '</span></div>' +
     '</article>';
   }
   document.getElementById('newsGrid').innerHTML = NEWS_ITEMS.map(renderNewsCard).join('');
+
+  // Category filter pills — built from the real categories already present in the data.
+  const uniqueCategories = [...new Set(NEWS_ITEMS.map(n => n.category))];
+  const filterBar = document.getElementById('filterBar');
+  filterBar.innerHTML = '<button class="filter-pill active" data-filter="all">All Updates</button>' +
+    uniqueCategories.map(cat => '<button class="filter-pill" data-filter="' + cat + '">' + cat + '</button>').join('');
+  filterBar.addEventListener('click', (e) => {
+    const btn = e.target.closest('.filter-pill');
+    if (!btn) return;
+    filterBar.querySelectorAll('.filter-pill').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    document.querySelectorAll('#newsGrid .news-card').forEach(card => {
+      card.classList.toggle('card-hidden', !(filter === 'all' || card.dataset.category === filter));
+    });
+  });
+
+  // Carousel arrows
+  const newsGrid = document.getElementById('newsGrid');
+  const newsPrev = document.getElementById('newsPrev');
+  const newsNext = document.getElementById('newsNext');
+  if (newsGrid && newsPrev && newsNext) {
+    const scrollAmount = () => (newsGrid.querySelector('.news-card') ? newsGrid.querySelector('.news-card').offsetWidth + 24 : 280);
+    newsPrev.addEventListener('click', () => newsGrid.scrollBy({ left: -scrollAmount(), behavior: 'smooth' }));
+    newsNext.addEventListener('click', () => newsGrid.scrollBy({ left: scrollAmount(), behavior: 'smooth' }));
+  }
 
   window.addEventListener('scroll', () => {
     const max = document.documentElement.scrollHeight - window.innerHeight;
