@@ -5,9 +5,39 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title id="pageTitle">News Article | H&amp;Y Law</title>
 <meta id="pageDesc" name="description" content="Real UK immigration news, explained, from H&amp;Y Law." />
+<link id="pageCanonical" rel="canonical" href="https://hylaw.co.uk/article.html" />
+<meta id="ogTitle" property="og:title" content="News Article | H&amp;Y Law" />
+<meta id="ogDesc" property="og:description" content="Real UK immigration news, explained, from H&amp;Y Law." />
+<meta property="og:type" content="article" />
+<meta id="ogUrl" property="og:url" content="https://hylaw.co.uk/article.html" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%2316213E'/%3E%3Cg stroke='%23F2854A' stroke-width='4' fill='none' stroke-linecap='round'%3E%3Cline x1='50' y1='20' x2='50' y2='70'/%3E%3Cline x1='28' y1='30' x2='72' y2='30'/%3E%3Cpath d='M28 30 L18 50 A10 8 0 0 0 38 50 Z'/%3E%3Cpath d='M72 30 L62 50 A10 8 0 0 0 82 50 Z'/%3E%3Cline x1='38' y1='78' x2='62' y2='78'/%3E%3C/g%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "H&Y Law",
+  "telephone": "+442080502206",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Enterprise Centre, 50 Wakering Rd",
+    "addressLocality": "Barking",
+    "postalCode": "IG11 8GN",
+    "addressRegion": "Greater London",
+    "addressCountry": "GB"
+  },
+  "areaServed": [
+    { "@type": "Place", "name": "Barking" },
+    { "@type": "Place", "name": "Ilford" },
+    { "@type": "Place", "name": "Romford" },
+    { "@type": "Place", "name": "Dagenham" },
+    { "@type": "Place", "name": "East Ham" },
+    { "@type": "Place", "name": "East London" }
+  ],
+  "url": "https://hylaw.co.uk"
+}
+</script>
 <style>
   :root {
     --brass: #EC6A2B; --brass-light: #F2854A; --white: #ffffff; --dark: #0b1020;
@@ -176,7 +206,7 @@
       </div>
       <div class="sidebar-cta">
         <h4>Affected by this?</h4>
-        <p>Book a free initial consultation to find out what it means for your case.</p>
+        <p>Book a free initial consultation with our Barking-based team, serving clients across Ilford, Romford, Dagenham and East London.</p>
         <a class="btn-primary cursor-link" href="contact.html">Book a Consultation →</a>
       </div>
       <div class="sidebar-card more-updates">
@@ -260,9 +290,44 @@
   if (!item) {
     window.location.href = 'news.html';
   } else {
-    document.title = item.title.replace(/&amp;/g, '&') + ' | H&Y Law';
-    document.getElementById('pageTitle').textContent = item.title.replace(/&amp;/g, '&') + ' | H&Y Law';
+    const plainTitle = item.title.replace(/&amp;/g, '&');
+    const pageTitle = plainTitle + ' | H&Y Law, Barking Immigration Solicitors';
+    const canonicalUrl = 'https://hylaw.co.uk/article.html?id=' + item.id;
+    document.title = pageTitle;
+    document.getElementById('pageTitle').textContent = pageTitle;
     document.getElementById('pageDesc').setAttribute('content', item.summary);
+    document.getElementById('pageCanonical').setAttribute('href', canonicalUrl);
+    document.getElementById('ogTitle').setAttribute('content', pageTitle);
+    document.getElementById('ogDesc').setAttribute('content', item.summary);
+    document.getElementById('ogUrl').setAttribute('content', canonicalUrl);
+
+    const articleSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: plainTitle,
+      description: item.summary,
+      datePublished: item.dateSort,
+      author: { '@type': 'Organization', name: item.source },
+      publisher: { '@type': 'LegalService', name: 'H&Y Law', url: 'https://hylaw.co.uk' },
+      mainEntityOfPage: canonicalUrl,
+      image: item.image ? 'https://hylaw.co.uk/' + item.image : undefined
+    };
+    const breadcrumbSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'News', item: 'https://hylaw.co.uk/news.html' },
+        { '@type': 'ListItem', position: 2, name: item.category, item: canonicalUrl },
+        { '@type': 'ListItem', position: 3, name: plainTitle, item: canonicalUrl }
+      ]
+    };
+    [articleSchema, breadcrumbSchema].forEach(schema => {
+      const s = document.createElement('script');
+      s.type = 'application/ld+json';
+      s.textContent = JSON.stringify(schema);
+      document.head.appendChild(s);
+    });
+
     document.getElementById('articleHeroMedia').innerHTML = renderMedia(item);
     document.getElementById('articleCategory').textContent = item.category;
     document.getElementById('articleTitle').innerHTML = item.title;
