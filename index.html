@@ -566,7 +566,7 @@
     }
     function renderHomeNewsCard(n) {
       const mediaInner = renderMedia(n);
-      return '<a class="news-card" href="news.html#' + n.id + '">' +
+      return '<a class="news-card" href="article.html?id=' + n.id + '">' +
         '<div class="news-body">' +
           '<div class="news-top"><span class="news-date">' + n.dateDisplay + '</span><span class="news-cat-badge">' + n.source + '</span></div>' +
           '<h3 class="news-title">' + n.title + '</h3>' +

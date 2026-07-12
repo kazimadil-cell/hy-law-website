@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title id="pageTitle">News Article | H&amp;Y Law</title>
+<meta id="pageDesc" name="description" content="Real UK immigration news, explained, from H&amp;Y Law." />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%2316213E'/%3E%3Cg stroke='%23F2854A' stroke-width='4' fill='none' stroke-linecap='round'%3E%3Cline x1='50' y1='20' x2='50' y2='70'/%3E%3Cline x1='28' y1='30' x2='72' y2='30'/%3E%3Cpath d='M28 30 L18 50 A10 8 0 0 0 38 50 Z'/%3E%3Cpath d='M72 30 L62 50 A10 8 0 0 0 82 50 Z'/%3E%3Cline x1='38' y1='78' x2='62' y2='78'/%3E%3C/g%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --brass: #EC6A2B; --brass-light: #F2854A; --white: #ffffff; --dark: #0b1020;
+    --navy: #16213E; --navy-2: #202f57; --ink: #16213E; --ink-soft: #4b5876; --muted: #6b7484;
+    --cream: #f5f6f9; --cream-2: #eef0f5; --card: #ffffff; --line: #e2e5ee; --line-gold: rgba(236,106,43,0.35); --slate: #2c3856;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: 'Manrope', sans-serif; color: var(--ink); background: var(--white); }
+  h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 800; margin: 0; }
+  a { color: inherit; }
+  .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+  .cursor-link { cursor: url('cursor-pointer.svg') 4 2, pointer; }
+
+  .grain { position: fixed; inset: 0; z-index: 300; pointer-events: none; opacity: 0.035; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
+  .scroll-progress { position: fixed; top: 0; left: 0; right: 0; height: 2px; z-index: 250; background: rgba(0,0,0,0.06); }
+  .scroll-progress-bar { height: 100%; width: 0%; background: var(--brass); transition: width 0.1s linear; }
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.in-view { opacity: 1; transform: translateY(0); }
+
+  nav { position: sticky; top: 0; z-index: 200; background: rgba(22,33,62,0.96); backdrop-filter: blur(10px); padding: 18px 0; box-shadow: 0 8px 30px rgba(0,0,0,0.15); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 20px; }
+  .nav-logo svg { width: 32px; height: 32px; flex-shrink: 0; }
+  .nav-links { display: flex; align-items: center; gap: 36px; }
+  .nav-links a { color: rgba(255,255,255,0.88); text-decoration: none; font-size: 13.5px; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--brass-light); }
+  .nav-cta { display: flex; align-items: center; gap: 16px; }
+  .nav-phone { color: #fff; font-size: 13.5px; font-weight: 700; text-decoration: none; white-space: nowrap; }
+  .nav-btn { position: relative; background: var(--brass); color: #fff; padding: 12px 22px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; font-size: 12.5px; text-decoration: none; white-space: nowrap; transition: background 0.2s, transform 0.2s; animation: navBtnPulse 2.6s ease-out infinite; }
+  .nav-btn:hover { background: var(--brass-light); transform: translateY(-1px); animation-play-state: paused; }
+  @keyframes navBtnPulse {
+    0% { box-shadow: 0 0 0 0 rgba(230,140,50,0.55); }
+    70% { box-shadow: 0 0 0 14px rgba(230,140,50,0); }
+    100% { box-shadow: 0 0 0 0 rgba(230,140,50,0); }
+  }
+  @media (prefers-reduced-motion: reduce) { .nav-btn { animation: none; } }
+  @media (max-width: 900px) { .nav-links, .nav-phone { display: none; } }
+
+  /* article hero */
+  .article-hero { display: flex; min-height: 46vh; background: var(--navy); }
+  .article-hero-media { flex: 1 1 55%; position: relative; background: linear-gradient(135deg, var(--navy-2), #0e1730); }
+  .article-hero-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .article-hero-media .news-media-logo { width: 100%; height: 100%; }
+  .article-hero-panel { flex: 1 1 45%; background: linear-gradient(120deg, var(--navy), #0e1730); display: flex; flex-direction: column; justify-content: center; padding: 56px; }
+  .article-breadcrumb { font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .article-breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; }
+  .article-breadcrumb a:hover { color: #fff; }
+  .article-breadcrumb span.cat { color: var(--brass-light); font-style: italic; }
+  .article-hero-panel h1 { color: #fff; font-size: clamp(26px, 3vw, 38px); line-height: 1.25; text-transform: uppercase; }
+  @media (max-width: 860px) { .article-hero { flex-direction: column; min-height: auto; } .article-hero-media { aspect-ratio: 16/9; } .article-hero-panel { padding: 36px 24px; } }
+
+  /* article body */
+  .article-section { padding: 60px 0 100px; background: var(--cream); }
+  .article-layout { display: grid; grid-template-columns: 1.7fr 1fr; gap: 50px; align-items: start; }
+  @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } }
+
+  .article-meta { color: var(--muted); font-size: 13.5px; margin-bottom: 26px; }
+  .article-body p { font-size: 16.5px; line-height: 1.85; color: var(--ink-soft); margin: 0 0 22px; }
+  .article-source-box { background: #fff; border-left: 4px solid var(--brass); padding: 24px 28px; margin: 30px 0; }
+  .article-source-box h3 { font-size: 17px; margin-bottom: 10px; }
+  .article-source-box p { font-size: 14.5px; margin-bottom: 14px; }
+  .article-source-link { display: inline-flex; align-items: center; gap: 6px; color: var(--brass); font-weight: 700; text-decoration: none; font-size: 14.5px; }
+  .article-source-link:hover { color: var(--brass-light); }
+  .article-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 30px; }
+  .article-tag { background: var(--cream-2); border: 1px solid var(--line); color: var(--ink-soft); font-size: 12.5px; font-weight: 700; padding: 8px 16px; border-radius: 999px; }
+
+  .sidebar-card { background: #fff; border: 1px solid var(--line); padding: 26px; margin-bottom: 24px; }
+  .sidebar-card h4 { font-family: 'Playfair Display', serif; font-size: 17px; margin-bottom: 18px; }
+  .glance-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 13.5px; }
+  .glance-row:last-child { border-bottom: none; }
+  .glance-row span:first-child { color: var(--muted); }
+  .glance-row span:last-child { font-weight: 700; color: var(--ink); }
+
+  .sidebar-cta { background: linear-gradient(120deg, var(--navy), #0e1730); padding: 30px 26px; text-align: center; margin-bottom: 24px; }
+  .sidebar-cta h4 { color: #fff; font-size: 18px; margin-bottom: 10px; }
+  .sidebar-cta p { color: rgba(255,255,255,0.68); font-size: 13.5px; line-height: 1.6; margin-bottom: 20px; }
+  .sidebar-cta a.btn-primary { display: inline-block; background: var(--brass); color: #fff; padding: 13px 26px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; font-size: 12.5px; text-decoration: none; transition: background 0.2s; }
+  .sidebar-cta a.btn-primary:hover { background: var(--brass-light); }
+
+  .more-updates a { display: block; text-decoration: none; color: var(--ink); padding: 14px 0; border-bottom: 1px solid var(--line); }
+  .more-updates a:last-child { border-bottom: none; }
+  .more-updates a:hover .more-updates-title { color: var(--brass); }
+  .more-updates-title { font-size: 14px; font-weight: 700; line-height: 1.4; margin-bottom: 6px; transition: color 0.2s; }
+  .more-updates-date { font-size: 12px; color: var(--muted); }
+
+  .final-cta { background: linear-gradient(120deg, var(--navy), #0e1730); padding: 90px 0; text-align: center; }
+  .final-cta h2 { color: #fff; font-size: clamp(28px,3.6vw,40px); margin-bottom: 20px; }
+  .final-cta p { color: rgba(255,255,255,0.68); font-size: 16px; margin-bottom: 34px; }
+  .final-cta-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary { background: var(--brass); color: #fff; padding: 16px 32px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; text-decoration: none; display: inline-block; transition: background 0.2s; }
+  .btn-primary:hover { background: var(--brass-light); }
+  .btn-ghost { border: 1px solid rgba(255,255,255,0.35); color: #fff; padding: 16px 32px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; font-size: 13px; text-decoration: none; display: inline-block; transition: background 0.2s, border-color 0.2s; }
+  .btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.6); }
+
+  .dw-footer { background: var(--slate); color: #fff; padding: 70px 0 30px; }
+  .dw-cols { display: grid; grid-template-columns: 1fr 1fr 1fr 1.3fr; gap: 40px; }
+  .dw-col h4 { font-size: 14px; color: #cfd6e6; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 20px; }
+  .dw-col a, .dw-col p { display: block; width: fit-content; color: #fff; text-decoration: none; font-size: 13.5px; font-weight: 500; margin-bottom: 13px; position: relative; }
+  .dw-col a::after { content: ''; position: absolute; left: 0; right: 0; bottom: -3px; height: 2px; background: var(--brass-light); transform: scaleX(0); transform-origin: left; transition: transform 0.25s ease; }
+  .dw-col a:hover::after { transform: scaleX(1); }
+  .dw-logo { display: flex; align-items: center; gap: 12px; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 20px; margin-bottom: 18px; }
+  .dw-logo svg { width: 30px; height: 30px; }
+  .dw-col p.muted { color: rgba(255,255,255,0.6); font-size: 13px; line-height: 1.7; }
+  .dw-bottom { max-width: 1160px; margin: 60px auto 0; padding: 24px 24px 0; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12px; color: rgba(255,255,255,0.5); }
+  @media (max-width: 860px) { .dw-cols { grid-template-columns: 1fr 1fr; } }
+
+  .news-media-logo { display: flex; align-items: center; justify-content: center; background: #fff; box-sizing: border-box; padding: 30px; }
+  .news-media-logo img { max-width: 60%; max-height: 60%; width: auto; height: auto; object-fit: contain; }
+</style>
+</head>
+<body>
+<div class="grain"></div>
+<div class="scroll-progress"><div class="scroll-progress-bar" id="scrollBar"></div></div>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a class="nav-logo cursor-link" href="index.html">
+      <svg viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="16" fill="#16213E"/><g stroke="#F2854A" stroke-width="5" fill="none" stroke-linecap="round"><line x1="50" y1="20" x2="50" y2="70"/><line x1="28" y1="30" x2="72" y2="30"/><path d="M28 30 L18 50 A10 8 0 0 0 38 50 Z"/><path d="M72 30 L62 50 A10 8 0 0 0 82 50 Z"/><line x1="38" y1="78" x2="62" y2="78"/></g></svg>
+      H&amp;Y Law
+    </a>
+    <div class="nav-links">
+      <a class="cursor-link" href="index.html">Home</a>
+      <a class="cursor-link" href="services.html">Services</a>
+      <a class="cursor-link" href="about.html">About</a>
+      <a class="cursor-link active" href="news.html">News</a>
+      <a class="cursor-link" href="videos.html">Videos</a>
+      <a class="cursor-link" href="contact.html">Contact</a>
+    </div>
+    <div class="nav-cta">
+      <a class="nav-phone cursor-link" href="tel:02080502206">020 8050 2206</a>
+      <a class="nav-btn cursor-link" href="contact.html">Free Consultation</a>
+    </div>
+  </div>
+</nav>
+
+<header class="article-hero reveal">
+  <div class="article-hero-media" id="articleHeroMedia"></div>
+  <div class="article-hero-panel">
+    <div class="article-breadcrumb">
+      <a class="cursor-link" href="news.html">News</a><span>›</span><span class="cat" id="articleCategory"></span>
+    </div>
+    <h1 id="articleTitle"></h1>
+  </div>
+</header>
+
+<section class="article-section reveal">
+  <div class="wrap article-layout">
+    <div>
+      <div class="article-meta" id="articleMeta"></div>
+      <div class="article-body" id="articleBody"></div>
+      <div class="article-source-box">
+        <h3>Source &amp; Further Reading</h3>
+        <p id="articleSourceNote"></p>
+        <a class="article-source-link cursor-link" id="articleSourceLink" target="_blank" rel="noopener">Read on <span id="articleSourceName"></span> <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+      </div>
+      <div class="article-tags" id="articleTags"></div>
+    </div>
+    <aside>
+      <div class="sidebar-card">
+        <h4>At a Glance</h4>
+        <div class="glance-row"><span>Topic</span><span id="glanceTopic"></span></div>
+        <div class="glance-row"><span>Published</span><span id="glancePublished"></span></div>
+        <div class="glance-row"><span>Source</span><span id="glanceSource"></span></div>
+      </div>
+      <div class="sidebar-cta">
+        <h4>Affected by this?</h4>
+        <p>Book a free initial consultation to find out what it means for your case.</p>
+        <a class="btn-primary cursor-link" href="contact.html">Book a Consultation →</a>
+      </div>
+      <div class="sidebar-card more-updates">
+        <h4>More Updates</h4>
+        <div id="moreUpdates"></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="final-cta reveal">
+  <div class="wrap">
+    <h2>Prefer to speak to us directly?</h2>
+    <p>Free initial consultation — call, WhatsApp or visit us in Barking.</p>
+    <div class="final-cta-actions">
+      <a class="btn-primary cursor-link" href="tel:02080502206">Call 020 8050 2206</a>
+      <a class="btn-ghost cursor-link" href="https://wa.me/447387829975" target="_blank" rel="noopener">WhatsApp: +44 7387 829975</a>
+    </div>
+  </div>
+</section>
+
+<footer class="dw-footer reveal">
+  <div class="wrap dw-cols">
+    <div class="dw-col">
+      <h4>Practice Areas</h4>
+      <a href="services.html#spouse-partner-visa">Spouse &amp; Partner Visas</a>
+      <a href="services.html#skilled-worker-visa">Skilled Worker Visa</a>
+      <a href="services.html#sponsor-licence">Sponsor Licence</a>
+      <a href="services.html#ilr">Indefinite Leave to Remain</a>
+      <a href="services.html#citizenship">British Citizenship</a>
+    </div>
+    <div class="dw-col">
+      <h4>Firm</h4>
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="dw-col">
+      <h4>Serving</h4>
+      <p style="cursor:default;">Barking</p>
+      <p style="cursor:default;">Ilford</p>
+      <p style="cursor:default;">Romford</p>
+      <p style="cursor:default;">Dagenham</p>
+      <p style="cursor:default;">East Ham</p>
+      <p style="cursor:default;">Greater London</p>
+    </div>
+    <div class="dw-col">
+      <div class="dw-logo">
+        <svg viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="16" fill="#16213E"/><g stroke="#F2854A" stroke-width="5" fill="none" stroke-linecap="round"><line x1="50" y1="20" x2="50" y2="70"/><line x1="28" y1="30" x2="72" y2="30"/><path d="M28 30 L18 50 A10 8 0 0 0 38 50 Z"/><path d="M72 30 L62 50 A10 8 0 0 0 82 50 Z"/><line x1="38" y1="78" x2="62" y2="78"/></g></svg>
+        H&amp;Y Law
+      </div>
+      <p class="muted" style="cursor:default;">Enterprise Centre, 50 Wakering Rd, Barking IG11 8GN</p>
+      <a href="tel:02080502206">020 8050 2206</a>
+      <a href="mailto:info@hylaw.co.uk">info@hylaw.co.uk</a>
+      <a href="https://wa.me/447387829975" target="_blank" rel="noopener">WhatsApp: +44 7387 829975</a>
+      <a href="https://www.tiktok.com/@hylawuk" target="_blank" rel="noopener">TikTok: @hylawuk</a>
+    </div>
+  </div>
+  <div class="dw-bottom">
+    <span>© 2026 H&amp;Y Law. All rights reserved.</span>
+    <span>Enterprise Centre, 50 Wakering Rd, Barking IG11 8GN</span>
+  </div>
+</footer>
+
+<script src="news-data.js"></script>
+<script>
+  const SOURCE_LOGO = { 'GOV.UK': 'news-source-govuk.jpg', 'ONS': 'news-source-ons.svg', 'EIN News': 'news-source-ein.svg' };
+  function renderMedia(n) {
+    if (n.image) return '<img src="' + n.image + '" alt="" loading="lazy" />';
+    const logo = SOURCE_LOGO[n.source];
+    if (!logo) return '';
+    if (logo.endsWith('.svg')) return '<div class="news-media-logo"><img src="' + logo + '" alt="' + n.source + ' logo" loading="lazy" /></div>';
+    return '<img src="' + logo + '" alt="' + n.source + '" loading="lazy" />';
+  }
+
+  const params = new URLSearchParams(window.location.search);
+  const id = params.get('id');
+  const item = NEWS_ITEMS.find(n => n.id === id);
+
+  if (!item) {
+    window.location.href = 'news.html';
+  } else {
+    document.title = item.title.replace(/&amp;/g, '&') + ' | H&Y Law';
+    document.getElementById('pageTitle').textContent = item.title.replace(/&amp;/g, '&') + ' | H&Y Law';
+    document.getElementById('pageDesc').setAttribute('content', item.summary);
+    document.getElementById('articleHeroMedia').innerHTML = renderMedia(item);
+    document.getElementById('articleCategory').textContent = item.category;
+    document.getElementById('articleTitle').innerHTML = item.title;
+    document.getElementById('articleMeta').textContent = item.dateDisplay + ' · UK Immigration';
+    document.getElementById('articleBody').innerHTML = '<p>' + item.teaser + '</p>';
+    document.getElementById('articleSourceNote').textContent = 'This update was reported by ' + item.source + '. Read the original article for the full detail, quotes and context:';
+    document.getElementById('articleSourceLink').setAttribute('href', item.url);
+    document.getElementById('articleSourceName').textContent = item.source;
+    document.getElementById('articleTags').innerHTML = '<span class="article-tag">' + item.category + '</span><span class="article-tag">' + item.source + '</span>';
+    document.getElementById('glanceTopic').textContent = item.category;
+    document.getElementById('glancePublished').textContent = item.dateDisplay;
+    document.getElementById('glanceSource').textContent = item.source;
+
+    const others = NEWS_ITEMS.filter(n => n.id !== item.id)
+      .sort((a, b) => new Date(b.dateSort) - new Date(a.dateSort))
+      .slice(0, 4);
+    document.getElementById('moreUpdates').innerHTML = others.map(n =>
+      '<a class="cursor-link" href="article.html?id=' + n.id + '"><div class="more-updates-title">' + n.title + '</div><div class="more-updates-date">' + n.dateDisplay + '</div></a>'
+    ).join('');
+  }
+
+  window.addEventListener('scroll', () => {
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    document.getElementById('scrollBar').style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+  }, { passive: true });
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('in-view'); io.unobserve(entry.target); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
