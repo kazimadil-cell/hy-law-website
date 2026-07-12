@@ -267,7 +267,8 @@
     document.getElementById('articleCategory').textContent = item.category;
     document.getElementById('articleTitle').innerHTML = item.title;
     document.getElementById('articleMeta').textContent = item.dateDisplay + ' · UK Immigration';
-    document.getElementById('articleBody').innerHTML = '<p>' + item.teaser + '</p>';
+    const paragraphs = (item.body && item.body.length) ? item.body : [item.teaser];
+    document.getElementById('articleBody').innerHTML = paragraphs.map(p => '<p>' + p + '</p>').join('');
     document.getElementById('articleSourceNote').textContent = 'This update was reported by ' + item.source + '. Read the original article for the full detail, quotes and context:';
     document.getElementById('articleSourceLink').setAttribute('href', item.url);
     document.getElementById('articleSourceName').textContent = item.source;
