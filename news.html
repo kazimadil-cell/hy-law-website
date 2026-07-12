@@ -278,9 +278,15 @@
   const newsPrev = document.getElementById('newsPrev');
   const newsNext = document.getElementById('newsNext');
   if (newsGrid && newsPrev && newsNext) {
-    const scrollAmount = () => (newsGrid.querySelector('.news-card') ? newsGrid.querySelector('.news-card').offsetWidth + 24 : 280);
-    newsPrev.addEventListener('click', () => newsGrid.scrollBy({ left: -scrollAmount(), behavior: 'smooth' }));
-    newsNext.addEventListener('click', () => newsGrid.scrollBy({ left: scrollAmount(), behavior: 'smooth' }));
+    let newsIndex = 0;
+    function scrollToCard(direction) {
+      const cards = Array.from(newsGrid.querySelectorAll('.news-card:not(.card-hidden)'));
+      if (!cards.length) return;
+      newsIndex = Math.max(0, Math.min(cards.length - 1, newsIndex + direction));
+      cards[newsIndex].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+    }
+    newsPrev.addEventListener('click', () => scrollToCard(-1));
+    newsNext.addEventListener('click', () => scrollToCard(1));
   }
 
   window.addEventListener('scroll', () => {

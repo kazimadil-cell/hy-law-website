@@ -574,9 +574,15 @@
     const prevBtn = document.getElementById('newsPrev');
     const nextBtn = document.getElementById('newsNext');
     if (grid && prevBtn && nextBtn) {
-      const scrollAmount = () => (grid.querySelector('.news-card') ? grid.querySelector('.news-card').offsetWidth + 24 : 280);
-      prevBtn.addEventListener('click', () => grid.scrollBy({ left: -scrollAmount(), behavior: 'smooth' }));
-      nextBtn.addEventListener('click', () => grid.scrollBy({ left: scrollAmount(), behavior: 'smooth' }));
+      let newsIndex = 0;
+      function scrollToCard(direction) {
+        const cards = Array.from(grid.querySelectorAll('.news-card'));
+        if (!cards.length) return;
+        newsIndex = Math.max(0, Math.min(cards.length - 1, newsIndex + direction));
+        cards[newsIndex].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+      }
+      prevBtn.addEventListener('click', () => scrollToCard(-1));
+      nextBtn.addEventListener('click', () => scrollToCard(1));
     }
   })();
 
