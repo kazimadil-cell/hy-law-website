@@ -73,7 +73,7 @@
   .news-arrow { width: 42px; height: 42px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.4); background: transparent; color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background 0.2s, border-color 0.2s, color 0.2s; }
   .news-arrow:hover { background: var(--brass); border-color: var(--brass); color: #fff; }
   .news-arrow svg { width: 16px; height: 16px; }
-  .news-track { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; padding-bottom: 4px; }
+  .news-track { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding: 0 24px; scrollbar-width: none; padding: 0 24px 4px; margin: 0 -24px; }
   .news-track::-webkit-scrollbar { display: none; }
   .news-card {
     flex: 0 0 clamp(240px, 23vw, 280px); scroll-snap-align: start; scroll-margin-top: 100px;
