@@ -18,9 +18,12 @@
 //   summary   - 1-2 sentence teaser shown on the homepage's top-3 preview
 //   teaser    - fuller 2-3 sentence summary shown on the full news.html page
 //   url       - real, working link to the original source article
-//   image     - real photo URL scraped from the source article's og:image, or null if
-//               the source page has no real photo (card then falls back to a styled
-//               source-name tile instead of inventing/using an unrelated stock photo)
+//   image     - local filename of a real, self-hosted per-article photo (scraped from
+//               the source's og:image, resized/compressed, see news-*.jpg in repo root),
+//               or null if no real per-article photo exists. When null, the page renderer
+//               (index.html / news.html) automatically shows that source's own standard
+//               default graphic instead (news-source-govuk.jpg / news-source-ons.svg /
+//               news-source-ein.svg) — every card always shows a real image, never blank.
 
 const NEWS_ITEMS = [
   {
