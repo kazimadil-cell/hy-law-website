@@ -283,7 +283,8 @@
       const cards = Array.from(newsGrid.querySelectorAll('.news-card:not(.card-hidden)'));
       if (!cards.length) return;
       newsIndex = Math.max(0, Math.min(cards.length - 1, newsIndex + direction));
-      cards[newsIndex].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+      const target = cards[newsIndex];
+      newsGrid.scrollTo({ left: target.offsetLeft - newsGrid.offsetLeft, behavior: 'smooth' });
     }
     newsPrev.addEventListener('click', () => scrollToCard(-1));
     newsNext.addEventListener('click', () => scrollToCard(1));
