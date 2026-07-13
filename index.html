@@ -133,14 +133,12 @@
     overflow: hidden; padding: 150px 0 0;
   }
   .hero-photo {
-    position: absolute; top: 0; right: 0; bottom: 0; width: 58%;
-    background-image: url('joshua-hero.jpg'); background-position: center 8%; background-size: cover; z-index: 0;
-    -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 9%);
-    mask-image: linear-gradient(90deg, transparent 0%, black 9%);
+    position: absolute; inset: 0; width: 100%;
+    background-image: url('joshua-hero-v2.jpg'); background-position: center 22%; background-size: cover; z-index: 0;
   }
   .hero-overlay {
     position: absolute; inset: 0; z-index: 1;
-    background: linear-gradient(90deg, var(--dark) 0%, var(--dark) 28%, rgba(11,16,32,0.88) 38%, rgba(11,16,32,0.4) 48%, rgba(11,16,32,0) 60%);
+    background: linear-gradient(90deg, var(--dark) 0%, rgba(11,16,32,0.88) 22%, rgba(11,16,32,0.55) 42%, rgba(11,16,32,0.15) 58%, rgba(11,16,32,0) 72%);
   }
   .hero-inner { position: relative; z-index: 3; width: 100%; max-width: none; margin: 0; padding-bottom: 90px; padding-left: clamp(24px, 6vw, 88px); padding-right: 24px; }
   .hero-text { max-width: 540px; }
