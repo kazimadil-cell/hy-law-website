@@ -108,8 +108,9 @@
     padding: 14px 0; box-shadow: 0 8px 30px rgba(0,0,0,0.25);
   }
   .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; max-width: none; margin: 0; padding-left: clamp(16px, 3vw, 48px); padding-right: 24px; }
-  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 20px; letter-spacing: 0.01em; }
-  .nav-logo img { width: 38px; height: 38px; flex-shrink: 0; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4)); }
+  .nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: #fff; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 20px; letter-spacing: 0.01em; }
+  .nav-logo img { width: auto; height: 46px; flex-shrink: 0; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4)); }
+  .nav-logo span { background: linear-gradient(90deg, #F2854A, #F5B96A); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .nav-logo svg { width: 34px; height: 34px; flex-shrink: 0; }
   .nav-links { display: flex; align-items: center; gap: 36px; }
   .nav-links a { color: rgba(255,255,255,0.88); text-decoration: none; font-size: 13.5px; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; transition: color 0.2s; }
@@ -318,7 +319,7 @@
   <div class="wrap nav-inner">
     <a class="nav-logo" href="index.html">
       <img src="hero-watermark-emblem.png" alt="H&amp;Y Law" />
-      H&amp;Y Law
+      <span>H&amp;Y</span>&nbsp;Law
     </a>
     <div class="nav-links">
       <a href="index.html" class="active">Home</a>
