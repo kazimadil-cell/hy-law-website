@@ -1,43 +1,18 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title id="pageTitle">News Article | H&amp;Y Law</title>
-<meta id="pageDesc" name="description" content="Real UK immigration news, explained, from H&amp;Y Law." />
-<link id="pageCanonical" rel="canonical" href="https://hylaw.co.uk/article.html" />
-<meta id="ogTitle" property="og:title" content="News Article | H&amp;Y Law" />
-<meta id="ogDesc" property="og:description" content="Real UK immigration news, explained, from H&amp;Y Law." />
-<meta property="og:type" content="article" />
-<meta id="ogUrl" property="og:url" content="https://hylaw.co.uk/article.html" />
+<title>Book a Consultation | H&amp;Y Law, Barking, Ilford &amp; Romford</title>
+<meta name="description" content="Book a fixed-length immigration consultation with H&amp;Y Law — 30 minutes for £100 or 60 minutes for £150. Choose a time that works for you." />
+<link rel="canonical" href="https://hylaw.co.uk/book.html" />
+<meta property="og:title" content="Book a Consultation | H&amp;Y Law" />
+<meta property="og:description" content="Book a fixed-length immigration consultation with H&amp;Y Law — 30 minutes for £100 or 60 minutes for £150." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://hylaw.co.uk/book.html" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%2316213E'/%3E%3Cg stroke='%23F2854A' stroke-width='4' fill='none' stroke-linecap='round'%3E%3Cline x1='50' y1='20' x2='50' y2='70'/%3E%3Cline x1='28' y1='30' x2='72' y2='30'/%3E%3Cpath d='M28 30 L18 50 A10 8 0 0 0 38 50 Z'/%3E%3Cpath d='M72 30 L62 50 A10 8 0 0 0 82 50 Z'/%3E%3Cline x1='38' y1='78' x2='62' y2='78'/%3E%3C/g%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LegalService",
-  "name": "H&Y Law",
-  "telephone": "+442080502206",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Enterprise Centre, 50 Wakering Rd",
-    "addressLocality": "Barking",
-    "postalCode": "IG11 8GN",
-    "addressRegion": "Greater London",
-    "addressCountry": "GB"
-  },
-  "areaServed": [
-    { "@type": "Place", "name": "Barking" },
-    { "@type": "Place", "name": "Ilford" },
-    { "@type": "Place", "name": "Romford" },
-    { "@type": "Place", "name": "Dagenham" },
-    { "@type": "Place", "name": "East Ham" },
-    { "@type": "Place", "name": "East London" }
-  ],
-  "url": "https://hylaw.co.uk"
-}
-</script>
 <style>
   :root {
     --brass: #EC6A2B; --brass-light: #F2854A; --white: #ffffff; --dark: #0b1020;
@@ -49,8 +24,8 @@
   body { margin: 0; font-family: 'Manrope', sans-serif; color: var(--ink); background: var(--white); }
   h1, h2, h3 { font-family: 'Playfair Display', serif; font-weight: 800; margin: 0; }
   a { color: inherit; }
+  img { max-width: 100%; display: block; }
   .wrap { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
-  .cursor-link { cursor: url('cursor-pointer.svg') 4 2, pointer; }
 
   .grain { position: fixed; inset: 0; z-index: 300; pointer-events: none; opacity: 0.035; mix-blend-mode: overlay;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); }
@@ -95,52 +70,41 @@
   @media (prefers-reduced-motion: reduce) { .nav-btn { animation: none; } }
   @media (max-width: 900px) { .nav-links, .nav-phone { display: none; } }
 
-  /* article hero */
-  .article-hero { display: flex; min-height: 46vh; background: var(--navy); }
-  .article-hero-media { flex: 1 1 55%; position: relative; background: linear-gradient(135deg, var(--navy-2), #0e1730); }
-  .article-hero-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .article-hero-media .news-media-logo { width: 100%; height: 100%; }
-  .article-hero-panel { flex: 1 1 45%; background: linear-gradient(120deg, var(--navy), #0e1730); display: flex; flex-direction: column; justify-content: center; padding: 56px; }
-  .article-breadcrumb { font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 20px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
-  .article-breadcrumb a { color: rgba(255,255,255,0.7); text-decoration: none; }
-  .article-breadcrumb a:hover { color: #fff; }
-  .article-breadcrumb span.cat { color: var(--brass-light); font-style: italic; }
-  .article-hero-panel h1 { color: #fff; font-size: clamp(26px, 3vw, 38px); line-height: 1.25; text-transform: uppercase; }
-  @media (max-width: 860px) { .article-hero { flex-direction: column; min-height: auto; } .article-hero-media { aspect-ratio: 16/9; } .article-hero-panel { padding: 36px 24px; } }
+  .page-hero { background: linear-gradient(120deg, var(--navy), #0e1730); padding: 90px 0 76px; text-align: center; }
+  .section-eyebrow { display: flex; align-items: center; justify-content: center; gap: 14px; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass-light); margin-bottom: 18px; }
+  .section-eyebrow::before, .section-eyebrow::after { content: ''; width: 32px; height: 1px; background: rgba(242,133,74,0.5); }
+  .page-hero h1 { color: #fff; font-size: clamp(32px, 4.6vw, 52px); margin-bottom: 18px; }
+  .page-hero p { color: rgba(255,255,255,0.7); font-size: 16px; max-width: 620px; margin: 0 auto; line-height: 1.7; }
 
-  /* article body */
-  .article-section { padding: 60px 0 100px; background: var(--cream); }
-  .article-layout { display: grid; grid-template-columns: 1.7fr 1fr; gap: 50px; align-items: start; }
-  @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } }
+  .plans-section { padding: 100px 0 40px; background: var(--white); }
+  .plans-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 900px; margin: 0 auto; }
+  .plan-card { border: 1px solid var(--line); padding: 44px 38px; position: relative; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
+  .plan-card:hover { transform: translateY(-6px); box-shadow: 0 30px 60px rgba(22,33,62,0.12); border-color: transparent; }
+  .plan-card.featured { background: linear-gradient(150deg, var(--navy), #0e1730); border-color: transparent; }
+  .plan-tag { position: absolute; top: -13px; right: 32px; background: var(--brass); color: #fff; font-size: 10.5px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 14px; }
+  .plan-duration { font-size: 12.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--brass); margin-bottom: 14px; }
+  .plan-card.featured .plan-duration { color: var(--brass-light); }
+  .plan-price { display: flex; align-items: baseline; gap: 6px; margin-bottom: 6px; }
+  .plan-price b { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 44px; color: var(--ink); }
+  .plan-card.featured .plan-price b { color: #fff; }
+  .plan-price span { font-size: 14px; color: var(--muted); font-weight: 600; }
+  .plan-card.featured .plan-price span { color: rgba(255,255,255,0.6); }
+  .plan-desc { font-size: 14.5px; color: var(--muted); line-height: 1.7; margin-bottom: 28px; }
+  .plan-card.featured .plan-desc { color: rgba(255,255,255,0.7); }
+  .plan-btn { display: block; text-align: center; background: var(--navy); color: #fff; padding: 15px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; font-size: 12.5px; text-decoration: none; transition: background 0.2s; }
+  .plan-btn:hover { background: var(--brass); }
+  .plan-card.featured .plan-btn { background: var(--brass); }
+  .plan-card.featured .plan-btn:hover { background: var(--brass-light); }
+  @media (max-width: 700px) { .plans-grid { grid-template-columns: 1fr; max-width: 420px; } }
 
-  .article-meta { color: var(--muted); font-size: 13.5px; margin-bottom: 26px; }
-  .article-body p { font-size: 16.5px; line-height: 1.85; color: var(--ink-soft); margin: 0 0 22px; }
-  .article-source-box { background: #fff; border-left: 4px solid var(--brass); padding: 24px 28px; margin: 30px 0; }
-  .article-source-box h3 { font-size: 17px; margin-bottom: 10px; }
-  .article-source-box p { font-size: 14.5px; margin-bottom: 14px; }
-  .article-source-link { display: inline-flex; align-items: center; gap: 6px; color: var(--brass); font-weight: 700; text-decoration: none; font-size: 14.5px; }
-  .article-source-link:hover { color: var(--brass-light); }
-  .article-tags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 30px; }
-  .article-tag { background: var(--cream-2); border: 1px solid var(--line); color: var(--ink-soft); font-size: 12.5px; font-weight: 700; padding: 8px 16px; border-radius: 999px; }
+  .book-note { max-width: 620px; margin: 40px auto 0; text-align: center; padding: 0 24px; }
+  .book-note p { color: var(--muted); font-size: 13.5px; line-height: 1.7; }
 
-  .sidebar-card { background: #fff; border: 1px solid var(--line); padding: 26px; margin-bottom: 24px; }
-  .sidebar-card h4 { font-family: 'Playfair Display', serif; font-size: 17px; margin-bottom: 18px; }
-  .glance-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 13.5px; }
-  .glance-row:last-child { border-bottom: none; }
-  .glance-row span:first-child { color: var(--muted); }
-  .glance-row span:last-child { font-weight: 700; color: var(--ink); }
-
-  .sidebar-cta { background: linear-gradient(120deg, var(--navy), #0e1730); padding: 30px 26px; text-align: center; margin-bottom: 24px; }
-  .sidebar-cta h4 { color: #fff; font-size: 18px; margin-bottom: 10px; }
-  .sidebar-cta p { color: rgba(255,255,255,0.68); font-size: 13.5px; line-height: 1.6; margin-bottom: 20px; }
-  .sidebar-cta a.btn-primary { display: inline-block; background: var(--brass); color: #fff; padding: 13px 26px; font-weight: 700; letter-spacing: 0.03em; text-transform: uppercase; font-size: 12.5px; text-decoration: none; transition: background 0.2s; }
-  .sidebar-cta a.btn-primary:hover { background: var(--brass-light); }
-
-  .more-updates a { display: block; text-decoration: none; color: var(--ink); padding: 14px 0; border-bottom: 1px solid var(--line); }
-  .more-updates a:last-child { border-bottom: none; }
-  .more-updates a:hover .more-updates-title { color: var(--brass); }
-  .more-updates-title { font-size: 14px; font-weight: 700; line-height: 1.4; margin-bottom: 6px; transition: color 0.2s; }
-  .more-updates-date { font-size: 12px; color: var(--muted); }
+  .schedule-section { padding: 70px 0 110px; background: var(--white); }
+  .schedule-card { max-width: 900px; margin: 0 auto; border: 1px solid var(--line); background: var(--cream); padding: 60px 40px; text-align: center; }
+  .schedule-card svg { width: 44px; height: 44px; stroke: var(--brass); margin: 0 auto 20px; }
+  .schedule-card h3 { font-size: 22px; margin-bottom: 12px; }
+  .schedule-card p { color: var(--muted); font-size: 14.5px; line-height: 1.75; max-width: 460px; margin: 0 auto 28px; }
 
   .final-cta { background: linear-gradient(120deg, var(--navy), #0e1730); padding: 90px 0; text-align: center; }
   .final-cta h2 { color: #fff; font-size: clamp(28px,3.6vw,40px); margin-bottom: 20px; }
@@ -162,9 +126,6 @@
   .dw-col p.muted { color: rgba(255,255,255,0.6); font-size: 13px; line-height: 1.7; }
   .dw-bottom { max-width: 1160px; margin: 60px auto 0; padding: 24px 24px 0; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12px; color: rgba(255,255,255,0.5); }
   @media (max-width: 860px) { .dw-cols { grid-template-columns: 1fr 1fr; } }
-
-  .news-media-logo { display: flex; align-items: center; justify-content: center; background: #fff; box-sizing: border-box; padding: 30px; }
-  .news-media-logo img { max-width: 60%; max-height: 60%; width: auto; height: auto; object-fit: contain; }
 </style>
 </head>
 <body>
@@ -173,14 +134,14 @@
 
 <nav>
   <div class="wrap nav-inner">
-    <a class="nav-logo cursor-link" href="index.html">
+    <a class="nav-logo" href="index.html">
       <svg viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="16" fill="#16213E"/><g stroke="#F2854A" stroke-width="5" fill="none" stroke-linecap="round"><line x1="50" y1="20" x2="50" y2="70"/><line x1="28" y1="30" x2="72" y2="30"/><path d="M28 30 L18 50 A10 8 0 0 0 38 50 Z"/><path d="M72 30 L62 50 A10 8 0 0 0 82 50 Z"/><line x1="38" y1="78" x2="62" y2="78"/></g></svg>
       H&amp;Y Law
     </a>
     <div class="nav-links">
-      <a class="cursor-link" href="index.html">Home</a>
+      <a href="index.html">Home</a>
       <div class="nav-item nav-item-wide">
-        <a class="cursor-link" href="services.html">Services</a>
+        <a href="services.html">Services</a>
         <div class="nav-dropdown">
           <div class="nav-dropdown-inner">
             <a href="services.html#spouse-partner-visa">Spouse &amp; Partner Visas</a>
@@ -196,12 +157,12 @@
         </div>
       </div>
       <div class="nav-item">
-        <a class="cursor-link" href="about.html">About</a>
+        <a href="about.html">About</a>
         <div class="nav-dropdown">
           <div class="nav-dropdown-inner">
             <a href="about.html">About Us</a>
             <a href="case-studies.html">Case Studies</a>
-            <a href="book.html">Book a Consultation</a>
+            <a href="book.html" class="active">Book a Consultation</a>
             <span class="dd-label">Areas We Serve</span>
             <a href="ilford.html">Ilford</a>
             <a href="romford.html">Romford</a>
@@ -210,66 +171,66 @@
           </div>
         </div>
       </div>
-      <a class="cursor-link active" href="news.html">News</a>
-      <a class="cursor-link" href="videos.html">Videos</a>
-      <a class="cursor-link" href="contact.html">Contact</a>
+      <a href="news.html">News</a>
+      <a href="videos.html">Videos</a>
+      <a href="contact.html">Contact</a>
     </div>
     <div class="nav-cta">
-      <a class="nav-phone cursor-link" href="tel:02080502206">020 8050 2206</a>
-      <a class="nav-btn cursor-link" href="contact.html">Free Consultation</a>
+      <a class="nav-phone" href="tel:02080502206">020 8050 2206</a>
+      <a class="nav-btn" href="contact.html">Free Consultation</a>
     </div>
   </div>
 </nav>
 
-<header class="article-hero reveal">
-  <div class="article-hero-media" id="articleHeroMedia"></div>
-  <div class="article-hero-panel">
-    <div class="article-breadcrumb">
-      <a class="cursor-link" href="news.html">News</a><span>›</span><span class="cat" id="articleCategory"></span>
-    </div>
-    <h1 id="articleTitle"></h1>
+<header class="page-hero reveal">
+  <div class="wrap">
+    <div class="section-eyebrow">Book Online</div>
+    <h1>Book a Consultation</h1>
+    <p>Prefer a dedicated, fixed-length session with an adviser? Choose 30 or 60 minutes and pick a time that suits you.</p>
   </div>
 </header>
 
-<section class="article-section reveal">
-  <div class="wrap article-layout">
-    <div>
-      <div class="article-meta" id="articleMeta"></div>
-      <div class="article-body" id="articleBody"></div>
-      <div class="article-source-box">
-        <h3>Source &amp; Further Reading</h3>
-        <p id="articleSourceNote"></p>
-        <a class="article-source-link cursor-link" id="articleSourceLink" target="_blank" rel="noopener">Read on <span id="articleSourceName"></span> <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+<section class="plans-section reveal">
+  <div class="wrap">
+    <div class="plans-grid">
+      <div class="plan-card">
+        <div class="plan-duration">30 Minutes</div>
+        <div class="plan-price"><b>£100</b><span>fixed fee</span></div>
+        <p class="plan-desc">A focused session to go through your situation and get clear, practical next steps.</p>
+        <a class="plan-btn" href="https://wa.me/447387829975?text=Hi%2C%20I%27d%20like%20to%20book%20a%2030-minute%20consultation%20(%C2%A3100).%20Please%20let%20me%20know%20your%20availability." target="_blank" rel="noopener">Book 30 Minutes</a>
       </div>
-      <div class="article-tags" id="articleTags"></div>
+      <div class="plan-card featured">
+        <span class="plan-tag">Most Thorough</span>
+        <div class="plan-duration">60 Minutes</div>
+        <div class="plan-price"><b>£150</b><span>fixed fee</span></div>
+        <p class="plan-desc">More time to cover a complex case in depth, review documents, and plan your full application.</p>
+        <a class="plan-btn" href="https://wa.me/447387829975?text=Hi%2C%20I%27d%20like%20to%20book%20a%2060-minute%20consultation%20(%C2%A3150).%20Please%20let%20me%20know%20your%20availability." target="_blank" rel="noopener">Book 60 Minutes</a>
+      </div>
     </div>
-    <aside>
-      <div class="sidebar-card">
-        <h4>At a Glance</h4>
-        <div class="glance-row"><span>Topic</span><span id="glanceTopic"></span></div>
-        <div class="glance-row"><span>Published</span><span id="glancePublished"></span></div>
-        <div class="glance-row"><span>Source</span><span id="glanceSource"></span></div>
-      </div>
-      <div class="sidebar-cta">
-        <h4>Affected by this?</h4>
-        <p>Book a free initial consultation with our Barking-based team, serving clients across Ilford, Romford, Dagenham and East London.</p>
-        <a class="btn-primary cursor-link" href="contact.html">Book a Consultation →</a>
-      </div>
-      <div class="sidebar-card more-updates">
-        <h4>More Updates</h4>
-        <div id="moreUpdates"></div>
-      </div>
-    </aside>
+    <div class="book-note">
+      <p>Fees for these fixed-length sessions are separate from our free initial consultation, which remains available by phone, WhatsApp or in person before any fees are agreed.</p>
+    </div>
+  </div>
+</section>
+
+<section class="schedule-section reveal">
+  <div class="wrap">
+    <div class="schedule-card">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      <h3>Choose your session above to check availability</h3>
+      <p>Tap "Book 30 Minutes" or "Book 60 Minutes" to message our team directly on WhatsApp with your preferred session — we'll confirm a time that works for you against our live calendar at info@hylaw.co.uk.</p>
+      <a class="plan-btn" style="display:inline-block; width:auto; padding:15px 34px;" href="tel:02080502206">Or Call 020 8050 2206</a>
+    </div>
   </div>
 </section>
 
 <section class="final-cta reveal">
   <div class="wrap">
-    <h2>Prefer to speak to us directly?</h2>
-    <p>Free initial consultation — call, WhatsApp or visit us in Barking.</p>
+    <h2>Not sure which option is right for you?</h2>
+    <p>Start with a free initial consultation — call, WhatsApp or visit us in Barking or Ilford.</p>
     <div class="final-cta-actions">
-      <a class="btn-primary cursor-link" href="tel:02080502206">Call 020 8050 2206</a>
-      <a class="btn-ghost cursor-link" href="https://wa.me/447387829975" target="_blank" rel="noopener">WhatsApp: +44 7387 829975</a>
+      <a class="btn-primary" href="tel:02080502206">Call 020 8050 2206</a>
+      <a class="btn-ghost" href="https://wa.me/447387829975" target="_blank" rel="noopener">WhatsApp: +44 7387 829975</a>
     </div>
   </div>
 </section>
@@ -294,11 +255,11 @@
     </div>
     <div class="dw-col">
       <h4>Areas We Serve</h4>
-      <a class="cursor-link" href="index.html">Barking</a>
-      <a class="cursor-link" href="ilford.html">Ilford</a>
-      <a class="cursor-link" href="romford.html">Romford</a>
-      <a class="cursor-link" href="dagenham.html">Dagenham</a>
-      <a class="cursor-link" href="east-ham.html">East Ham</a>
+      <a href="index.html">Barking</a>
+      <a href="ilford.html">Ilford</a>
+      <a href="romford.html">Romford</a>
+      <a href="dagenham.html">Dagenham</a>
+      <a href="east-ham.html">East Ham</a>
       <p style="cursor:default;">Greater London</p>
     </div>
     <div class="dw-col">
@@ -320,84 +281,15 @@
   </div>
 </footer>
 
-<script src="news-data.js"></script>
+<!--
+  TODO (Kazim): once you've set up Cal.com or Calendly and connected info@hylaw.co.uk's
+  calendar with the two event types (30 min / £100, 60 min / £150), send me the embed
+  link and I'll replace the .schedule-section above with the live embedded scheduler
+  (e.g. Cal.com's inline embed <script>/<div> snippet) so this page shows real-time
+  availability instead of routing to WhatsApp.
+-->
+
 <script>
-  const SOURCE_LOGO = { 'GOV.UK': 'news-source-govuk.jpg', 'ONS': 'news-source-ons.svg', 'EIN News': 'news-source-ein.svg' };
-  function renderMedia(n) {
-    if (n.image) return '<img src="' + n.image + '" alt="" loading="lazy" />';
-    const logo = SOURCE_LOGO[n.source];
-    if (!logo) return '';
-    if (logo.endsWith('.svg')) return '<div class="news-media-logo"><img src="' + logo + '" alt="' + n.source + ' logo" loading="lazy" /></div>';
-    return '<img src="' + logo + '" alt="' + n.source + '" loading="lazy" />';
-  }
-
-  const params = new URLSearchParams(window.location.search);
-  const id = params.get('id');
-  const item = NEWS_ITEMS.find(n => n.id === id);
-
-  if (!item) {
-    window.location.href = 'news.html';
-  } else {
-    const plainTitle = item.title.replace(/&amp;/g, '&');
-    const pageTitle = plainTitle + ' | H&Y Law, Barking Immigration Solicitors';
-    const canonicalUrl = 'https://hylaw.co.uk/article.html?id=' + item.id;
-    document.title = pageTitle;
-    document.getElementById('pageTitle').textContent = pageTitle;
-    document.getElementById('pageDesc').setAttribute('content', item.summary);
-    document.getElementById('pageCanonical').setAttribute('href', canonicalUrl);
-    document.getElementById('ogTitle').setAttribute('content', pageTitle);
-    document.getElementById('ogDesc').setAttribute('content', item.summary);
-    document.getElementById('ogUrl').setAttribute('content', canonicalUrl);
-
-    const articleSchema = {
-      '@context': 'https://schema.org',
-      '@type': 'Article',
-      headline: plainTitle,
-      description: item.summary,
-      datePublished: item.dateSort,
-      author: { '@type': 'Organization', name: item.source },
-      publisher: { '@type': 'LegalService', name: 'H&Y Law', url: 'https://hylaw.co.uk' },
-      mainEntityOfPage: canonicalUrl,
-      image: item.image ? 'https://hylaw.co.uk/' + item.image : undefined
-    };
-    const breadcrumbSchema = {
-      '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'News', item: 'https://hylaw.co.uk/news.html' },
-        { '@type': 'ListItem', position: 2, name: item.category, item: canonicalUrl },
-        { '@type': 'ListItem', position: 3, name: plainTitle, item: canonicalUrl }
-      ]
-    };
-    [articleSchema, breadcrumbSchema].forEach(schema => {
-      const s = document.createElement('script');
-      s.type = 'application/ld+json';
-      s.textContent = JSON.stringify(schema);
-      document.head.appendChild(s);
-    });
-
-    document.getElementById('articleHeroMedia').innerHTML = renderMedia(item);
-    document.getElementById('articleCategory').textContent = item.category;
-    document.getElementById('articleTitle').innerHTML = item.title;
-    document.getElementById('articleMeta').textContent = item.dateDisplay + ' · UK Immigration';
-    const paragraphs = (item.body && item.body.length) ? item.body : [item.teaser];
-    document.getElementById('articleBody').innerHTML = paragraphs.map(p => '<p>' + p + '</p>').join('');
-    document.getElementById('articleSourceNote').textContent = 'This update was reported by ' + item.source + '. Read the original article for the full detail, quotes and context:';
-    document.getElementById('articleSourceLink').setAttribute('href', item.url);
-    document.getElementById('articleSourceName').textContent = item.source;
-    document.getElementById('articleTags').innerHTML = '<span class="article-tag">' + item.category + '</span><span class="article-tag">' + item.source + '</span>';
-    document.getElementById('glanceTopic').textContent = item.category;
-    document.getElementById('glancePublished').textContent = item.dateDisplay;
-    document.getElementById('glanceSource').textContent = item.source;
-
-    const others = NEWS_ITEMS.filter(n => n.id !== item.id)
-      .sort((a, b) => new Date(b.dateSort) - new Date(a.dateSort))
-      .slice(0, 4);
-    document.getElementById('moreUpdates').innerHTML = others.map(n =>
-      '<a class="cursor-link" href="article.html?id=' + n.id + '"><div class="more-updates-title">' + n.title + '</div><div class="more-updates-date">' + n.dateDisplay + '</div></a>'
-    ).join('');
-  }
-
   window.addEventListener('scroll', () => {
     const max = document.documentElement.scrollHeight - window.innerHeight;
     document.getElementById('scrollBar').style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';

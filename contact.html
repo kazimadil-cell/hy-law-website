@@ -232,6 +232,7 @@
           <div class="nav-dropdown-inner">
             <a href="about.html">About Us</a>
             <a href="case-studies.html">Case Studies</a>
+            <a href="book.html">Book a Consultation</a>
             <span class="dd-label">Areas We Serve</span>
             <a href="ilford.html">Ilford</a>
             <a href="romford.html">Romford</a>
@@ -256,6 +257,7 @@
     <div class="section-eyebrow">Get In Touch</div>
     <h1>Contact H&amp;Y Law</h1>
     <p>Call, WhatsApp, email, or visit us at our Barking (HQ) or Ilford office. We offer a free initial consultation.</p>
+    <p style="margin-top:14px;"><a href="book.html" style="color:var(--brass-light); font-weight:700; text-decoration:none; border-bottom:1px solid rgba(242,133,74,0.4);">Prefer a fixed-length booked session? See consultation options →</a></p>
   </div>
 </header>
 
@@ -323,8 +325,8 @@
         <div class="form-row">
           <div class="field full"><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
         </div>
-        <p class="form-note">Submitting opens your email client with these details pre-filled to info@hylaw.co.uk. For an urgent matter, please call or WhatsApp us instead.</p>
-        <button class="btn-primary" type="submit">Send Message</button>
+        <p class="form-note">Submitting opens WhatsApp with these details pre-filled, ready to send straight to our team.</p>
+        <button class="btn-primary" type="submit">Send via WhatsApp</button>
       </form>
     </div>
   </div>
@@ -433,15 +435,13 @@
   document.getElementById('contactForm').addEventListener('submit', (e) => {
     e.preventDefault();
     const f = e.target;
-    const subject = encodeURIComponent('Enquiry from ' + f.name.value + ' — ' + f.service.value);
-    const body = encodeURIComponent(
+    const message = 'New enquiry from the website:\n\n' +
       'Name: ' + f.name.value + '\n' +
       'Phone: ' + f.phone.value + '\n' +
       'Email: ' + f.email.value + '\n' +
       'Service: ' + f.service.value + '\n\n' +
-      f.message.value
-    );
-    window.location.href = 'mailto:info@hylaw.co.uk?subject=' + subject + '&body=' + body;
+      'Message: ' + f.message.value;
+    window.open('https://wa.me/447387829975?text=' + encodeURIComponent(message), '_blank', 'noopener');
   });
 </script>
 </body>
