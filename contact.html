@@ -73,15 +73,22 @@
   .nav-links a { color: rgba(255,255,255,0.88); text-decoration: none; font-size: 13.5px; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; transition: color 0.2s; }
   .nav-links a:hover, .nav-links a.active { color: var(--brass-light); }
   .nav-item { position: relative; }
-  .nav-item > a { display: flex; align-items: center; gap: 5px; }
-  .nav-item > a::after { content: ''; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); margin-top: -3px; transition: transform 0.2s; }
+  .nav-item > a { display: flex; align-items: center; gap: 6px; }
+  .nav-item > a::after { content: ''; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg); margin-top: -3px; transition: transform 0.25s ease; }
   .nav-item:hover > a::after { transform: rotate(225deg); margin-top: 3px; }
-  .nav-dropdown { position: absolute; top: calc(100% + 14px); left: 50%; transform: translateX(-50%) translateY(6px); background: #fff; min-width: 250px; box-shadow: 0 24px 60px rgba(0,0,0,0.28); border-top: 3px solid var(--brass); opacity: 0; visibility: hidden; transition: opacity 0.22s ease, transform 0.22s ease; padding: 12px 0; z-index: 120; }
-  .nav-item:hover .nav-dropdown { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
-  .nav-dropdown a { display: block; color: var(--ink); text-transform: none; letter-spacing: 0; font-size: 13.5px; font-weight: 600; padding: 10px 24px; white-space: nowrap; }
-  .nav-dropdown a:hover { background: var(--cream); color: var(--brass); }
-  .nav-dropdown .dd-label { display: block; padding: 12px 24px 4px; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); font-weight: 800; }
-  .nav-dropdown .dd-divider { height: 1px; background: var(--line); margin: 10px 0; }
+  .nav-dropdown { position: absolute; top: 100%; left: 50%; transform: translateX(-50%); padding-top: 16px; opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.25s ease; z-index: 120; }
+  .nav-item:hover .nav-dropdown { opacity: 1; visibility: visible; pointer-events: auto; }
+  .nav-dropdown-inner { background: #fff; min-width: 250px; border-radius: 12px; overflow: hidden; box-shadow: 0 28px 60px rgba(11,16,32,0.28), 0 2px 8px rgba(11,16,32,0.06); border-top: 3px solid var(--brass); padding: 10px 0; transform: translateY(10px) scale(0.98); transform-origin: top center; transition: transform 0.3s cubic-bezier(.2,.9,.3,1.2); }
+  .nav-item:hover .nav-dropdown-inner { transform: translateY(0) scale(1); }
+  .nav-dropdown a { display: flex; align-items: center; gap: 10px; color: var(--ink); text-transform: none; letter-spacing: 0; font-size: 13.5px; font-weight: 600; padding: 11px 22px; white-space: nowrap; position: relative; border-radius: 6px; transition: background 0.18s ease, color 0.18s ease, padding-left 0.18s ease; }
+  .nav-dropdown a::before { content: ''; position: absolute; left: 0; top: 4px; bottom: 4px; width: 3px; border-radius: 2px; background: var(--brass); transform: scaleY(0); transition: transform 0.18s ease; }
+  .nav-dropdown a:hover { background: var(--cream); color: var(--brass); padding-left: 27px; }
+  .nav-dropdown a:hover::before { transform: scaleY(1); }
+  .nav-dropdown .dd-label { display: block; padding: 14px 22px 6px; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 800; }
+  .nav-dropdown .dd-divider { height: 1px; background: var(--line); margin: 8px 18px; }
+  .nav-item-wide .nav-dropdown-inner { min-width: 540px; display: grid; grid-template-columns: 1fr 1fr; padding: 14px 10px; gap: 0 6px; }
+  .nav-item-wide .nav-dropdown a { padding: 11px 16px; }
+  .nav-item-wide .nav-dropdown a:hover { padding-left: 21px; }
   .nav-cta { display: flex; align-items: center; gap: 16px; }
   .nav-phone { color: #fff; font-size: 13.5px; font-weight: 700; text-decoration: none; white-space: nowrap; }
   .nav-btn { position: relative; background: var(--brass); color: #fff; padding: 12px 22px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; font-size: 12.5px; text-decoration: none; white-space: nowrap; transition: background 0.2s, transform 0.2s; animation: navBtnPulse 2.6s ease-out infinite; }
@@ -172,29 +179,33 @@
     </a>
     <div class="nav-links">
       <a href="index.html">Home</a>
-      <div class="nav-item">
+      <div class="nav-item nav-item-wide">
         <a href="services.html">Services</a>
         <div class="nav-dropdown">
-          <a href="services.html#spouse-partner-visa">Spouse &amp; Partner Visas</a>
-          <a href="services.html#skilled-worker-visa">Skilled Worker Visa</a>
-          <a href="services.html#sponsor-licence">Sponsor Licence Applications</a>
-          <a href="services.html#ilr">Indefinite Leave to Remain (ILR)</a>
-          <a href="services.html#citizenship">British Citizenship</a>
-          <a href="services.html#asylum">Asylum &amp; Protection</a>
-          <a href="services.html#administrative-review">Administrative Review</a>
-          <a href="services.html#visitor-visa">Visitor Visa</a>
-          <a href="services.html#extensions">Extensions &amp; Switching</a>
+          <div class="nav-dropdown-inner">
+            <a href="services.html#spouse-partner-visa">Spouse &amp; Partner Visas</a>
+            <a href="services.html#skilled-worker-visa">Skilled Worker Visa</a>
+            <a href="services.html#sponsor-licence">Sponsor Licence Applications</a>
+            <a href="services.html#ilr">Indefinite Leave to Remain (ILR)</a>
+            <a href="services.html#citizenship">British Citizenship</a>
+            <a href="services.html#asylum">Asylum &amp; Protection</a>
+            <a href="services.html#administrative-review">Administrative Review</a>
+            <a href="services.html#visitor-visa">Visitor Visa</a>
+            <a href="services.html#extensions">Extensions &amp; Switching</a>
+          </div>
         </div>
       </div>
       <div class="nav-item">
         <a href="about.html">About</a>
         <div class="nav-dropdown">
-          <a href="about.html">About Us</a>
-          <span class="dd-label">Areas We Serve</span>
-          <a href="ilford.html">Ilford</a>
-          <a href="romford.html">Romford</a>
-          <a href="dagenham.html">Dagenham</a>
-          <a href="east-ham.html">East Ham</a>
+          <div class="nav-dropdown-inner">
+            <a href="about.html">About Us</a>
+            <span class="dd-label">Areas We Serve</span>
+            <a href="ilford.html">Ilford</a>
+            <a href="romford.html">Romford</a>
+            <a href="dagenham.html">Dagenham</a>
+            <a href="east-ham.html">East Ham</a>
+          </div>
         </div>
       </div>
       <a href="news.html">News</a>
