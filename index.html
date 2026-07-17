@@ -318,6 +318,17 @@
   .google-reviews-btn { display: inline-block; background: var(--navy); color: #fff; padding: 17px 40px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; font-size: 12.5px; text-decoration: none; transition: background 0.2s, transform 0.2s, box-shadow 0.2s; }
   .google-reviews-btn:hover { background: var(--brass); transform: translateY(-2px); box-shadow: 0 14px 30px rgba(236,106,43,0.3); }
 
+  /* award strip */
+  .award-strip { padding: 56px 0; background: var(--white); }
+  .award-strip .wrap { display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; }
+  .award-strip-item { display: flex; align-items: center; gap: 20px; text-align: left; }
+  .award-strip-item img { width: 68px; height: auto; flex-shrink: 0; }
+  .award-strip-item.dark-badge img { border-radius: 50%; }
+  .award-strip-text b { display: block; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 16px; color: var(--ink); margin-bottom: 4px; }
+  .award-strip-text span { display: block; font-size: 13px; color: var(--muted); }
+  .award-strip-divider { width: 1px; height: 46px; background: var(--line); }
+  @media (max-width: 700px) { .award-strip .wrap { flex-direction: column; gap: 26px; } .award-strip-divider { display: none; } .award-strip-item { text-align: center; flex-direction: column; } }
+
   /* final cta */
   .final-cta { background: linear-gradient(120deg, var(--navy), #0e1730); padding: 90px 0; text-align: center; }
   .final-cta h2 { color: #fff; font-size: clamp(28px,3.6vw,40px); margin-bottom: 20px; }
@@ -566,6 +577,26 @@
   </div>
 </section>
 
+<section class="award-strip reveal">
+  <div class="wrap">
+    <div class="award-strip-item">
+      <img src="award-badge.png" alt="London & South East England Prestige Awards 2026/27 — Winner" loading="lazy" />
+      <div class="award-strip-text">
+        <b>Winner — Prestige Awards 2026/27</b>
+        <span>London &amp; South East England</span>
+      </div>
+    </div>
+    <div class="award-strip-divider"></div>
+    <div class="award-strip-item dark-badge">
+      <img src="award-badge-2.jpg" alt="SME News UK Enterprise Awards 2026 — Best Emerging Immigration Law Firm, London" loading="lazy" />
+      <div class="award-strip-text">
+        <b>Best Emerging Immigration Law Firm 2026</b>
+        <span>SME News UK Enterprise Awards</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="final-cta reveal">
   <div class="wrap">
     <h2>Speak to an immigration adviser today</h2>
@@ -608,7 +639,8 @@
         <svg viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="16" fill="#16213E"/><g stroke="#F2854A" stroke-width="5" fill="none" stroke-linecap="round"><line x1="50" y1="20" x2="50" y2="70"/><line x1="28" y1="30" x2="72" y2="30"/><path d="M28 30 L18 50 A10 8 0 0 0 38 50 Z"/><path d="M72 30 L62 50 A10 8 0 0 0 82 50 Z"/><line x1="38" y1="78" x2="62" y2="78"/></g></svg>
         H&amp;Y Law
       </div>
-      <p class="muted" style="cursor:default;">Enterprise Centre, 50 Wakering Rd, Barking IG11 8GN</p>
+      <p class="muted" style="cursor:default;">Barking (HQ): Enterprise Centre, 50 Wakering Rd, IG11 8GN</p>
+      <p class="muted" style="cursor:default;">Ilford Branch: 116 Windsor Road, IG1 1HQ</p>
       <a href="tel:02080502206">020 8050 2206</a>
       <a href="mailto:info@hylaw.co.uk">info@hylaw.co.uk</a>
       <a href="https://wa.me/447387829975" target="_blank" rel="noopener">WhatsApp: +44 7387 829975</a>
@@ -617,7 +649,7 @@
   </div>
   <div class="dw-bottom">
     <span>© 2026 H&amp;Y Law. All rights reserved.</span>
-    <span>Enterprise Centre, 50 Wakering Rd, Barking IG11 8GN</span>
+    <span>Barking (HQ) &amp; Ilford Branch</span>
   </div>
 </footer>
 

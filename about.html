@@ -142,6 +142,24 @@
   .stat-item span { display: block; font-size: 13px; letter-spacing: 0.03em; color: rgba(255,255,255,0.75); }
   @media (max-width: 860px) { .stats-grid { grid-template-columns: 1fr 1fr; row-gap: 36px; } }
 
+  /* award recognition */
+  .award-section { padding: 100px 0; background: var(--white); text-align: center; }
+  .award-section .section-head h2 { max-width: 640px; margin-left: auto; margin-right: auto; }
+  .award-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 900px; margin: 0 auto; }
+  .award-tile { display: flex; align-items: center; gap: 26px; padding: 34px 30px; text-align: left; border: 1px solid var(--line); }
+  .award-tile.light { background: var(--cream); }
+  .award-tile.dark { background: linear-gradient(150deg, #0b0f1d, #16213E); border-color: transparent; }
+  .award-tile img { width: 96px; height: auto; flex-shrink: 0; }
+  .award-tile.light img { filter: drop-shadow(0 10px 22px rgba(236,106,43,0.18)); }
+  .award-tile.dark img { border-radius: 50%; }
+  .award-tile-text b { display: block; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 16.5px; line-height: 1.3; margin-bottom: 6px; }
+  .award-tile.light .award-tile-text b { color: var(--ink); }
+  .award-tile.dark .award-tile-text b { color: #fff; }
+  .award-tile-text span { display: block; font-size: 13px; line-height: 1.6; }
+  .award-tile.light .award-tile-text span { color: var(--muted); }
+  .award-tile.dark .award-tile-text span { color: rgba(255,255,255,0.65); }
+  @media (max-width: 700px) { .award-grid { grid-template-columns: 1fr; } .award-tile { flex-direction: column; text-align: center; } }
+
   /* tabbed overview */
   .tabs-section { padding: 90px 0; background: var(--white); }
   .tabs-nav { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-bottom: 44px; }
@@ -301,6 +319,31 @@
   </div>
 </section>
 
+<section class="award-section reveal">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-eyebrow dark">Award-Winning</div>
+      <h2>Recognised for Excellence</h2>
+    </div>
+    <div class="award-grid">
+      <div class="award-tile light">
+        <img src="award-badge.png" alt="London & South East England Prestige Awards 2026/27 — Winner" loading="lazy" />
+        <div class="award-tile-text">
+          <b>Winner — London &amp; South East England Prestige Awards 2026/27</b>
+          <span>Recognised for our client-focused, multilingual approach to immigration advice.</span>
+        </div>
+      </div>
+      <div class="award-tile dark">
+        <img src="award-badge-2.jpg" alt="SME News UK Enterprise Awards 2026 — Best Emerging Immigration Law Firm, London" loading="lazy" />
+        <div class="award-tile-text">
+          <b>Best Emerging Immigration Law Firm 2026 — London</b>
+          <span>SME News UK Enterprise Awards 2026.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="tabs-section reveal">
   <div class="wrap">
     <div class="tabs-nav">
@@ -432,7 +475,8 @@
         <svg viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="16" fill="#16213E"/><g stroke="#F2854A" stroke-width="5" fill="none" stroke-linecap="round"><line x1="50" y1="20" x2="50" y2="70"/><line x1="28" y1="30" x2="72" y2="30"/><path d="M28 30 L18 50 A10 8 0 0 0 38 50 Z"/><path d="M72 30 L62 50 A10 8 0 0 0 82 50 Z"/><line x1="38" y1="78" x2="62" y2="78"/></g></svg>
         H&amp;Y Law
       </div>
-      <p class="muted" style="cursor:default;">Enterprise Centre, 50 Wakering Rd, Barking IG11 8GN</p>
+      <p class="muted" style="cursor:default;">Barking (HQ): Enterprise Centre, 50 Wakering Rd, IG11 8GN</p>
+      <p class="muted" style="cursor:default;">Ilford Branch: 116 Windsor Road, IG1 1HQ</p>
       <a href="tel:02080502206">020 8050 2206</a>
       <a href="mailto:info@hylaw.co.uk">info@hylaw.co.uk</a>
       <a href="https://wa.me/447387829975" target="_blank" rel="noopener">WhatsApp: +44 7387 829975</a>
@@ -441,7 +485,7 @@
   </div>
   <div class="dw-bottom">
     <span>© 2026 H&amp;Y Law. All rights reserved.</span>
-    <span>Enterprise Centre, 50 Wakering Rd, Barking IG11 8GN</span>
+    <span>Barking (HQ) &amp; Ilford Branch</span>
   </div>
 </footer>
 
