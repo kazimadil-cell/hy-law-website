@@ -61,8 +61,9 @@
 
   nav { position: sticky; top: 0; z-index: 200; background: rgba(22,33,62,0.96); backdrop-filter: blur(10px); padding: 18px 0; box-shadow: 0 8px 30px rgba(0,0,0,0.15); }
   .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #fff; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 20px; }
-  .nav-logo svg { width: 32px; height: 32px; flex-shrink: 0; }
+  .nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: #fff; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 20px; letter-spacing: 0.01em; }
+  .nav-logo img { width: auto; height: 42px; flex-shrink: 0; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4)); }
+  .nav-logo span { background: linear-gradient(90deg, #F2854A, #F5B96A); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .nav-links { display: flex; align-items: center; gap: 36px; }
   .nav-links a { color: rgba(255,255,255,0.88); text-decoration: none; font-size: 13.5px; font-weight: 600; letter-spacing: 0.03em; text-transform: uppercase; transition: color 0.2s; }
   .nav-links a:hover, .nav-links a.active { color: var(--brass-light); }
@@ -157,8 +158,9 @@
   .dw-col a, .dw-col p { display: block; width: fit-content; color: #fff; text-decoration: none; font-size: 13.5px; font-weight: 500; margin-bottom: 13px; position: relative; }
   .dw-col a::after { content: ''; position: absolute; left: 0; right: 0; bottom: -3px; height: 2px; background: var(--brass-light); transform: scaleX(0); transform-origin: left; transition: transform 0.25s ease; }
   .dw-col a:hover::after { transform: scaleX(1); }
-  .dw-logo { display: flex; align-items: center; gap: 12px; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 20px; margin-bottom: 18px; }
-  .dw-logo svg { width: 30px; height: 30px; }
+  .dw-logo { display: flex; align-items: center; gap: 10px; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 20px; margin-bottom: 18px; }
+  .dw-logo img { width: auto; height: 40px; flex-shrink: 0; }
+  .dw-logo span { background: linear-gradient(90deg, #F2854A, #F5B96A); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .dw-col p.muted { color: rgba(255,255,255,0.6); font-size: 13px; line-height: 1.7; }
   .dw-bottom { max-width: 1160px; margin: 60px auto 0; padding: 24px 24px 0; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12px; color: rgba(255,255,255,0.5); }
   @media (max-width: 860px) { .dw-cols { grid-template-columns: 1fr 1fr; } }
@@ -174,8 +176,8 @@
 <nav>
   <div class="wrap nav-inner">
     <a class="nav-logo cursor-link" href="index.html">
-      <svg viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="16" fill="#16213E"/><g stroke="#F2854A" stroke-width="5" fill="none" stroke-linecap="round"><line x1="50" y1="20" x2="50" y2="70"/><line x1="28" y1="30" x2="72" y2="30"/><path d="M28 30 L18 50 A10 8 0 0 0 38 50 Z"/><path d="M72 30 L62 50 A10 8 0 0 0 82 50 Z"/><line x1="38" y1="78" x2="62" y2="78"/></g></svg>
-      H&amp;Y Law
+      <img src="hero-watermark-emblem.png" alt="H&amp;Y Law" />
+      <span style="margin-right:1px;">H&amp;Y</span>Law
     </a>
     <div class="nav-links">
       <a class="cursor-link" href="index.html">Home</a>
@@ -303,8 +305,8 @@
     </div>
     <div class="dw-col">
       <div class="dw-logo">
-        <svg viewBox="0 0 100 100" fill="none"><rect width="100" height="100" rx="16" fill="#16213E"/><g stroke="#F2854A" stroke-width="5" fill="none" stroke-linecap="round"><line x1="50" y1="20" x2="50" y2="70"/><line x1="28" y1="30" x2="72" y2="30"/><path d="M28 30 L18 50 A10 8 0 0 0 38 50 Z"/><path d="M72 30 L62 50 A10 8 0 0 0 82 50 Z"/><line x1="38" y1="78" x2="62" y2="78"/></g></svg>
-        H&amp;Y Law
+        <img src="hero-watermark-emblem.png" alt="H&amp;Y Law" />
+        <span style="margin-right:1px;">H&amp;Y</span>Law
       </div>
       <p class="muted" style="cursor:default;">Barking (HQ): Enterprise Centre, 50 Wakering Rd, IG11 8GN</p>
       <p class="muted" style="cursor:default;">Ilford Branch: 116 Windsor Road, IG1 1HQ</p>
