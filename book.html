@@ -4,10 +4,10 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Book a Consultation | H&amp;Y Law, Barking, Ilford &amp; Romford</title>
-<meta name="description" content="Book a fixed-length immigration consultation with H&amp;Y Law — 30 minutes for £100 or 60 minutes for £150. Choose a time that works for you." />
+<meta name="description" content="Book a fixed-length 30-minute immigration consultation with H&amp;Y Law for £100. Choose a time that works for you." />
 <link rel="canonical" href="https://hylaw.co.uk/book.html" />
 <meta property="og:title" content="Book a Consultation | H&amp;Y Law" />
-<meta property="og:description" content="Book a fixed-length immigration consultation with H&amp;Y Law — 30 minutes for £100 or 60 minutes for £150." />
+<meta property="og:description" content="Book a fixed-length 30-minute immigration consultation with H&amp;Y Law for £100." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://hylaw.co.uk/book.html" />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%2316213E'/%3E%3Cg stroke='%23F2854A' stroke-width='4' fill='none' stroke-linecap='round'%3E%3Cline x1='50' y1='20' x2='50' y2='70'/%3E%3Cline x1='28' y1='30' x2='72' y2='30'/%3E%3Cpath d='M28 30 L18 50 A10 8 0 0 0 38 50 Z'/%3E%3Cpath d='M72 30 L62 50 A10 8 0 0 0 82 50 Z'/%3E%3Cline x1='38' y1='78' x2='62' y2='78'/%3E%3C/g%3E%3C/svg%3E" />
@@ -87,6 +87,7 @@
 
   .plans-section { padding: 100px 0 40px; background: var(--white); }
   .plans-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 900px; margin: 0 auto; }
+  .plans-grid-single { grid-template-columns: 1fr; max-width: 420px; }
   .plan-card { border: 1px solid var(--line); padding: 44px 38px; position: relative; transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease; }
   .plan-card:hover { transform: translateY(-6px); box-shadow: 0 30px 60px rgba(22,33,62,0.12); border-color: transparent; }
   .plan-card.featured { background: linear-gradient(150deg, var(--navy), #0e1730); border-color: transparent; }
@@ -196,29 +197,22 @@
   <div class="wrap">
     <div class="section-eyebrow">Book Online</div>
     <h1>Book a Consultation</h1>
-    <p>Prefer a dedicated, fixed-length session with an adviser? Choose 30 or 60 minutes and pick a time that suits you.</p>
+    <p>Prefer a dedicated, fixed-length session with an adviser? Book 30 minutes and pick a time that suits you.</p>
   </div>
 </header>
 
 <section class="plans-section reveal">
   <div class="wrap">
-    <div class="plans-grid">
-      <div class="plan-card">
+    <div class="plans-grid plans-grid-single">
+      <div class="plan-card featured">
         <div class="plan-duration">30 Minutes</div>
         <div class="plan-price"><b>£100</b><span>fixed fee</span></div>
         <p class="plan-desc">A focused session to go through your situation and get clear, practical next steps.</p>
         <a class="plan-btn" href="https://wa.me/447387829975?text=Hi%2C%20I%27d%20like%20to%20book%20a%2030-minute%20consultation%20(%C2%A3100).%20Please%20let%20me%20know%20your%20availability." target="_blank" rel="noopener">Book 30 Minutes</a>
       </div>
-      <div class="plan-card featured">
-        <span class="plan-tag">Most Thorough</span>
-        <div class="plan-duration">60 Minutes</div>
-        <div class="plan-price"><b>£150</b><span>fixed fee</span></div>
-        <p class="plan-desc">More time to cover a complex case in depth, review documents, and plan your full application.</p>
-        <a class="plan-btn" href="https://wa.me/447387829975?text=Hi%2C%20I%27d%20like%20to%20book%20a%2060-minute%20consultation%20(%C2%A3150).%20Please%20let%20me%20know%20your%20availability." target="_blank" rel="noopener">Book 60 Minutes</a>
-      </div>
     </div>
     <div class="book-note">
-      <p>Fees for these fixed-length sessions are separate from our free initial consultation, which remains available by phone, WhatsApp or in person before any fees are agreed.</p>
+      <p>The fee for this fixed-length session is separate from our free initial consultation, which remains available by phone, WhatsApp or in person before any fees are agreed.</p>
     </div>
   </div>
 </section>
@@ -227,8 +221,8 @@
   <div class="wrap">
     <div class="schedule-card">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-      <h3>Choose your session above to check availability</h3>
-      <p>Tap "Book 30 Minutes" or "Book 60 Minutes" to message our team directly on WhatsApp with your preferred session — we'll confirm a time that works for you against our live calendar at info@hylaw.co.uk.</p>
+      <h3>Tap the button above to check availability</h3>
+      <p>Tap "Book 30 Minutes" to message our team directly on WhatsApp with your preferred session — we'll confirm a time that works for you against our live calendar at info@hylaw.co.uk.</p>
       <a class="plan-btn" style="display:inline-block; width:auto; padding:15px 34px;" href="tel:02080502206">Or Call 020 8050 2206</a>
     </div>
   </div>
@@ -292,11 +286,18 @@
 </footer>
 
 <!--
-  TODO (Kazim): once you've set up Cal.com or Calendly and connected info@hylaw.co.uk's
-  calendar with the two event types (30 min / £100, 60 min / £150), send me the embed
-  link and I'll replace the .schedule-section above with the live embedded scheduler
-  (e.g. Cal.com's inline embed <script>/<div> snippet) so this page shows real-time
-  availability instead of routing to WhatsApp.
+  TODO (Kazim): once you've set up Cal.com or Calendly, connected info@hylaw.co.uk's
+  calendar, created the single 30-min / £100 event type, and turned on Cal.com's Stripe
+  app for that event type (so payment is collected as part of the booking itself, tied
+  to the slot the client actually picks), send me the embed link. I'll then replace the
+  .schedule-section above with the live embedded scheduler (Cal.com's inline embed
+  <script>/<div> snippet) so this page shows real-time availability, takes payment, adds
+  the booking to both calendars, and emails both sides a confirmation — instead of
+  routing to WhatsApp as it does now.
+
+  Note: a plain Stripe Payment Link (not through Cal.com) isn't used here on purpose —
+  it would collect payment without checking real availability first, risking someone
+  paying for a slot that's already taken.
 -->
 
 <script>
