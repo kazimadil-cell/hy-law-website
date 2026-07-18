@@ -105,7 +105,38 @@
     100% { box-shadow: 0 0 0 0 rgba(230,140,50,0); }
   }
   @media (prefers-reduced-motion: reduce) { .nav-btn { animation: none; } }
-  @media (max-width: 900px) { .nav-links, .nav-phone { display: none; } }
+  .nav-toggle { display: none; background: none; border: none; padding: 0; width: 30px; height: 22px; position: relative; cursor: pointer; z-index: 210; flex-shrink: 0; }
+  .nav-toggle span { position: absolute; left: 0; right: 0; height: 2px; background: #fff; border-radius: 2px; transition: transform 0.25s ease, opacity 0.25s ease; }
+  .nav-toggle span:nth-child(1) { top: 0; }
+  .nav-toggle span:nth-child(2) { top: 10px; }
+  .nav-toggle span:nth-child(3) { top: 20px; }
+  .nav-toggle.open span:nth-child(1) { transform: translateY(10px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.open span:nth-child(3) { transform: translateY(-10px) rotate(-45deg); }
+  .nav-overlay { position: fixed; inset: 0; background: rgba(11,16,32,0.55); opacity: 0; visibility: hidden; transition: opacity 0.3s ease; z-index: 195; }
+  .nav-overlay.open { opacity: 1; visibility: visible; }
+  @media (max-width: 900px) {
+    .nav-toggle { display: block; }
+    .nav-phone { display: none; }
+    .nav-links {
+      position: fixed; top: 0; right: -100%; width: min(320px, 84vw); height: 100vh;
+      background: var(--navy); flex-direction: column; align-items: stretch;
+      padding: 100px 28px 40px; gap: 0; overflow-y: auto;
+      transition: right 0.35s ease; box-shadow: -30px 0 70px rgba(0,0,0,0.35); z-index: 205;
+    }
+    .nav-links.nav-open { right: 0; }
+    .nav-links > a { padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .nav-item { width: 100%; }
+    .nav-item > a { padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.1); width: 100%; }
+    .nav-item > a::after { display: none; }
+    .nav-dropdown { position: static; padding-top: 0; opacity: 1; visibility: visible; pointer-events: auto; transform: none; }
+    .nav-dropdown-inner { position: static; background: transparent; box-shadow: none; border-top: none; border-radius: 0; padding: 4px 0 14px 16px; transform: none; min-width: 0; display: block; }
+    .nav-dropdown a { color: rgba(255,255,255,0.72); padding: 10px 0; font-size: 13.5px; }
+    .nav-dropdown a::before { display: none; }
+    .nav-dropdown a:hover { background: transparent; color: var(--brass-light); padding-left: 8px; }
+    .nav-dropdown .dd-label { color: rgba(255,255,255,0.4); padding: 14px 0 6px; }
+    .nav-item-wide .nav-dropdown-inner { display: block; }
+  }
 
   .page-hero { background: linear-gradient(120deg, var(--navy), #0e1730); padding: 130px 0 76px; text-align: center; }
   .section-eyebrow { display: flex; align-items: center; justify-content: center; gap: 14px; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass-light); margin-bottom: 18px; }
@@ -216,12 +247,14 @@
       <a href="videos.html">Videos</a>
       <a href="contact.html">Contact</a>
     </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     <div class="nav-cta">
       <a class="nav-phone" href="tel:02080502206">020 8050 2206</a>
       <a class="nav-btn" href="book.html">Book Consultation</a>
     </div>
   </div>
 </nav>
+<div class="nav-overlay" id="navOverlay"></div>
 
 <header class="page-hero reveal">
   <div class="wrap">
@@ -365,6 +398,29 @@
     entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('in-view'); io.unobserve(entry.target); } });
   }, { threshold: 0.15 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  (function () {
+    const toggle = document.getElementById('navToggle');
+    const links = document.querySelector('.nav-links');
+    const overlay = document.getElementById('navOverlay');
+    if (!toggle || !links || !overlay) return;
+    function closeMenu() {
+      links.classList.remove('nav-open');
+      toggle.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    toggle.addEventListener('click', () => {
+      const isOpen = links.classList.toggle('nav-open');
+      toggle.classList.toggle('open', isOpen);
+      overlay.classList.toggle('open', isOpen);
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    overlay.addEventListener('click', closeMenu);
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      if (window.innerWidth <= 900) closeMenu();
+    }));
+  })();
 </script>
 </body>
 </html>
