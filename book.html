@@ -126,9 +126,9 @@
   .booking-grid { display: grid; grid-template-columns: 0.78fr 1.5fr; }
   .booking-info { padding: 44px 36px; border-right: 1px solid var(--line); background: #fff; }
   .booking-info h2 { font-size: 24px; margin-bottom: 10px; line-height: 1.2; }
-  .booking-price-tag { display: inline-flex; align-items: baseline; gap: 6px; border: 1px solid var(--line-gold); border-radius: 999px; padding: 6px 14px; margin-bottom: 30px; }
-  .booking-price-tag b { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 16px; color: var(--brass); }
-  .booking-price-tag span { font-size: 11.5px; color: var(--muted); font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; }
+  .booking-price-tag { display: inline-flex; align-items: baseline; gap: 8px; background: linear-gradient(120deg, var(--navy), #0e1730); border-radius: 999px; padding: 9px 20px; margin-bottom: 30px; }
+  .booking-price-tag b { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 19px; color: #fff; }
+  .booking-price-tag span { font-size: 10.5px; color: var(--brass-light); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
   .booking-meta { list-style: none; margin: 0; padding: 0; }
   .booking-meta li { display: flex; align-items: flex-start; gap: 12px; padding: 15px 0; border-bottom: 1px solid var(--line); font-size: 13.5px; color: var(--ink-soft); }
   .booking-meta li:last-child { border-bottom: none; }
@@ -269,11 +269,11 @@
       <div class="booking-grid">
         <div class="booking-info">
           <h2>30-Min Consultation</h2>
-          <div class="booking-price-tag"><b>£100</b><span>fixed fee</span></div>
+          <div class="booking-price-tag"><b>£100</b><span>per session</span></div>
           <ul class="booking-meta">
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-              <span><b>30 minutes</b><br/>Fixed fee, paid at booking</span>
+              <span><b>30 minutes</b><br/>With an immigration adviser</span>
             </li>
             <li id="metaSession">
               <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -436,9 +436,17 @@
     const calMonthLabel = document.getElementById('calMonthLabel');
     const calPrev = document.getElementById('calPrev');
     const calNext = document.getElementById('calNext');
-    const metaSession = document.getElementById('metaSession').querySelector('span');
+    const metaSessionLi = document.getElementById('metaSession');
+    const metaSession = metaSessionLi.querySelector('span');
+    const metaSessionIcon = metaSessionLi.querySelector('svg');
     const metaDate = document.getElementById('metaDate').querySelector('span');
     const continueBtn = document.getElementById('continueBtn');
+
+    const SESSION_ICONS = {
+      'Phone Call': '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>',
+      'Video Call': '<path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/>',
+      'In Person': '<path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 9h1v1H9zM9 13h1v1H9zM14 9h1v1h-1zM14 13h1v1h-1z"/>'
+    };
 
     function renderCalendar() {
       calMonthLabel.textContent = MONTHS[viewMonth] + ' ' + viewYear;
@@ -477,6 +485,7 @@
 
     function updateMeta() {
       metaSession.textContent = selectedSession;
+      if (SESSION_ICONS[selectedSession]) { metaSessionIcon.innerHTML = SESSION_ICONS[selectedSession]; }
       if (selectedDate) {
         const dateStr = selectedDate.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' });
         metaDate.textContent = selectedTime ? (dateStr + ' at ' + selectedTime) : dateStr;
