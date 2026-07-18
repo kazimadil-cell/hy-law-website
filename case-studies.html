@@ -62,7 +62,15 @@
   .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s ease, transform 0.8s ease; }
   .reveal.in-view { opacity: 1; transform: translateY(0); }
 
-  nav { position: sticky; top: 0; z-index: 200; background: rgba(22,33,62,0.96); backdrop-filter: blur(10px); padding: 18px 0; box-shadow: 0 8px 30px rgba(0,0,0,0.15); }
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+    background: transparent; padding: 26px 0;
+    transition: background 0.35s ease, padding 0.35s ease, box-shadow 0.35s ease;
+  }
+  nav.nav-scrolled {
+    background: rgba(22,33,62,0.94); backdrop-filter: blur(10px);
+    padding: 14px 0; box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+  }
   .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; max-width: none; margin: 0; padding-left: clamp(16px, 3vw, 48px); padding-right: 24px; }
   .nav-logo { display: flex; align-items: center; gap: 8px; text-decoration: none; color: #fff; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 20px; letter-spacing: 0.01em; }
   .nav-logo img { width: auto; height: 42px; flex-shrink: 0; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.4)); }
@@ -99,7 +107,7 @@
   @media (prefers-reduced-motion: reduce) { .nav-btn { animation: none; } }
   @media (max-width: 900px) { .nav-links, .nav-phone { display: none; } }
 
-  .page-hero { background: linear-gradient(120deg, var(--navy), #0e1730); padding: 90px 0 76px; text-align: center; }
+  .page-hero { background: linear-gradient(120deg, var(--navy), #0e1730); padding: 130px 0 76px; text-align: center; }
   .section-eyebrow { display: flex; align-items: center; justify-content: center; gap: 14px; font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--brass-light); margin-bottom: 18px; }
   .section-eyebrow::before, .section-eyebrow::after { content: ''; width: 32px; height: 1px; background: rgba(242,133,74,0.5); }
   .page-hero h1 { color: #fff; font-size: clamp(32px, 4.6vw, 52px); margin-bottom: 18px; }
@@ -165,7 +173,7 @@
 <div class="grain"></div>
 <div class="scroll-progress"><div class="scroll-progress-bar" id="scrollBar"></div></div>
 
-<nav>
+<nav id="mainNav">
   <div class="wrap nav-inner">
     <a class="nav-logo" href="index.html">
       <img src="hero-watermark-emblem.png" alt="H&amp;Y Law" />
@@ -351,6 +359,7 @@
   window.addEventListener('scroll', () => {
     const max = document.documentElement.scrollHeight - window.innerHeight;
     document.getElementById('scrollBar').style.width = (max > 0 ? (window.scrollY / max) * 100 : 0) + '%';
+    document.getElementById('mainNav').classList.toggle('nav-scrolled', window.scrollY > 80);
   }, { passive: true });
   const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('in-view'); io.unobserve(entry.target); } });
