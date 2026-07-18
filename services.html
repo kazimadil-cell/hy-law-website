@@ -134,7 +134,11 @@
     .nav-dropdown a::before { display: none; }
     .nav-dropdown a:hover { background: transparent; color: var(--brass-light); padding-left: 8px; }
     .nav-dropdown .dd-label { color: rgba(255,255,255,0.4); padding: 14px 0 6px; }
-    .nav-item-wide .nav-dropdown-inner { display: block; }
+    .nav-item-wide .nav-dropdown-inner { display: block; min-width: 0; }
+    .nav-inner { gap: 8px; padding-right: 16px; }
+    .nav-logo { font-size: 16px; gap: 6px; }
+    .nav-logo img { height: 34px; }
+    .nav-btn { padding: 9px 14px; font-size: 10.5px; }
   }
 
   .page-hero {
@@ -232,11 +236,11 @@
       <a href="videos.html">Videos</a>
       <a href="contact.html">Contact</a>
     </div>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     <div class="nav-cta">
       <a class="nav-phone" href="tel:02080502206">020 8050 2206</a>
       <a class="nav-btn" href="book.html">Book Consultation</a>
     </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 <div class="nav-overlay" id="navOverlay"></div>
