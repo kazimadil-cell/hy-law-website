@@ -122,59 +122,8 @@
 
   /* booking widget */
   .booking-section { padding: 70px 0 110px; background: var(--white); }
-  .booking-card { max-width: 1020px; margin: 0 auto; background: var(--cream); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; box-shadow: 0 40px 90px rgba(22,33,62,0.1); }
-  .booking-grid { display: grid; grid-template-columns: 0.78fr 1.5fr; }
-  .booking-info { padding: 44px 36px; border-right: 1px solid var(--line); background: #fff; }
-  .booking-info h2 { font-size: 24px; margin-bottom: 10px; line-height: 1.2; }
-  .booking-price-tag { display: inline-flex; align-items: baseline; gap: 8px; background: linear-gradient(120deg, var(--navy), #0e1730); border-radius: 999px; padding: 9px 20px; margin-bottom: 30px; }
-  .booking-price-tag b { font-family: 'Playfair Display', serif; font-weight: 800; font-size: 19px; color: #fff; }
-  .booking-price-tag span { font-size: 10.5px; color: var(--brass-light); font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; }
-  .booking-meta { list-style: none; margin: 0; padding: 0; }
-  .booking-meta li { display: flex; align-items: flex-start; gap: 12px; padding: 15px 0; border-bottom: 1px solid var(--line); font-size: 13.5px; color: var(--ink-soft); }
-  .booking-meta li:last-child { border-bottom: none; }
-  .booking-meta li svg { width: 17px; height: 17px; stroke: var(--brass); flex-shrink: 0; margin-top: 1px; }
-  .booking-meta li b { color: var(--ink); font-weight: 700; }
-  .booking-main { padding: 44px 40px; }
-  .session-toggle { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 34px; }
-  .session-btn { border: 1px solid var(--line); background: #fff; padding: 18px 8px; text-align: center; border-radius: 6px; cursor: pointer; font-family: inherit; font-size: 13px; font-weight: 600; color: var(--ink-soft); transition: background 0.2s, border-color 0.2s, color 0.2s; }
-  .session-btn svg { width: 22px; height: 22px; margin: 0 auto 10px; display: block; stroke: var(--brass); }
-  .session-btn.active { background: var(--navy); border-color: var(--navy); color: #fff; }
-  .session-btn.active svg { stroke: var(--brass-light); }
-  .cal-wrap { display: grid; grid-template-columns: 1.35fr 1fr; gap: 34px; }
-  .cal-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 18px; }
-  .cal-head h3 { font-size: 20px; }
-  .cal-nav-btn { width: 32px; height: 32px; border: 1px solid var(--line); background: #fff; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; color: var(--ink-soft); transition: border-color 0.2s, color 0.2s; }
-  .cal-nav-btn:hover { border-color: var(--brass); color: var(--brass); }
-  .cal-nav-btn:disabled { opacity: 0.3; cursor: default; }
-  .cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; text-align: center; }
-  .cal-day-label { font-size: 10.5px; font-weight: 700; letter-spacing: 0.04em; color: var(--muted); text-transform: uppercase; padding: 4px 0 10px; }
-  .cal-day { padding: 10px 0; font-size: 13.5px; border-radius: 6px; cursor: pointer; background: none; border: none; font-family: inherit; color: var(--ink); transition: background 0.15s, color 0.15s; }
-  .cal-day:hover:not(:disabled):not(.selected) { background: var(--cream-2); }
-  .cal-day:disabled { color: #d6d9e2; cursor: default; }
-  .cal-day.selected { background: var(--brass); color: #fff; font-weight: 700; }
-  .cal-day.empty { visibility: hidden; }
-  .times-panel-label { font-size: 10.5px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
-  .times-panel p { font-size: 13.5px; color: var(--muted); line-height: 1.7; margin: 0; }
-  .time-slot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-  .time-slot { border: 1px solid var(--line); background: #fff; padding: 10px 6px; text-align: center; font-size: 13px; font-weight: 600; color: var(--ink-soft); border-radius: 6px; cursor: pointer; font-family: inherit; transition: background 0.15s, border-color 0.15s, color 0.15s; }
-  .time-slot:hover { border-color: var(--brass); color: var(--brass); }
-  .time-slot.selected { background: var(--navy); border-color: var(--navy); color: #fff; }
-  .booking-continue-row { display: flex; justify-content: flex-end; margin-top: 30px; }
-  .continue-btn { border: none; background: var(--line); color: #9aa1b3; padding: 16px 36px; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; font-size: 12.5px; cursor: not-allowed; transition: background 0.2s, color 0.2s; text-decoration: none; }
-  .continue-btn.enabled { background: var(--brass); color: #fff; cursor: pointer; }
-  .continue-btn.enabled:hover { background: var(--brass-light); }
-  @media (max-width: 860px) { .booking-grid { grid-template-columns: 1fr; } .booking-info { border-right: none; border-bottom: 1px solid var(--line); } .cal-wrap { grid-template-columns: 1fr; } }
-  @media (max-width: 480px) {
-    .booking-info { padding: 28px 22px; }
-    .booking-main { padding: 28px 20px; }
-    .session-toggle { gap: 8px; margin-bottom: 26px; }
-    .session-btn { padding: 12px 4px; font-size: 11px; }
-    .session-btn svg { width: 18px; height: 18px; margin-bottom: 6px; }
-    .cal-day { font-size: 12px; padding: 8px 0; }
-    .cal-head h3 { font-size: 17px; }
-    .time-slot { font-size: 11.5px; padding: 9px 4px; }
-    .continue-btn { display: block; width: 100%; text-align: center; padding: 15px; font-size: 11.5px; }
-  }
+  .booking-embed-wrap { max-width: 1020px; margin: 0 auto; height: 780px; background: var(--cream); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; box-shadow: 0 40px 90px rgba(22,33,62,0.1); }
+  @media (max-width: 600px) { .booking-embed-wrap { height: 680px; } }
 
   .final-cta { background: linear-gradient(120deg, var(--navy), #0e1730); padding: 90px 0; text-align: center; }
   .final-cta h2 { color: #fff; font-size: clamp(28px,3.6vw,40px); margin-bottom: 20px; }
@@ -265,76 +214,30 @@
 
 <section class="booking-section reveal">
   <div class="wrap">
-    <div class="booking-card">
-      <div class="booking-grid">
-        <div class="booking-info">
-          <h2>30-Min Consultation</h2>
-          <div class="booking-price-tag"><b>£100</b><span>per session</span></div>
-          <ul class="booking-meta">
-            <li>
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-              <span><b>30 minutes</b><br/>With an immigration adviser</span>
-            </li>
-            <li id="metaSession">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              <span>Select a session type</span>
-            </li>
-            <li id="metaDate">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              <span>Select a date &amp; time</span>
-            </li>
-          </ul>
-        </div>
-        <div class="booking-main">
-          <div class="session-toggle" id="sessionToggle">
-            <button type="button" class="session-btn active" data-session="Phone Call">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              Phone Call
-            </button>
-            <button type="button" class="session-btn" data-session="Video Call">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
-              Video Call
-            </button>
-            <button type="button" class="session-btn" data-session="In Person">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 9h1v1H9zM9 13h1v1H9zM14 9h1v1h-1zM14 13h1v1h-1z"/></svg>
-              In Person
-            </button>
-          </div>
-          <div class="cal-wrap">
-            <div>
-              <div class="cal-head">
-                <h3 id="calMonthLabel"></h3>
-                <div style="display:flex; gap:8px;">
-                  <button type="button" class="cal-nav-btn" id="calPrev" aria-label="Previous month">‹</button>
-                  <button type="button" class="cal-nav-btn" id="calNext" aria-label="Next month">›</button>
-                </div>
-              </div>
-              <div class="cal-grid" id="calGridLabels">
-                <span class="cal-day-label">MO</span><span class="cal-day-label">TU</span><span class="cal-day-label">WE</span><span class="cal-day-label">TH</span><span class="cal-day-label">FR</span><span class="cal-day-label">SA</span><span class="cal-day-label">SU</span>
-              </div>
-              <div class="cal-grid" id="calGrid"></div>
-            </div>
-            <div>
-              <div class="times-panel-label">Preferred Time</div>
-              <div class="time-slot-grid" id="timeSlots">
-                <button type="button" class="time-slot" data-time="10:00am">10:00am</button>
-                <button type="button" class="time-slot" data-time="11:30am">11:30am</button>
-                <button type="button" class="time-slot" data-time="1:00pm">1:00pm</button>
-                <button type="button" class="time-slot" data-time="2:30pm">2:30pm</button>
-                <button type="button" class="time-slot" data-time="4:00pm">4:00pm</button>
-                <button type="button" class="time-slot" data-time="5:30pm">5:30pm</button>
-              </div>
-              <p style="margin-top:14px;">We'll confirm your exact slot is free by WhatsApp before taking payment.</p>
-            </div>
-          </div>
-          <div class="booking-continue-row">
-            <a class="continue-btn" id="continueBtn" href="#">Message Us to Confirm →</a>
-          </div>
-        </div>
-      </div>
+    <div class="booking-embed-wrap">
+      <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-30-minute-consultation"></div>
     </div>
   </div>
 </section>
+
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal ||
+  function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || [];
+  d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api
+  = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace
+  === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal,
+  ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window,
+  "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", "30-minute-consultation", {origin:"https://cal.com"});
+
+  Cal.ns["30-minute-consultation"]("inline", {
+    elementOrSelector:"#my-cal-inline-30-minute-consultation",
+    config: {"layout":"month_view","useSlotsViewOnSmallScreen":"true"},
+    calLink: "hylaw/30-minute-consultation",
+  });
+
+  Cal.ns["30-minute-consultation"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#16213E"},"dark":{"cal-brand":"#EC6A2B"}},"hideEventTypeDetails":false,"layout":"month_view"});
+</script>
 
 <section class="final-cta reveal">
   <div class="wrap">
@@ -420,131 +323,6 @@
   }, { threshold: 0.15 });
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  (function () {
-    const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-    let viewYear, viewMonth;
-    let selectedSession = 'Phone Call';
-    let selectedDate = null;
-    let selectedTime = null;
-
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    viewYear = today.getFullYear();
-    viewMonth = today.getMonth();
-
-    const calGrid = document.getElementById('calGrid');
-    const calMonthLabel = document.getElementById('calMonthLabel');
-    const calPrev = document.getElementById('calPrev');
-    const calNext = document.getElementById('calNext');
-    const metaSessionLi = document.getElementById('metaSession');
-    const metaSession = metaSessionLi.querySelector('span');
-    const metaSessionIcon = metaSessionLi.querySelector('svg');
-    const metaDate = document.getElementById('metaDate').querySelector('span');
-    const continueBtn = document.getElementById('continueBtn');
-
-    const SESSION_ICONS = {
-      'Phone Call': '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>',
-      'Video Call': '<path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/>',
-      'In Person': '<path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 9h1v1H9zM9 13h1v1H9zM14 9h1v1h-1zM14 13h1v1h-1z"/>'
-    };
-
-    function renderCalendar() {
-      calMonthLabel.textContent = MONTHS[viewMonth] + ' ' + viewYear;
-      const firstDay = new Date(viewYear, viewMonth, 1);
-      const startOffset = (firstDay.getDay() + 6) % 7; // Monday-first
-      const daysInMonth = new Date(viewYear, viewMonth + 1, 0).getDate();
-      const isPastMonth = (viewYear < today.getFullYear()) || (viewYear === today.getFullYear() && viewMonth < today.getMonth());
-      calPrev.disabled = isPastMonth || (viewYear === today.getFullYear() && viewMonth === today.getMonth());
-
-      calGrid.innerHTML = '';
-      for (let i = 0; i < startOffset; i++) {
-        const empty = document.createElement('span');
-        empty.className = 'cal-day empty';
-        calGrid.appendChild(empty);
-      }
-      for (let d = 1; d <= daysInMonth; d++) {
-        const cellDate = new Date(viewYear, viewMonth, d);
-        const btn = document.createElement('button');
-        btn.type = 'button';
-        btn.className = 'cal-day';
-        btn.textContent = d;
-        const isPast = cellDate < today;
-        if (isPast) {
-          btn.disabled = true;
-        } else {
-          btn.addEventListener('click', () => {
-            selectedDate = cellDate;
-            document.querySelectorAll('.cal-day').forEach(el => el.classList.remove('selected'));
-            btn.classList.add('selected');
-            updateMeta();
-          });
-        }
-        calGrid.appendChild(btn);
-      }
-    }
-
-    function updateMeta() {
-      metaSession.textContent = selectedSession;
-      if (SESSION_ICONS[selectedSession]) { metaSessionIcon.innerHTML = SESSION_ICONS[selectedSession]; }
-      if (selectedDate) {
-        const dateStr = selectedDate.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' });
-        metaDate.textContent = selectedTime ? (dateStr + ' at ' + selectedTime) : dateStr;
-      } else {
-        metaDate.textContent = 'Select a date & time';
-      }
-      const ready = !!(selectedDate && selectedTime);
-      continueBtn.classList.toggle('enabled', ready);
-      if (ready) {
-        const dateStr = selectedDate.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
-        const message = 'Hi, I\'d like to book a 30-minute consultation (£100).\n\n' +
-          'Session type: ' + selectedSession + '\n' +
-          'Preferred date: ' + dateStr + '\n' +
-          'Preferred time: ' + selectedTime + '\n\n' +
-          'Please confirm this slot is available.';
-        continueBtn.href = 'https://wa.me/447387829975?text=' + encodeURIComponent(message);
-        continueBtn.target = '_blank';
-        continueBtn.rel = 'noopener';
-      } else {
-        continueBtn.removeAttribute('href');
-      }
-    }
-
-    document.getElementById('sessionToggle').addEventListener('click', (e) => {
-      const btn = e.target.closest('.session-btn');
-      if (!btn) return;
-      document.querySelectorAll('.session-btn').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      selectedSession = btn.dataset.session;
-      updateMeta();
-    });
-
-    document.getElementById('timeSlots').addEventListener('click', (e) => {
-      const btn = e.target.closest('.time-slot');
-      if (!btn) return;
-      document.querySelectorAll('.time-slot').forEach(b => b.classList.remove('selected'));
-      btn.classList.add('selected');
-      selectedTime = btn.dataset.time;
-      updateMeta();
-    });
-
-    continueBtn.addEventListener('click', (e) => {
-      if (!continueBtn.classList.contains('enabled')) e.preventDefault();
-    });
-
-    calPrev.addEventListener('click', () => {
-      viewMonth--;
-      if (viewMonth < 0) { viewMonth = 11; viewYear--; }
-      renderCalendar();
-    });
-    calNext.addEventListener('click', () => {
-      viewMonth++;
-      if (viewMonth > 11) { viewMonth = 0; viewYear++; }
-      renderCalendar();
-    });
-
-    renderCalendar();
-    updateMeta();
-  })();
 
   (function () {
     const toggle = document.getElementById('navToggle');
