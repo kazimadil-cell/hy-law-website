@@ -13,6 +13,8 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%2316213E'/%3E%3Cg stroke='%23F2854A' stroke-width='4' fill='none' stroke-linecap='round'%3E%3Cline x1='50' y1='20' x2='50' y2='70'/%3E%3Cline x1='28' y1='30' x2='72' y2='30'/%3E%3Cpath d='M28 30 L18 50 A10 8 0 0 0 38 50 Z'/%3E%3Cpath d='M72 30 L62 50 A10 8 0 0 0 82 50 Z'/%3E%3Cline x1='38' y1='78' x2='62' y2='78'/%3E%3C/g%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;0,900;1,600;1,700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="preconnect" href="https://www.tiktok.com">
+<link rel="dns-prefetch" href="https://www.tiktok.com">
 <style>
   :root {
     --brass: #EC6A2B; --brass-light: #F2854A; --white: #ffffff; --dark: #0b1020;
@@ -505,26 +507,39 @@
     modalRevertTimer = setTimeout(closeVideoModal, revertMs);
 
     const loader = modalBody.querySelector('.video-loading');
-    setTimeout(() => {
-      if (!loader) return;
+    function hideLoader() {
+      if (!loader || loader.classList.contains('fade-out')) return;
       loader.classList.add('fade-out');
       setTimeout(() => loader.remove(), 400);
-    }, 1800);
+    }
+    // Fallback in case the iframe never fires 'load' (slow network, blocked embed, etc.)
+    // so the spinner doesn't stay up forever — but the observer below normally
+    // clears it the moment the video is actually ready to play.
+    const loaderFallback = setTimeout(hideLoader, 6000);
 
     // TikTok's own player has a "maximize" icon that, by default, navigates the
     // whole page away to tiktok.com instead of just enlarging in place. Sandbox
     // the iframe TikTok injects (no allow-top-navigation/allow-popups) so that
-    // click is inert and visitors stay on our site.
+    // click is inert and visitors stay on our site. The same observer also tells
+    // us the real moment the player is ready, so the spinner reflects actual
+    // load time instead of a guessed fixed delay.
     const embedObserver = new MutationObserver(() => {
       const iframe = modalBody.querySelector('iframe');
       if (iframe && !iframe.hasAttribute('sandbox')) {
         iframe.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-presentation allow-forms');
+        iframe.addEventListener('load', () => { clearTimeout(loaderFallback); hideLoader(); }, { once: true });
         embedObserver.disconnect();
       }
     });
     embedObserver.observe(modalBody, { childList: true, subtree: true });
     setTimeout(() => embedObserver.disconnect(), revertMs);
 
+    // TikTok's embed.js only scans the page for blockquote.tiktok-embed once, on
+    // load — it doesn't watch for new ones. Re-adding a fresh script tag each
+    // time is the standard way to make it pick up the newly inserted blockquote,
+    // but we drop the previous tag first so repeated plays in one session don't
+    // pile up duplicate scripts in the DOM.
+    document.querySelectorAll('script[src="https://www.tiktok.com/embed.js"]').forEach(el => el.remove());
     const s = document.createElement('script');
     s.src = 'https://www.tiktok.com/embed.js';
     s.async = true;
