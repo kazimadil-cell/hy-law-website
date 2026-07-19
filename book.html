@@ -121,9 +121,30 @@
   .page-hero p { color: rgba(255,255,255,0.82); font-size: 16px; max-width: 620px; margin: 0 auto; line-height: 1.7; }
 
   /* booking widget */
-  .booking-section { padding: 70px 0 110px; background: var(--white); }
-  .booking-embed-wrap { max-width: 1020px; margin: 0 auto; height: 780px; background: var(--cream); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; box-shadow: 0 40px 90px rgba(22,33,62,0.1); }
-  @media (max-width: 600px) { .booking-embed-wrap { height: 680px; } }
+  .booking-section { padding: 70px 0 110px; background: linear-gradient(180deg, var(--cream) 0%, var(--white) 260px); }
+  .booking-layout { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 320px 1fr; gap: 28px; align-items: start; }
+  .booking-panel { background: linear-gradient(155deg, var(--navy), #0e1730); border-radius: 16px; padding: 36px 30px; color: #fff; position: sticky; top: 110px; box-shadow: 0 30px 70px rgba(22,33,62,0.22); }
+  .booking-panel .bp-eyebrow { font-size: 11px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--brass-light); margin-bottom: 10px; }
+  .booking-panel .bp-price { display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px; }
+  .booking-panel .bp-price b { font-family: 'Playfair Display', serif; font-size: 42px; font-weight: 800; }
+  .booking-panel .bp-price span { font-size: 13px; color: rgba(255,255,255,0.62); }
+  .booking-panel .bp-sub { font-size: 13.5px; color: rgba(255,255,255,0.72); margin-bottom: 26px; line-height: 1.6; }
+  .bp-list { list-style: none; margin: 0 0 28px; padding: 0; display: flex; flex-direction: column; gap: 14px; }
+  .bp-list li { display: flex; align-items: flex-start; gap: 10px; font-size: 13.5px; color: rgba(255,255,255,0.9); line-height: 1.5; }
+  .bp-list svg { flex-shrink: 0; margin-top: 2px; width: 16px; height: 16px; color: var(--brass-light); }
+  .bp-divider { height: 1px; background: rgba(255,255,255,0.14); margin: 24px 0; }
+  .bp-secure { display: flex; align-items: center; gap: 10px; font-size: 12px; color: rgba(255,255,255,0.62); line-height: 1.5; }
+  .bp-secure svg { flex-shrink: 0; width: 18px; height: 18px; color: var(--brass-light); }
+  .bp-alt { margin-top: 22px; font-size: 12.5px; color: rgba(255,255,255,0.6); }
+  .bp-alt a { color: var(--brass-light); font-weight: 700; text-decoration: none; }
+  .bp-alt a:hover { text-decoration: underline; }
+  .booking-embed-wrap { background: var(--cream); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: 0 40px 90px rgba(22,33,62,0.1); }
+  .booking-embed-wrap > div { min-height: 780px; }
+  @media (max-width: 900px) {
+    .booking-layout { grid-template-columns: 1fr; }
+    .booking-panel { position: static; }
+    .booking-embed-wrap > div { min-height: 680px; }
+  }
 
   .final-cta { background: linear-gradient(120deg, var(--navy), #0e1730); padding: 90px 0; text-align: center; }
   .final-cta h2 { color: #fff; font-size: clamp(28px,3.6vw,40px); margin-bottom: 20px; }
@@ -214,8 +235,27 @@
 
 <section class="booking-section reveal">
   <div class="wrap">
-    <div class="booking-embed-wrap">
-      <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-30-minute-consultation"></div>
+    <div class="booking-layout">
+      <aside class="booking-panel">
+        <div class="bp-eyebrow">Fixed-Length Session</div>
+        <div class="bp-price"><b>£100</b><span>/ 30 minutes</span></div>
+        <p class="bp-sub">A focused, one-to-one consultation with a qualified immigration adviser — in person, by phone or video.</p>
+        <ul class="bp-list">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Straight-talking advice on your specific case</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Choose Barking or Ilford, phone or video call</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Clear next steps and an honest cost estimate</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Instant confirmation by email once booked</li>
+        </ul>
+        <div class="bp-divider"></div>
+        <div class="bp-secure">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          Secure checkout powered by Stripe. Your slot is only confirmed once payment clears.
+        </div>
+        <div class="bp-alt">Prefer to speak first? <a href="tel:02080502206">Call 020 8050 2206</a> or <a href="https://wa.me/447387829975" target="_blank" rel="noopener">WhatsApp us</a>.</div>
+      </aside>
+      <div class="booking-embed-wrap">
+        <div style="width:100%;height:100%;overflow:scroll" id="my-cal-inline-30-minute-consultation"></div>
+      </div>
     </div>
   </div>
 </section>
@@ -295,22 +335,6 @@
     <span>Barking (HQ) &amp; Ilford Branch</span>
   </div>
 </footer>
-
-<!--
-  TODO (Kazim): the calendar above lets clients pick a real session type, date and time,
-  but it doesn't yet check your actual calendar — "Message Us to Confirm" just sends
-  their selection to WhatsApp so your team can confirm it's free. Once you've set up
-  Cal.com or Calendly, connected info@hylaw.co.uk's calendar, created the 30-min / £100
-  event type, and turned on Cal.com's Stripe app for it (so payment is collected as part
-  of the booking, tied to the slot actually picked), send me the embed link. I'll then
-  replace the .booking-section above with the live embedded scheduler so this page shows
-  real-time availability, takes payment, adds the booking to both calendars, and emails
-  both sides a confirmation automatically.
-
-  Note: a plain Stripe Payment Link (not through Cal.com) isn't used here on purpose —
-  it would collect payment without checking real availability first, risking someone
-  paying for a slot that's already taken.
--->
 
 <script>
   window.addEventListener('scroll', () => {
