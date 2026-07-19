@@ -528,6 +528,9 @@
       const iframe = modalBody.querySelector('iframe');
       if (iframe && !iframe.hasAttribute('sandbox')) {
         iframe.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-presentation allow-forms');
+        // Browsers block unmuted autoplay in an iframe unless the parent page
+        // explicitly delegates it — without this the video opens muted by default.
+        iframe.setAttribute('allow', 'autoplay; encrypted-media');
         iframe.addEventListener('load', () => { clearTimeout(loaderFallback); hideLoader(); }, { once: true });
         embedObserver.disconnect();
       }
