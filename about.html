@@ -142,10 +142,11 @@
   }
 
   .page-hero {
-    background: url('banner-about-hero.jpg'); background-size: cover; background-position: center 10%;
+    background: url('joshua-hero-v2.jpg'); background-size: cover; background-position: center 22%;
     min-height: 46vh; display: flex; align-items: center; justify-content: center;
     padding: 130px 0 76px; text-align: center; position: relative; overflow: hidden;
   }
+  @media (max-width: 860px) { .page-hero { background-position: 70% 16%; } }
   .page-hero::after {
     content: ''; position: absolute; inset: 0;
     background: linear-gradient(0deg, rgba(11,16,32,0.75) 0%, rgba(11,16,32,0.55) 50%, rgba(11,16,32,0.45) 100%);
