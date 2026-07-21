@@ -34,6 +34,25 @@
 
 const NEWS_ITEMS = [
   {
+    id: "immigration-stats-mar2026",
+    dateSort: "2026-07-16",
+    dateDisplay: "16 July 2026",
+    source: "GOV.UK",
+    icon: "clock",
+    category: "Migration Stats",
+    title: "Immigration System Statistics: Year Ending March 2026",
+    summary: "Home Office figures for the year ending March 2026 show asylum claims and most visa grant categories falling year-on-year, while the asylum backlog fell by more than half.",
+    teaser: "The Home Office's quarterly statistics release, published 16 July 2026, recorded 94,000 asylum claims for the year ending March 2026, down 12% on the previous year, alongside a 55% fall in the number of people awaiting an initial asylum decision. Work, study, family and settlement grants all declined over the same period, while small boat arrivals and enforcement returns both edged higher.",
+    body: [
+      "The Home Office published its latest quarterly Immigration System Statistics release on 16 July 2026, covering the year ending March 2026 across entry, visas, asylum, detention, returns and citizenship.",
+      "On asylum, 94,000 people claimed asylum in the year, 12% fewer than the previous 12 months, while initial decisions rose sharply to 128,000, up 32%. The overall grant rate at initial decision fell to 39%, down from 49% a year earlier. The number of people still awaiting an initial decision dropped to 49,000, a fall of 55% on the previous year and 72% below the peak recorded in June 2023.",
+      "Visa grants were down across most main categories: work visas fell 17% to 253,000, sponsored study visas fell 3% to 410,000, and family visas fell 17% to 62,000, while 2.2 million visitor visas were granted. Settlement grants fell 11% to 152,000 and citizenship grants fell 12% to 237,000, while grants of EU Settlement Scheme settled status rose 12% to 371,000.",
+      "Detected irregular arrivals totalled 44,000, of which small boat crossings made up 39,000 (90%) — a slight increase on the previous year but 14% below the 2022 peak. Returns rose 7% to 39,000, including a 13% rise in enforced returns to 9,700, and entries into immigration detention rose 7% to 23,000."
+    ],
+    url: "https://www.gov.uk/government/statistics/immigration-system-statistics-year-ending-march-2026",
+    image: null
+  },
+  {
     id: "hc259",
     dateSort: "2026-07-09",
     dateDisplay: "9 July 2026",
@@ -194,23 +213,5 @@ const NEWS_ITEMS = [
     ],
     url: "https://www.gov.uk/government/news/asylum-seekers-will-pay-towards-costs-of-accommodation",
     image: "news-asylum-accommodation.jpg"
-  },
-  {
-    id: "net-migration-ons",
-    dateSort: "2025-11-27",
-    dateDisplay: "27 November 2025",
-    source: "ONS",
-    icon: "clock",
-    category: "Migration Stats",
-    title: "Net Migration Falls to 204,000",
-    summary: "ONS provisional figures show long-term net migration down roughly two-thirds year-on-year.",
-    teaser: "The Office for National Statistics reported provisional long-term net migration of 204,000 for the year ending June 2025, down from 649,000 a year earlier — a fall of around two-thirds, driven by fewer non-EU arrivals for work and study and a continued rise in emigration.",
-    body: [
-      "The Office for National Statistics published provisional long-term international migration figures for the year ending June 2025 on 27 November 2025, recording net migration of 204,000 — down from 649,000 the year before, a fall of roughly two-thirds and a return to levels last seen before the post-Brexit immigration system was introduced.",
-      "The fall was driven mainly by the non-EU+ nationality group, though it remained the largest positive contributor to net migration at +383,000. Both EU+ nationals and British nationals recorded negative net migration over the period (more people leaving than arriving), at -70,000 and -109,000 respectively. Total immigration fell from an estimated 1,299,000 to 898,000, with three-quarters of arrivals coming from non-EU countries, while emigration rose to an estimated 693,000, an increase of 43,000 on the previous year.",
-      "The ONS attributes the overall decline to fewer non-EU+ nationals arriving for work and study reasons, combined with a continued gradual increase in emigration. As with all figures in this release, the ONS describes them as provisional estimates, subject to revision as more data becomes available."
-    ],
-    url: "https://www.ons.gov.uk/peoplepopulationandcommunity/populationandmigration/internationalmigration/bulletins/longterminternationalmigrationprovisional/yearendingjune2025",
-    image: null
   }
 ];
