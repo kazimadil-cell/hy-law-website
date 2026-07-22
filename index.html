@@ -223,7 +223,27 @@
   @keyframes caretBlink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
   .hero-greeting-rule { width: 32px; height: 1px; background: rgba(255,255,255,0.35); margin: 0 0 8px auto; }
   .hero-greeting-lang { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.8); }
-  @media (max-width: 860px) { .hero-photo { width: 100%; background-position: center 22%; } .hero-trust-item { padding-right: 20px; margin-right: 20px; } .hero-greeting { display: none; } .hero-watermark { display: none; } }
+  .hero-award-badge { display: block; margin-top: 14px; height: 68px; width: auto; border-radius: 8px; box-shadow: 0 12px 28px rgba(0,0,0,0.42), 0 0 0 1px rgba(212,175,110,0.4); background: rgba(255,255,255,0.97); padding: 6px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .hero-award-badge:hover { transform: translateY(-4px); box-shadow: 0 18px 36px rgba(0,0,0,0.48), 0 0 0 1px rgba(212,175,110,0.6); }
+  .hero-award-badge.hero-award-dark { background: rgba(18,20,26,0.94); }
+  .hero-award-caption { margin-top: 22px; display: inline-flex; align-items: center; gap: 9px; padding: 9px 18px; border: 1px solid rgba(212,175,110,0.45); border-radius: 999px; background: rgba(255,255,255,0.05); backdrop-filter: blur(4px); font-size: 11.5px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--brass-light); }
+  .hero-award-caption::before { content: '★'; font-size: 12px; line-height: 1; color: var(--brass-light); }
+  .hero-award-caption-mobile { display: none; }
+  .hero-mobile-awards { display: none; }
+  @media (max-width: 860px) {
+    .hero-photo { width: 100%; background-position: center 22%; }
+    .hero-trust-item { padding-right: 20px; margin-right: 20px; }
+    .hero-greeting { display: none; }
+    .hero-watermark { display: none; }
+    .hero-award-badge.desktop-award { display: none; }
+    .hero-award-caption-desktop { display: none; }
+    .hero-trust-item-last { display: flex; align-items: center; gap: 12px; padding-right: 0; margin-right: 0; flex-wrap: wrap; }
+    .hero-trust-text { padding-right: 12px; margin-right: 0; border-right: 1px solid rgba(255,255,255,0.16); flex-shrink: 0; }
+    .hero-mobile-awards { display: flex; align-items: center; gap: 7px; margin-top: 16px; }
+    .hero-mobile-awards img { display: block; height: 40px; width: auto; border-radius: 6px; padding: 4px; background: rgba(255,255,255,0.97); box-shadow: 0 8px 20px rgba(0,0,0,0.4), 0 0 0 1px rgba(212,175,110,0.4); }
+    .hero-mobile-awards img.hero-award-dark { background: rgba(18,20,26,0.94); }
+    .hero-award-caption-mobile { display: inline-flex; margin-top: 14px; flex-basis: 100%; width: fit-content; font-size: 10px; padding: 7px 14px; letter-spacing: 0.12em; }
+  }
 
   /* section eyebrow */
   .section-eyebrow {
@@ -510,10 +530,24 @@
         <a class="btn-ghost" href="https://wa.me/447387829975" target="_blank" rel="noopener">WhatsApp Us</a>
       </div>
       <div class="hero-trust">
-        <div class="hero-trust-item"><b>5.0★</b><span>Google Reviews</span></div>
-        <div class="hero-trust-item"><b>6</b><span>Languages Spoken</span></div>
-        <div class="hero-trust-item"><b>24 HR</b><span>Super Priority Service</span></div>
+        <div class="hero-trust-item">
+          <b>5.0★</b><span>Google Reviews</span>
+          <img class="hero-award-badge desktop-award" src="award-badge.png" alt="London &amp; South East England Prestige Awards 2026/27 Winner">
+        </div>
+        <div class="hero-trust-item">
+          <b>6</b><span>Languages Spoken</span>
+          <img class="hero-award-badge hero-award-dark desktop-award" src="award-badge-2.jpg" alt="SME News UK Enterprise Awards 2026 — Best Emerging Immigration Law Firm, London">
+        </div>
+        <div class="hero-trust-item hero-trust-item-last">
+          <div class="hero-trust-text"><b>24 HR</b><span>Super Priority Service</span></div>
+          <div class="hero-mobile-awards">
+            <img src="award-badge.png" alt="London &amp; South East England Prestige Awards 2026/27 Winner">
+            <img class="hero-award-dark" src="award-badge-2.jpg" alt="SME News UK Enterprise Awards 2026 — Best Emerging Immigration Law Firm, London">
+          </div>
+          <p class="hero-award-caption hero-award-caption-mobile">Award-Winning Firm 2026/27</p>
+        </div>
       </div>
+      <p class="hero-award-caption hero-award-caption-desktop">Award-Winning Firm 2026/27</p>
     </div>
   </div>
   <div class="hero-greeting">
