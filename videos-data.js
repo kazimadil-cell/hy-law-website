@@ -63,6 +63,36 @@ const MOST_WATCHED = [
 
 const RECENT_UPLOADS = [
   {
+    id: "7667283048118930710",
+    thumb: "tt-thumb-16.jpg",
+    tag: "Free Consultation",
+    caption: "Free Consultations: New Ilford Office",
+    alt: "H&Y Law offers free immigration consultations to celebrate opening their new Ilford office",
+    addedAt: "2026-08-05",
+    duration: 23,
+    uploadDate: "2026-07-27"
+  },
+  {
+    id: "7667153657917443350",
+    thumb: "tt-thumb-17.jpg",
+    tag: "Firm Update",
+    caption: "On This Day",
+    alt: "H&Y Law's On This Day post looking back at a past milestone",
+    addedAt: "2026-08-05",
+    duration: 28,
+    uploadDate: "2026-07-27"
+  },
+  {
+    id: "7666906250830990614",
+    thumb: "tt-thumb-18.jpg",
+    tag: "New Office",
+    caption: "New East London Office Now Open in Ilford",
+    alt: "H&Y Law announces the opening of their new East London office in Ilford",
+    addedAt: "2026-08-05",
+    duration: 23,
+    uploadDate: "2026-07-26"
+  },
+  {
     id: "7575354631535037718",
     thumb: "tt-thumb-12.jpg",
     tag: "Citizenship",
@@ -71,35 +101,5 @@ const RECENT_UPLOADS = [
     addedAt: "2026-07-11",
     duration: 92,
     uploadDate: "2025-11-22"
-  },
-  {
-    id: "7566388524090592514",
-    thumb: "tt-thumb-13.jpg",
-    tag: "Spouse Visa",
-    caption: "Spouse Visa: Get Tailored Advice",
-    alt: "Get tailored spouse visa legal advice",
-    addedAt: "2026-07-11",
-    duration: 53,
-    uploadDate: "2025-10-28"
-  },
-  {
-    id: "7564520083695996182",
-    thumb: "tt-thumb-14.jpg",
-    tag: "Immigration Rules",
-    caption: "Immigration Rules Update: HC133",
-    alt: "Latest update to the immigration rules, Statement of Changes HC133",
-    addedAt: "2026-07-11",
-    duration: 51,
-    uploadDate: "2025-10-23"
-  },
-  {
-    id: "7555955296477269270",
-    thumb: "tt-thumb-15.jpg",
-    tag: "Spouse Visa",
-    caption: "Answering Your Spouse Visa Question",
-    alt: "Answering a follower's spouse visa question",
-    addedAt: "2026-07-11",
-    duration: 73,
-    uploadDate: "2025-09-30"
   }
 ];
