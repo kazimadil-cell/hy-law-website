@@ -53,6 +53,25 @@ const NEWS_ITEMS = [
     image: null
   },
   {
+    id: "immigration-asylum-bill",
+    dateSort: "2026-07-13",
+    dateDisplay: "13 July 2026",
+    source: "GOV.UK",
+    icon: "clock",
+    category: "Asylum",
+    title: "Immigration and Asylum Bill Passes Second Reading",
+    summary: "MPs voted 264 to 90 to give the Immigration and Asylum Bill its second reading, backing reforms to asylum appeals, Article 8 human rights claims and modern slavery protections.",
+    teaser: "The Home Secretary opened the second reading debate on the Immigration and Asylum Bill on 13 July 2026, which MPs then passed by 264 votes to 90. The bill would replace immigration judges with a new Independent Immigration Appeals Authority, narrow Article 8 family-life claims, and require successful refugees to contribute financially towards their support once in work.",
+    body: [
+      "The Immigration and Asylum Bill, introduced in the Commons on 30 June 2026, had its second reading on 13 July 2026, with Home Secretary Shabana Mahmood opening the debate. MPs voted 264 to 90 in favour, with 14 Labour MPs voting against the bill.",
+      "The bill's central change is the creation of a new Independent Immigration Appeals Authority, staffed by trained adjudicators rather than judges, replacing the First-tier Tribunal's immigration and asylum chamber. It would also merge refugee status and humanitarian protection into a single, temporary 'core protection' model, and move to a single appeal route requiring claimants to raise all relevant grounds upfront rather than in stages.",
+      "On human rights, the bill would narrow how Article 8 of the European Convention on Human Rights — the right to family life — can be used in immigration cases, defining 'family life' primarily as spouses, partners and children under 18, and providing that illegal entry weakens the strength of a claim. It would also give the Home Secretary a new power to remove some long-term residents convicted of serious offences, and bar modern slavery protection from those judged a security threat or serving a custodial sentence. A separate provision would require successful refugees to repay a portion of taxpayer-funded support once they are in employment.",
+      "In her opening speech, the Home Secretary cited asylum support costing £4.7 billion in a single year, including roughly £9 million a day on housing people in around 400 asylum hotels, and said arrests of people smugglers were up 55% on the previous year. The bill next moves to committee stage, due to begin on 10 September 2026 and expected to report by early November 2026, before any further Commons and Lords stages."
+    ],
+    url: "https://www.gov.uk/government/speeches/immigration-and-asylum-bill-second-reading-opening-speech",
+    image: "news-immigration-asylum-bill.jpg"
+  },
+  {
     id: "hc259",
     dateSort: "2026-07-09",
     dateDisplay: "9 July 2026",
@@ -196,22 +215,4 @@ const NEWS_ITEMS = [
     url: "https://www.gov.uk/government/consultations/earned-settlement",
     image: null
   },
-  {
-    id: "asylum-accommodation",
-    dateSort: "2026-01-15",
-    dateDisplay: "2026",
-    source: "GOV.UK",
-    icon: "clock",
-    category: "Asylum",
-    title: "Asylum Seekers to Repay Accommodation Costs",
-    summary: "New Home Office powers require asylum seekers who can afford it to contribute to support and accommodation costs.",
-    teaser: "Under new powers in the Immigration and Asylum Bill, the Home Office will require asylum seekers who are assessed as able to afford it to contribute towards the cost of their support and accommodation.",
-    body: [
-      "New powers introduced under the Immigration and Asylum Bill mean the Home Office can require asylum seekers to contribute towards the cost of their own support and accommodation, where they are individually assessed as able to afford it.",
-      "This does not apply to everyone in the asylum system by default — support and accommodation remain free at the point of use for those who genuinely cannot pay. The change targets cases where an individual has the financial means to contribute, aiming to recover some of the cost of the asylum accommodation estate from those who can afford it rather than reducing support for those who can't.",
-      "The measure sits within the government's broader push to reform asylum support costs, which have been under sustained political and financial pressure given the scale of the current accommodation estate."
-    ],
-    url: "https://www.gov.uk/government/news/asylum-seekers-will-pay-towards-costs-of-accommodation",
-    image: "news-asylum-accommodation.jpg"
-  }
 ];
