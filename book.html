@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -186,6 +186,18 @@
   .dw-col p.muted { color: rgba(255,255,255,0.74); font-size: 13px; line-height: 1.7; }
   .dw-bottom { max-width: 1160px; margin: 60px auto 0; padding: 24px 24px 0; border-top: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: 12px; color: rgba(255,255,255,0.66); }
   @media (max-width: 860px) { .dw-cols { grid-template-columns: 1fr 1fr; } }
+  /* accreditations strip */
+  .dw-accred { max-width: 1160px; margin: 56px auto 0; padding: 0 24px; text-align: center; }
+  .dw-accred-label { display: flex; align-items: center; justify-content: center; gap: 16px; font-size: 11px; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--brass-light); margin-bottom: 26px; }
+  .dw-accred-label::before, .dw-accred-label::after { content: ''; flex: 0 1 90px; height: 1px; background: linear-gradient(90deg, transparent, rgba(245,185,106,0.55)); }
+  .dw-accred-label::after { transform: scaleX(-1); }
+  .dw-accred-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 22px; }
+  .dw-accred-tile { margin: 0; height: 78px; padding: 10px 20px; background: #fff; border-radius: 12px; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 26px rgba(0,0,0,0.28), 0 0 0 1px rgba(245,185,106,0.28); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .dw-accred-tile:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(0,0,0,0.36), 0 0 0 1px rgba(245,185,106,0.6); }
+  .dw-accred-tile img { display: block; height: 100%; width: auto; max-width: 100%; }
+  .dw-accred-tile.dw-accred-navy { padding: 0; overflow: hidden; background: #003764; }
+  .dw-accred-tile.dw-accred-navy img { height: 100%; }
+  @media (max-width: 860px) { .dw-accred { margin-top: 44px; } .dw-accred-row { gap: 14px; } .dw-accred-tile { height: 62px; padding: 8px 14px; border-radius: 10px; } .dw-accred-tile.dw-accred-navy { padding: 0; } }
 </style>
 </head>
 <body>
@@ -358,7 +370,15 @@
       <a href="https://www.tiktok.com/@hylawuk" target="_blank" rel="noopener">TikTok: @hylawuk</a>
     </div>
   </div>
-  <div class="dw-bottom">
+  <div class="dw-accred">
+    <div class="dw-accred-label">Accreditations &amp; Registrations</div>
+    <div class="dw-accred-row">
+      <figure class="dw-accred-tile"><img loading="lazy" src="accred-iaa.jpg" alt="Immigration Advice Authority" /></figure>
+      <figure class="dw-accred-tile"><img loading="lazy" src="accred-oisc.jpg" alt="Office of the Immigration Services Commissioner (OISC)" /></figure>
+      <figure class="dw-accred-tile dw-accred-navy"><img loading="lazy" src="accred-ico.jpg" alt="Information Commissioner's Office" /></figure>
+      <figure class="dw-accred-tile"><img loading="lazy" src="accred-companies-house.jpg" alt="Companies House" /></figure>
+    </div>
+  </div>  <div class="dw-bottom">
     <span>© 2026 H&amp;Y Law. All rights reserved.</span>
     <span>Barking (HQ) &amp; Ilford Branch</span>
   </div>
