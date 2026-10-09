@@ -63,6 +63,26 @@ const MOST_WATCHED = [
 
 const RECENT_UPLOADS = [
   {
+    id: "7692107620844375329",
+    thumb: "tt-thumb-20.jpg",
+    tag: "Citizenship",
+    caption: "Citizenship Approved in Under a Week (Farsi)",
+    alt: "An Afghan client shares, in Farsi, his experience after his British citizenship application was approved in under a week with H&Y Law",
+    addedAt: "2026-10-09",
+    duration: 46,
+    uploadDate: "2026-10-02"
+  },
+  {
+    id: "7682410851088764193",
+    thumb: "tt-thumb-19.jpg",
+    tag: "Citizenship",
+    caption: "Citizenship Approved in Under a Week (Pashto)",
+    alt: "An Afghan client shares, in Pashto, his experience after his British citizenship application was approved in under a week with H&Y Law",
+    addedAt: "2026-10-09",
+    duration: 46,
+    uploadDate: "2026-09-06"
+  },
+  {
     id: "7667283048118930710",
     thumb: "tt-thumb-16.jpg",
     tag: "Free Consultation",
@@ -82,24 +102,4 @@ const RECENT_UPLOADS = [
     duration: 28,
     uploadDate: "2026-07-27"
   },
-  {
-    id: "7666906250830990614",
-    thumb: "tt-thumb-18.jpg",
-    tag: "New Office",
-    caption: "New East London Office Now Open in Ilford",
-    alt: "H&Y Law announces the opening of their new East London office in Ilford",
-    addedAt: "2026-08-05",
-    duration: 23,
-    uploadDate: "2026-07-26"
-  },
-  {
-    id: "7575354631535037718",
-    thumb: "tt-thumb-12.jpg",
-    tag: "Citizenship",
-    caption: "Illegal Entry &amp; British Citizenship",
-    alt: "Illegal entry and British citizenship applications",
-    addedAt: "2026-07-11",
-    duration: 92,
-    uploadDate: "2025-11-22"
-  }
 ];
