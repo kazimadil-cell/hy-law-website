@@ -34,6 +34,78 @@
 
 const NEWS_ITEMS = [
   {
+    id: "contactless-egates",
+    dateSort: "2026-10-06",
+    dateDisplay: "6 October 2026",
+    source: "GOV.UK",
+    icon: "clock",
+    category: "Border Control",
+    title: "Airports to Go Contactless in Major Boost for UK Passengers",
+    summary: "Border Force has begun rolling out contactless eGates that use facial recognition, so passengers no longer need to scan their passport at the border.",
+    teaser: "Contactless eGates went live at East Midlands Airport on 6 October 2026, starting with British citizens. The gates match a live photo against passport, travel and immigration data, are around 25% faster in testing, and every eGate in the UK is due to be upgraded by early 2027.",
+    body: [
+      "The Home Office and Border Force announced on 6 October 2026 that UK airports will move to contactless eGates, allowing passengers to clear border control without placing their passport on a reader. The rollout started that day at East Midlands Airport, initially for British citizens, and will extend to more airports and other eligible nationalities over the coming months, with every eGate due to be upgraded by early 2027.",
+      "At the gate, the traveller's photo is taken and checked against verified passport, travel and immigration records; if the full security checks are passed, the gate opens. Where further checks are needed, the passenger will be asked to present their passport or will be directed to a Border Force officer, and officers remain on hand at every eGate. Travellers are still told to carry their passport. Testing found the contactless gates work roughly 25% faster than the current passport-reader model.",
+      "The government presents the change as part of the border modernisation programme set out in the Immigration White Paper, alongside the expansion of the Electronic Travel Authorisation (ETA) scheme and the extension of eGates to children aged eight and over. eGates currently operate at 13 UK airports, including Heathrow, Gatwick, Manchester, Birmingham, Edinburgh and Glasgow."
+    ],
+    url: "https://www.gov.uk/government/news/airports-to-go-contactless-in-major-boost-for-uk-passengers",
+    image: "news-contactless-egates.jpg"
+  },
+  {
+    id: "irish-border-smuggling",
+    dateSort: "2026-09-29",
+    dateDisplay: "29 September 2026",
+    source: "GOV.UK",
+    icon: "shield",
+    category: "Enforcement",
+    title: "Nearly 50 Arrests in People Smuggling Crackdown at Irish Border",
+    summary: "Immigration Enforcement arrested 49 people in three days of targeted action against misuse of the Common Travel Area between Ireland and the UK.",
+    teaser: "Between 22 and 24 September 2026, Immigration Enforcement arrested 49 people at ports, airports, roads and rail routes across the UK under Operation Comby, which targets illegal travel from Ireland. The operation has now made more than 250 arrests and 113 removals since the general election.",
+    body: [
+      "The Home Office reported on 29 September 2026 that Immigration Enforcement officers arrested 49 people during three days of targeted activity, from 22 to 24 September, at seaports, airports, roads and rail links in Northern Ireland, Scotland, England and Wales. The action formed part of Operation Comby, a multi-agency operation aimed at people abusing the Common Travel Area — the long-standing arrangement allowing British and Irish citizens to travel freely between the two countries — to enter the UK illegally.",
+      "Since the general election, Operation Comby has led to more than 250 arrests and 113 removals from the UK, and nearly £500,000 in cash has been seized. A separate operation, Operation Gull, which carries out routine deployments at Northern Ireland's ports and airports, accounted for almost 1,000 arrests over the past year. Cases highlighted from the latest action included two Romanian women arrested at Belfast International Airport who were identified as possible trafficking victims, and four Romanian nationals stopped at Belfast Port with around £130,000 of counterfeit Apple goods.",
+      "The department also said that between July 2024 and June 2026, Immigration Enforcement carried out nearly 3,000 enforcement visits in Northern Ireland, leading to more than 2,400 arrests and nearly 1,000 returns. The Home Secretary has announced plans to double the Immigration Enforcement budget by 2028/29 and grow its workforce by 60%."
+    ],
+    url: "https://www.gov.uk/government/news/nearly-50-arrests-in-people-smuggling-crackdown-at-irish-border",
+    image: "news-irish-border-smuggling.jpg"
+  },
+  {
+    id: "uk-resettlement-scheme",
+    dateSort: "2026-09-28",
+    dateDisplay: "28 September 2026",
+    source: "GOV.UK",
+    icon: "clock",
+    category: "Asylum",
+    title: "UK Resettlement Scheme Reopens for New Referrals",
+    summary: "The Home Secretary has reopened the UK Resettlement Scheme, with around one in four referrals set aside for Afghan women and girls and Palestinian refugees.",
+    teaser: "The UK Resettlement Scheme reopened to new referrals on 28 September 2026, working with UNHCR and the International Refugee Assistance Project. New community, university and corporate sponsorship routes will follow, and those resettled will get a five-year route to settlement.",
+    body: [
+      "Home Secretary Shabana Mahmood announced on 28 September 2026 that the UK Resettlement Scheme (UKRS) has reopened for new referrals as a safe and legal route for refugees. Referrals are being made through the UN Refugee Agency (UNHCR) and the International Refugee Assistance Project (IRAP), with the first arrivals expected before the end of the year. Around one in four referrals will go to Afghan women and girls and to Palestinian refugees.",
+      "The government also set out three new sponsorship routes: a route for charities and non-profit organisations, with applications opening in October and first arrivals expected in autumn 2027; a university sponsorship route, also expecting arrivals from autumn 2027; and a corporate sponsorship route opening to applications in spring 2027. Sponsors on each route will be expected to provide housing, integration support and help finding work.",
+      "Numbers will start in the hundreds and are intended to rise to the low thousands as illegal migration falls, subject to annual caps. People resettled through these routes will be given a five-year path to permanent settlement, which the Home Office describes as more generous than the terms available to those who arrive by small boat or other irregular means."
+    ],
+    url: "https://www.gov.uk/government/news/uk-resettlement-scheme-reopens-for-new-referrals",
+    image: "news-uk-resettlement-scheme.jpg"
+  },
+  {
+    id: "hc584",
+    dateSort: "2026-09-03",
+    dateDisplay: "3 September 2026",
+    source: "GOV.UK",
+    icon: "doc",
+    category: "Immigration Rules",
+    title: "Statement of Changes to the Immigration Rules: HC 584",
+    summary: "New Immigration Rules changes laid on 3 September 2026, mostly in force from 8 October, affect Skilled Worker, Visitor, Student, EU Settlement Scheme, BN(O) and domestic abuse routes.",
+    teaser: "HC 584 was laid before Parliament on 3 September 2026. Most changes apply from 8 October 2026, with religious worker route changes from 29 October, a student maintenance increase from 30 November, and EU Settlement Scheme identity changes from 9 December 2026.",
+    body: [
+      "The Home Office laid Statement of Changes HC 584 before Parliament on 3 September 2026. The bulk of the changes took effect on 8 October 2026, with further changes to the Minister of Religion and Religious Worker routes from 29 October 2026, a rise in student maintenance funds from 30 November 2026, and a change to identity evidence under the EU Settlement Scheme from 9 December 2026.",
+      "For Skilled Workers, the changes give additional work flexibility to people who receive a positive Conclusive Grounds decision under the modern slavery framework while holding permission. The Victim of Domestic Abuse route is widened to cover more relationship types and certain dependent children aged 18 or over, and the Visitor and Student rules gain new provisions for Erasmus+ participants, covering study, training, traineeships and job shadowing. Visitor rules are also adjusted for permitted training and for artists, entertainers and musicians attending rehearsals.",
+      "Student maintenance amounts increase from £1,529 to £1,570 per month in London and from £1,171 to £1,203 per month elsewhere. The religious worker routes are restructured, including a National Minimum Wage exemption backed by sponsor maintenance obligations, while the Hong Kong BN(O) settlement rules and several EU Settlement Scheme provisions — including the removal of the biometric residence permit as proof of identity — are clarified or tightened."
+    ],
+    url: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-584-3-september-2026",
+    image: null
+  },
+  {
     id: "immigration-stats-mar2026",
     dateSort: "2026-07-16",
     dateDisplay: "16 July 2026",
@@ -141,78 +213,6 @@ const NEWS_ITEMS = [
       "A related change took effect from 8 April 2026, introducing a new salary compliance regime requiring sponsors to ensure Skilled Worker visa holders are paid at least the required minimum salary in every pay period, rather than relying on an annual average. The Home Office issued a further guidance update on 20 May 2026, continuing this tightening of sponsor obligations."
     ],
     url: "https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers",
-    image: null
-  },
-  {
-    id: "visa-brake",
-    dateSort: "2026-03-05",
-    dateDisplay: "5 March 2026",
-    source: "GOV.UK",
-    icon: "shield",
-    category: "Visa Restrictions",
-    title: "\"Visa Brake\" Imposed on 4 Countries",
-    summary: "Nationals of Afghanistan, Cameroon, Myanmar and Sudan barred from Student and Skilled Worker routes from 26 March 2026.",
-    teaser: "The Home Office announced a \"visa brake\" on 5 March 2026, barring nationals of Afghanistan, Cameroon, Myanmar and Sudan from Student (and, for Afghan nationals, Skilled Worker) visa applications from 26 March 2026, citing a sharp rise in asylum claims from these routes.",
-    body: [
-      "The Home Office announced a \"visa brake\" on 5 March 2026, a new mechanism allowing the government to pause visa routes for specific nationalities where there is evidence of significant and rising abuse. It was applied immediately to four countries: Afghanistan, Cameroon, Myanmar and Sudan.",
-      "From 26 March 2026, online applications made from outside the UK for a Student visa were refused for nationals of all four countries, and Skilled Worker visa applications were refused for Afghan nationals specifically. The Home Office said the trigger was a sharp rise in asylum claims from people who had entered on these routes — by the year ending September 2025, asylum applications from students of these four nationalities had reportedly risen to over 470% of their 2021 level, with the number of Afghans on work visas going on to claim asylum reportedly outstripping the number of visas being issued.",
-      "The brake is described as a temporary, reviewable measure rather than a permanent ban — the government's own impact assessment suggests an initial duration of around 18 months, with the policy intended to be lifted once it's judged no longer necessary."
-    ],
-    url: "https://www.gov.uk/government/news/visa-brake-imposed-on-4-countries-after-widespread-visa-abuse",
-    image: "news-visa-brake.jpg"
-  },
-  {
-    id: "hc1691",
-    dateSort: "2026-03-05",
-    dateDisplay: "5 March 2026",
-    source: "GOV.UK",
-    icon: "doc",
-    category: "Immigration Rules",
-    title: "Statement of Changes HC 1691",
-    summary: "Wide-ranging rule changes including BN(O) route expansion and wider mandatory refusal grounds, phased in through July 2026.",
-    teaser: "Statement of Changes HC 1691, published 5 March 2026, introduced staged changes including an expansion of the BN(O) route to adult children of BN(O) nationals, and wider mandatory refusal grounds for suspended sentences of 12 months or more.",
-    body: [
-      "Statement of Changes HC 1691, published 5 March 2026, rolled out a wide set of Immigration Rules changes in stages through the rest of 2026, rather than all at once — different provisions commenced on 5 March itself (some at 3:00pm GMT that day), then 26 March, 2 April, 8 April, 29 April and 1 July 2026.",
-      "One notable change expands the British National (Overseas) route, extending eligibility to adult children of BN(O) nationals who were born after 1 July 1979 — widening who in a BN(O) family can apply in their own right. Separately, from 26 March 2026 the mandatory grounds for refusing an application were expanded to include suspended sentences of 12 months or more, tightening the character and conduct requirements applied across routes.",
-      "The statement also touched asylum policy: it allows asylum seekers who have waited more than a year for a decision, and who are permitted to work, to do so in a wider range of roles than previously allowed. As with any staged Statement of Changes, which specific provision applies to a given case depends on the application date and route."
-    ],
-    url: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-1619-5-march-2026",
-    image: null
-  },
-  {
-    id: "net-migration-ein",
-    dateSort: "2026-02-20",
-    dateDisplay: "2026",
-    source: "EIN News",
-    icon: "clock",
-    category: "Migration Stats",
-    title: "UK Net Migration Nearly Halves to 171,000",
-    summary: "EIN reports on ONS figures showing net migration nearly halved, alongside record Home Office asylum claim figures.",
-    teaser: "The Electronic Immigration Network reports that ONS figures show UK net migration falling to around 171,000, down sharply year-on-year, while separate Home Office figures showed asylum claims reaching a record high with falling grant rates.",
-    body: [
-      "EIN reported on further ONS figures showing UK net migration continuing its sharp downward trend, falling to around 171,000 — nearly half the level recorded a year earlier, continuing the pattern seen in the ONS's own year-ending-June-2025 release (covered separately in our news feed).",
-      "The same report highlighted a contrasting trend on the Home Office side: asylum claims were reported to have reached a record high over the same period, while the proportion of claims being granted was said to be falling. Taken together, the two data sets point to a wider migration picture where overall net numbers are falling even as asylum applications rise as a share of the total.",
-      "These are Home Office and ONS statistics as reported by EIN; the official releases from each body are the primary source for the exact methodology and caveats behind the figures."
-    ],
-    url: "https://www.ein.org.uk/news/uk-net-migration-nearly-halves-171000-year-december-2025-ons-says",
-    image: "news-net-migration-ein.jpg"
-  },
-  {
-    id: "earned-settlement",
-    dateSort: "2026-02-12",
-    dateDisplay: "12 February 2026",
-    source: "GOV.UK",
-    icon: "clock",
-    category: "Settlement",
-    title: "Earned Settlement Consultation Closes",
-    summary: "Government consultation on extending the qualifying period for settlement received over 200,000 responses.",
-    teaser: "The Home Office's \"earned settlement\" consultation closed on 12 February 2026 after receiving over 200,000 responses. It proposes moving from automatic settlement after a fixed period to a system where migrants must demonstrate sustained good conduct and contribution, with a baseline wait of 10 years or more for most routes.",
-    body: [
-      "The Home Office's consultation on \"earned settlement\" ran from 20 November 2025 to 12 February 2026 and drew an unusually large response — reports put the total at over 200,000 submissions, reflecting how directly the proposals would affect people already living and working in the UK on a pathway to settlement.",
-      "The proposals, part of the wider 2025 white paper \"Restoring Control over the Immigration System\", would end automatic settlement after a fixed number of years and replace it with a system where migrants must demonstrate sustained good conduct, contribution and integration. Most routes would move to a 10-year baseline wait rather than the current 5 years, and the consultation separately asked whether \"medium-skilled\" workers and below should face an even longer 15-year baseline. A related change would raise the required English language level to B2 (from the current B1) from March 2027.",
-      "As of this update, the government's formal response to the consultation had not yet been published. Under the usual process a response is expected within about 12 weeks of a consultation closing, though the Home Secretary has indicated the substantive changes may not land until later in 2026, with final Immigration Rules still to be laid before Parliament."
-    ],
-    url: "https://www.gov.uk/government/consultations/earned-settlement",
     image: null
   },
 ];
