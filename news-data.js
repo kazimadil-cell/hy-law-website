@@ -34,6 +34,43 @@
 
 const NEWS_ITEMS = [
   {
+    id: "earned-settlement",
+    dateSort: "2026-11-02",
+    dateDisplay: "2 November 2026",
+    source: "GOV.UK",
+    icon: "doc",
+    category: "Settlement",
+    title: "Home Secretary Unveils New Rules for Migrants Settling in the UK",
+    summary: "Settlement will no longer follow almost automatically after five years: the default qualifying period becomes 10 years, with shorter routes for high earners and key public service workers.",
+    teaser: "On 2 November 2026 the Home Secretary set out the earned settlement model. The default wait for settlement becomes 10 years, cut to 3 or 5 years for higher earners, public service workers and eligible care workers, and raised to 20 years or more for those who breached immigration rules. Everyone must also meet four new core conditions.",
+    body: [
+      "Home Secretary Shabana Mahmood set out new settlement rules before Parliament on 2 November 2026, largely following the earned settlement consultation launched in November 2025. Under the new model, indefinite leave to remain is no longer granted almost automatically after five years; how long someone waits instead depends on their contribution and character.",
+      "For the general routes, the default qualifying period becomes 10 years. The highest earners can settle after 3 years, while people earning over £50,271 and certain public service workers, such as doctors, nurses and teachers, can settle after 5 years. Care workers who complied with their visa conditions and earned at least £25,000 a year can also settle after 5 years. Anyone who has breached the immigration rules will face a wait of at least 20 years.",
+      "Every applicant, whenever they arrived, must meet four core requirements: a clean criminal record (with a tougher threshold than the current 12-month suspended sentence test), English at a high standard equivalent to A-Level English as a foreign language, no debts owed to the taxpayer, and a record of sustained National Insurance contributions. Refugees who come through Home Office-approved safe and legal routes can settle after 5 years; other refugees face 20 years, reduced to 10 for those in work or study, with an extra 10-year wait (up to 30 years in total) for those who arrived by small boat or other clandestine means.",
+      "The rules apply at the point of application rather than the date of arrival, and the government estimates that more than 500,000 people will now wait longer than 5 years. Those who do not qualify for 5-year settlement will be offered a new 5-year visa instead, and nobody will be forced to leave. Existing settled status will not be removed, and family members of British citizens, Hong Kong BN(O) visa holders and members of the armed forces keep their current pathways."
+    ],
+    url: "https://www.gov.uk/government/news/home-secretary-unveils-new-rules-for-migrants-settling-in-the-uk",
+    image: "news-earned-settlement.jpg"
+  },
+  {
+    id: "refugee-lead-sponsors",
+    dateSort: "2026-10-29",
+    dateDisplay: "29 October 2026",
+    source: "GOV.UK",
+    icon: "clock",
+    category: "Asylum",
+    title: "Lead Sponsor Applications Open in Step Towards Refugee Arrivals",
+    summary: "UK charities and non-profits can now apply to become lead sponsors under the new Named Community Sponsorship and Refugee Study routes.",
+    teaser: "Applications to become a lead sponsor for the UK's new safe and legal refugee routes opened on 29 October 2026. First arrivals through the Named Community Sponsorship and Refugee Study routes are expected in autumn 2027, with a separate refugee work route opening to applications in spring 2027.",
+    body: [
+      "The Home Office opened applications on 29 October 2026 for organisations wanting to become lead sponsors under the UK's new safe and legal refugee routes, which the Home Secretary first pledged in November 2025. The routes are modelled on Canada's private sponsorship programme.",
+      "Lead sponsors must be registered UK charities or non-profit organisations with a good reputation and suitable safeguarding arrangements and resources. Once accredited and overseen by the Home Office, they will support local groups such as community organisations, churches and universities to help refugees with accommodation, education, employment and access to local services.",
+      "The first arrivals through the Named Community Sponsorship and Refugee Study routes are expected in autumn 2027, while a separate refugee work route will open to applications in spring 2027. Arrivals will be capped and linked to communities' capacity to sponsor; together with the reopened UK Resettlement Scheme, numbers are set to start in the hundreds and rise to the low thousands as illegal migration falls."
+    ],
+    url: "https://www.gov.uk/government/news/lead-sponsor-applications-open-in-step-towards-refugee-arrivals",
+    image: "news-refugee-lead-sponsors.jpg"
+  },
+  {
     id: "contactless-egates",
     dateSort: "2026-10-06",
     dateDisplay: "6 October 2026",
@@ -177,42 +214,6 @@ const NEWS_ITEMS = [
       "Because EIN is a specialist legal-sector publisher rather than the primary government source, its report is a useful secondary summary of the same underlying Statement of Changes — the original legal text and full commencement details sit with GOV.UK, linked below."
     ],
     url: "https://www.ein.org.uk/news/new-statement-changes-immigration-rules-amends-graduate-route-appendix-fm-and-part-8-family",
-    image: null
-  },
-  {
-    id: "fee-rise-2026",
-    dateSort: "2026-04-08",
-    dateDisplay: "8 April 2026",
-    source: "GOV.UK",
-    icon: "doc",
-    category: "Visa Fees",
-    title: "UK Visa &amp; Nationality Fees Rise Roughly 6.5%",
-    summary: "Most visa, settlement and citizenship fees increased from 8 April 2026, including a rise in the ILR fee to £3,226.",
-    teaser: "From 8 April 2026, most Home Office visa, settlement and nationality fees rose by roughly 6.5%. The Indefinite Leave to Remain fee increased from £3,029 to £3,226 per applicant, while the fee for registering a child as a British citizen was reduced.",
-    body: [
-      "The Home Office increased almost all UK visa, immigration, settlement and nationality fees from 8 April 2026, with most categories rising by around 6 to 7 per cent. The updated fee table was published as a revision to the standard Home Office fees regulations.",
-      "Examples of the increase include the Standard Visitor visa (up to six months), which rose from £127 to £135, and the Electronic Travel Authorisation, up from £16 to £20. Student visa fees increased to £558 for both main applicants and dependants, and a Skilled Worker visa of up to three years rose from £719 to £769. The fee for Indefinite Leave to Remain (settlement) increased from £3,029 to £3,226 per applicant.",
-      "Not every fee went up: the application fee for registering a child as a British citizen was reduced, falling from £1,214 to £1,000. Applicants who submitted before 8 April 2026 were charged at the previous rates, so the increase applies going forward from that date rather than retrospectively."
-    ],
-    url: "https://www.gov.uk/government/publications/visa-regulations-revised-table/home-office-immigration-and-nationality-fees-8-april-2026",
-    image: null
-  },
-  {
-    id: "sponsor-guidance",
-    dateSort: "2026-03-06",
-    dateDisplay: "6 March 2026",
-    source: "GOV.UK",
-    icon: "shield",
-    category: "Sponsorship",
-    title: "Home Office Tightens Sponsor Licence Guidance",
-    summary: "New sponsor guidance replaces \"genuine vacancy\" with \"eligible role\" and lowers the threshold for licence revocation.",
-    teaser: "The Home Office issued significantly updated Sponsor Guidance on 6 March 2026, replacing the term \"genuine vacancy\" with \"eligible role\" and lowering the evidence threshold needed to revoke a sponsor licence for salary non-compliance.",
-    body: [
-      "On 6 March 2026 the Home Office issued substantially revised versions of its Sponsor Guidance documents, including Appendix D and the Skilled Worker sponsor guidance, affecting how UK employers hold and maintain a sponsor licence.",
-      "A key change replaces the previous \"genuine vacancy\" test with a new \"eligible role\" standard, reflecting closer scrutiny of whether a sponsored position is genuinely required. The guidance also lowers the bar for compliance action over salary issues: rather than needing to be satisfied a worker's salary was artificially inflated, the Home Office now only needs \"reasonable grounds to suspect\" this before acting. Sponsors must also keep evidence that sponsored workers have been informed of their employment rights.",
-      "A related change took effect from 8 April 2026, introducing a new salary compliance regime requiring sponsors to ensure Skilled Worker visa holders are paid at least the required minimum salary in every pay period, rather than relying on an annual average. The Home Office issued a further guidance update on 20 May 2026, continuing this tightening of sponsor obligations."
-    ],
-    url: "https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers",
     image: null
   },
 ];
