@@ -44,8 +44,9 @@ const NEWS_ITEMS = [
     summary: "Settlement will no longer follow almost automatically after five years: the default qualifying period becomes 10 years, with shorter routes for high earners and key public service workers.",
     teaser: "On 2 November 2026 the Home Secretary set out the earned settlement model. The default wait for settlement becomes 10 years, cut to 3 or 5 years for higher earners, public service workers and eligible care workers, and raised to 20 years or more for those who breached immigration rules. Everyone must also meet four new core conditions.",
     body: [
-      "Home Secretary Shabana Mahmood set out new settlement rules before Parliament on 2 November 2026, largely following the earned settlement consultation launched in November 2025. Under the new model, indefinite leave to remain is no longer granted almost automatically after five years; how long someone waits instead depends on their contribution and character.",
-      "For the general routes, the default qualifying period becomes 10 years. The highest earners can settle after 3 years, while people earning over £50,271 and certain public service workers, such as doctors, nurses and teachers, can settle after 5 years. Care workers who complied with their visa conditions and earned at least £25,000 a year can also settle after 5 years. Anyone who has breached the immigration rules will face a wait of at least 20 years.",
+      "Home Secretary Shabana Mahmood set out new settlement rules in an oral statement to Parliament on 2 November 2026, following the earned settlement consultation launched in November 2025, which drew more than 200,000 responses. Under the new model, indefinite leave to remain is no longer granted almost automatically after five years; how long someone waits instead depends on their contribution and character.",
+      "For the general routes, the default qualifying period becomes 10 years. The highest earners — highest-rate taxpayers and people on the top-talent routes — can settle after 3 years, while people earning over £50,271 and certain public service workers, such as doctors, nurses and teachers, can settle after 5 years. Anyone who has breached the immigration rules will face a wait of at least 20 years, and anyone who has claimed benefits will need five continuous years without relying on the state before applying.",
+      "Care workers who complied with their visa conditions and earned at least £25,000 a year keep their 5-year path. Around 250,000 people (plus dependants) came to or switched into the social care route between 2022 and 2025, and roughly a quarter of them did not meet their visa conditions; they will be offered a further 5-year care visa that is not tied to their old employer, with longer to find a new job before their visa is curtailed. A similar arrangement covers certain public sector roles identified by the Migration Advisory Committee, such as auxiliary nurses. These transitional arrangements apply to people who arrived before the Immigration White Paper of May 2025.",
       "Every applicant, whenever they arrived, must meet four core requirements: a clean criminal record (with a tougher threshold than the current 12-month suspended sentence test), English at a high standard equivalent to A-Level English as a foreign language, no debts owed to the taxpayer, and a record of sustained National Insurance contributions. Refugees who come through Home Office-approved safe and legal routes can settle after 5 years; other refugees face 20 years, reduced to 10 for those in work or study, with an extra 10-year wait (up to 30 years in total) for those who arrived by small boat or other clandestine means.",
       "The rules apply at the point of application rather than the date of arrival, and the government estimates that more than 500,000 people will now wait longer than 5 years. Those who do not qualify for 5-year settlement will be offered a new 5-year visa instead, and nobody will be forced to leave. Existing settled status will not be removed, and family members of British citizens, Hong Kong BN(O) visa holders and members of the armed forces keep their current pathways."
     ],
@@ -69,6 +70,60 @@ const NEWS_ITEMS = [
     ],
     url: "https://www.gov.uk/government/news/lead-sponsor-applications-open-in-step-towards-refugee-arrivals",
     image: "news-refugee-lead-sponsors.jpg"
+  },
+  {
+    id: "eritrea-visa-penalties",
+    dateSort: "2026-10-15",
+    dateDisplay: "15 October 2026",
+    source: "GOV.UK",
+    icon: "shield",
+    category: "Visa Restrictions",
+    title: "Home Secretary Threatens Eritrea with Visa Penalties",
+    summary: "Eritrean officials have lost fast-track UK visa processing, and the Home Secretary has warned that all visas for Eritreans could be blocked unless returns resume.",
+    teaser: "On 15 October 2026 the Home Office removed preferential visa processing for Eritrean VIPs and officials and restricted Eritrean diplomats' travel outside London. Shabana Mahmood warned that every visa for Eritrean nationals could be blocked if Eritrea does not agree to take back people with no right to be in the UK.",
+    body: [
+      "Home Secretary Shabana Mahmood announced on 15 October 2026 that Eritrean VIPs and government officials would lose access to preferential, fast-track UK visa processing with immediate effect. She warned that the UK would go further and block all visas for Eritrean nationals if Eritrea does not quickly agree to accept the return of its citizens who have no right to remain in the UK.",
+      "Eritrean diplomats in the UK are now barred from travelling more than 60 km (37 miles) outside London without Foreign Office permission, mirroring restrictions placed on British officials in Asmara. The Home Office said Eritrea had abruptly withdrawn from returns cooperation earlier in 2026, and that Eritreans were the most common nationality arriving by small boat in the year ending June 2026.",
+      "The move follows the government's earlier use of visa penalties. Angola and Namibia agreed improved returns arrangements soon after being threatened with visa measures in autumn 2025, while restrictions imposed on the Democratic Republic of Congo were lifted after six months of sustained cooperation and resumed returns flights. The department also pointed to a new deal with Egypt that is expected to cut the time taken to return Egyptian nationals by around 90%, from roughly 30 weeks to 3 weeks."
+    ],
+    url: "https://www.gov.uk/government/news/home-secretary-threatens-eritrea-with-visa-penalties",
+    image: "news-eritrea-visa-penalties.jpg"
+  },
+  {
+    id: "article8-reforms",
+    dateSort: "2026-10-12",
+    dateDisplay: "12 October 2026",
+    source: "GOV.UK",
+    icon: "doc",
+    category: "Human Rights",
+    title: "Migrants Exploiting Human Rights Laws Targeted in Fresh Reforms",
+    summary: "The government has tabled amendments to the Immigration and Asylum Bill to limit Article 8 family-life claims used to resist deportation and to penalise late claims.",
+    teaser: "Two amendments to the Immigration and Asylum Bill, announced on 12 October 2026, would make courts look at how much real contact a parent has with a child, stop people bolstering Article 8 claims by moving back into the family home just before claiming, and allow last-minute claims to count against a person's credibility.",
+    body: [
+      "The Home Office announced on 12 October 2026 that it had tabled two amendments to the Immigration and Asylum Bill, aimed at narrowing how the right to family life under Article 8 of the European Convention on Human Rights can be used to prevent deportation, and at tightening the treatment of late claims.",
+      "Under the amendments, courts deciding whether family life exists would have to consider how long and how often a parent has actually been in contact with their child. The changes are also designed to stop people strengthening an Article 8 claim by moving back into a family home shortly before making it. In addition, last-minute claims made without good reason could damage a person's credibility, and decision-makers would have to take into account when evidence was submitted.",
+      "These sit alongside measures already in the bill: a definition of 'family life' generally limited to core, co-habiting family relationships; a faster process for late claims; a single appeal route; a single definition of a protection claim combining refugee status and humanitarian protection; a new Independent Immigration Appeals Authority; and a requirement for asylum seekers in taxpayer-funded accommodation to contribute to costs where they can afford to. The bill passed its Commons second reading in July with a majority of 174 and is now going through detailed line-by-line scrutiny, so none of these measures is yet in force."
+    ],
+    url: "https://www.gov.uk/government/news/migrants-exploiting-human-rights-laws-targeted-in-fresh-reforms",
+    image: "news-article8-reforms.jpg"
+  },
+  {
+    id: "slavery-victims-skilled-worker",
+    dateSort: "2026-10-09",
+    dateDisplay: "9 October 2026",
+    source: "GOV.UK",
+    icon: "shield",
+    category: "Sponsorship",
+    title: "Victims Freed from Abusive Employers Under New Visa Rules",
+    summary: "Skilled Worker visa holders, including care workers, who are formally recognised as modern slavery victims can now leave an abusive sponsor and take any lawful work.",
+    teaser: "From 9 October 2026, Skilled Worker visa holders recognised by the Home Office as modern slavery victims are no longer tied to their sponsor and can do any lawful work for the rest of their visa. The Home Office also reported that more than 6,600 sponsors have lost their licences since the current government took office.",
+    body: [
+      "The Home Office announced on 9 October 2026 that, from that day, people on Skilled Worker visas — including care workers — who are formally recognised as victims of modern slavery can leave an abusive sponsor. Once recognised, they are no longer tied to a particular employer and may take any lawful work for the remainder of their visa.",
+      "Previously, leaving an abusive sponsor could cost a worker both their immigration status and their income, as Skilled Worker visa holders have no recourse to public funds. The Home Office gave the example of a care worker who paid an agency £20,000 for a full-time role, was then charged £400 a month by her sponsor to keep her visa active, and was paid only £200 to £300 a month when work did materialise.",
+      "Alongside the change, the department said more than 6,600 sponsors have lost their licence to employ overseas workers since the current government took office, including over 4,400 in the year ending June 2026 — a 140% rise on the previous year and the highest on record. Sponsors found to be involved in criminality will be referred to the police. The measure delivers a commitment in the Immigration White Paper to make it easier for sponsored workers to change employer and reduce their dependence on a single sponsor."
+    ],
+    url: "https://www.gov.uk/government/news/victims-freed-from-abusive-employers-under-new-visa-rules",
+    image: "news-slavery-victims-skilled-worker.jpg"
   },
   {
     id: "contactless-egates",
@@ -143,25 +198,6 @@ const NEWS_ITEMS = [
     image: null
   },
   {
-    id: "immigration-stats-mar2026",
-    dateSort: "2026-07-16",
-    dateDisplay: "16 July 2026",
-    source: "GOV.UK",
-    icon: "clock",
-    category: "Migration Stats",
-    title: "Immigration System Statistics: Year Ending March 2026",
-    summary: "Home Office figures for the year ending March 2026 show asylum claims and most visa grant categories falling year-on-year, while the asylum backlog fell by more than half.",
-    teaser: "The Home Office's quarterly statistics release, published 16 July 2026, recorded 94,000 asylum claims for the year ending March 2026, down 12% on the previous year, alongside a 55% fall in the number of people awaiting an initial asylum decision. Work, study, family and settlement grants all declined over the same period, while small boat arrivals and enforcement returns both edged higher.",
-    body: [
-      "The Home Office published its latest quarterly Immigration System Statistics release on 16 July 2026, covering the year ending March 2026 across entry, visas, asylum, detention, returns and citizenship.",
-      "On asylum, 94,000 people claimed asylum in the year, 12% fewer than the previous 12 months, while initial decisions rose sharply to 128,000, up 32%. The overall grant rate at initial decision fell to 39%, down from 49% a year earlier. The number of people still awaiting an initial decision dropped to 49,000, a fall of 55% on the previous year and 72% below the peak recorded in June 2023.",
-      "Visa grants were down across most main categories: work visas fell 17% to 253,000, sponsored study visas fell 3% to 410,000, and family visas fell 17% to 62,000, while 2.2 million visitor visas were granted. Settlement grants fell 11% to 152,000 and citizenship grants fell 12% to 237,000, while grants of EU Settlement Scheme settled status rose 12% to 371,000.",
-      "Detected irregular arrivals totalled 44,000, of which small boat crossings made up 39,000 (90%) — a slight increase on the previous year but 14% below the 2022 peak. Returns rose 7% to 39,000, including a 13% rise in enforced returns to 9,700, and entries into immigration detention rose 7% to 23,000."
-    ],
-    url: "https://www.gov.uk/government/statistics/immigration-system-statistics-year-ending-march-2026",
-    image: null
-  },
-  {
     id: "immigration-asylum-bill",
     dateSort: "2026-07-13",
     dateDisplay: "13 July 2026",
@@ -179,41 +215,5 @@ const NEWS_ITEMS = [
     ],
     url: "https://www.gov.uk/government/speeches/immigration-and-asylum-bill-second-reading-opening-speech",
     image: "news-immigration-asylum-bill.jpg"
-  },
-  {
-    id: "hc259",
-    dateSort: "2026-07-09",
-    dateDisplay: "9 July 2026",
-    source: "GOV.UK",
-    icon: "doc",
-    category: "Immigration Rules",
-    title: "Statement of Changes to the Immigration Rules: HC 259",
-    summary: "Updates affecting the graduate route, Appendix FM family provisions and the move to eVisas, taking effect from late July 2026.",
-    teaser: "The Home Office published a new Statement of Changes to the Immigration Rules on 9 July 2026, covering the graduate route, Appendix FM family provisions, and the phased move to digital eVisas, with changes taking effect from 3 August 2026.",
-    body: [
-      "The Home Office laid Statement of Changes HC 259 before Parliament on 9 July 2026, the latest in a series of periodic updates to the Immigration Rules. The changes touch several routes at once rather than a single area of policy, which is typical of these statements — they bundle together smaller fixes and clarifications alongside more substantive policy shifts.",
-      "Among the areas affected are the graduate route (the post-study work permission available to international students who complete a UK degree) and the family provisions under Appendix FM, which govern applications from spouses, partners and family members of people settled or present in the UK. The statement also continues the phased rollout of digital eVisas, replacing physical and paper-based proof of immigration status.",
-      "Most of the changes in HC 259 take effect from 3 August 2026. As with any Statement of Changes, the exact impact depends on which route applies to your case and when your application is submitted — the commencement and transitional provisions in the statement itself set out precisely which applications are covered."
-    ],
-    url: "https://www.gov.uk/government/publications/statement-of-changes-to-the-immigration-rules-hc-259-9-july-2026",
-    image: null
-  },
-  {
-    id: "graduate-route-ein",
-    dateSort: "2026-07-01",
-    dateDisplay: "July 2026",
-    source: "EIN News",
-    icon: "clock",
-    category: "Immigration Rules",
-    title: "Immigration Rules Amend Graduate Route &amp; Family Provisions",
-    summary: "A new Statement of Changes updates the graduate route, Appendix FM and Part 8 family provisions.",
-    teaser: "The Electronic Immigration Network reports that a new Statement of Changes updates the graduate route, Appendix FM and Part 8 family provisions, aligning the rules for children joining relatives already settled in the UK.",
-    body: [
-      "The Electronic Immigration Network (EIN) reported on a new Statement of Changes to the Immigration Rules that amends the graduate route alongside the family provisions in Appendix FM and Part 8 of the Rules.",
-      "Part 8 and Appendix FM together govern how children and other family members can join relatives who are already settled or present in the UK, covering questions like which relationships qualify and what evidence is required. EIN's coverage highlights that this update is aimed at aligning those provisions more consistently across routes, rather than introducing an entirely new category.",
-      "Because EIN is a specialist legal-sector publisher rather than the primary government source, its report is a useful secondary summary of the same underlying Statement of Changes — the original legal text and full commencement details sit with GOV.UK, linked below."
-    ],
-    url: "https://www.ein.org.uk/news/new-statement-changes-immigration-rules-amends-graduate-route-appendix-fm-and-part-8-family",
-    image: null
   },
 ];
